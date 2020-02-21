@@ -43,7 +43,7 @@ Instead of using latent weights, one can opt for a custom BNN optimizer that inh
 
 ## Choice of Pseudo-Gradient
 
-In [`larq.quantizers`](/larq/api/quantizers) you will find a variety of quantizers that have been introduced in different papers. Many of these quantizers behave identically during the forward pass but implement different pseudo-gradients. Studies comparing different pseudo-gradients report little difference between them. Therefore, we recommend using the classical [`ste_sign()`](/larq/api/quantizers/#ste_sign) as default.
+In [`larq.quantizers`](/larq/api/quantizers/) you will find a variety of quantizers that have been introduced in different papers. Many of these quantizers behave identically during the forward pass but implement different pseudo-gradients. Studies comparing different pseudo-gradients report little difference between them. Therefore, we recommend using the classical [`ste_sign()`](/larq/api/quantizers/#ste_sign) as default.
 
 ## Choice of Optimizer
 
