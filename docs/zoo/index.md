@@ -45,7 +45,7 @@ E.g. to reproduce the training of [Binary AlexNet](/zoo/api/#binaryalexnet) run:
 lqz train binary_alexnet --dataset imagenet2012 --dataset-version 5.0.0
 ```
 
-To experiment with different hyperparameters you can either edit the [`HParams` for this model](https://github.com/larq/zoo/blob/master/larq_zoo/binarynet.py#L72-L85) or overwrite them from the command line, e.g.:
+To experiment with different hyperparameters you can either edit the [`HParams` for this model](https://github.com/larq/zoo/blob/v0.5.0/larq_zoo/binarynet.py#L74-L87) or overwrite them from the command line, e.g.:
 
 ```shell
 lqz train binary_alexnet --dataset imagenet2012 --dataset-version 5.0.0 --hparams epochs=150,batch_size=256
