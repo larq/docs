@@ -17,7 +17,7 @@
     - larq.metrics+
 - larq/api/quantizers.md:
     - larq.quantizers+
-- zoo/api/larq_zoo.md:
+- zoo/api/index.md:
     - larq_zoo:
         - larq_zoo.BinaryAlexNet
         - larq_zoo.BiRealNet
