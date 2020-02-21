@@ -1,6 +1,6 @@
 docs/compute-engine
 docs/plots/generated
-docs/larq/api
+docs/*/api
 package-lock.json
 
 # Byte-compiled / optimized / DLL files
