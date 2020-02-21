@@ -2,6 +2,7 @@
 
 import inspect
 import os
+import pkg_resources
 import sys
 
 import yaml
@@ -12,20 +13,30 @@ from pydocmd.loader import PythonLoader
 from pydocmd.preprocessor import Preprocessor
 
 
+def normalize_path(path, package_name):
+    return path[path.find(package_name) :]
+
+
+def get_version(package_name):
+    return pkg_resources.require(package_name)[0].version
+
+
 def callable_to_source_link(obj):
     obj = inspect.unwrap(obj)
     path = inspect.getfile(obj).lstrip("./")
     if "larq_zoo" in path:
-        path = path[path.find("larq_zoo") :]
+        package_name = "larq_zoo"
         repo = "larq/zoo"
     elif "larq" in path:
-        path = path[path.find("larq") :]
+        package_name = "larq"
         repo = "larq/larq"
     else:
         raise RuntimeError("We only support building API docs for larq and larq-zoo.")
     source = inspect.getsourcelines(obj)
     line = source[-1] + 1 if source[0][0].startswith("@") else source[-1]
-    link = f"https://github.com/{repo}/blob/master/{path}#L{line}"
+    version = get_version(package_name)
+    path = normalize_path(path, package_name)
+    link = f"https://github.com/{repo}/blob/v{version}/{path}#L{line}"
     return f'<a class="headerlink code-link" style="float:right;" href="{link}" title="Source code"></a>'
 
 
