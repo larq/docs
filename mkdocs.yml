@@ -27,7 +27,7 @@ nav:
   - Zoo:
       - Getting Started: zoo/index.md
       - Tutorials: zoo/tutorials.ipynb
-      - API: larq/api/larq_zoo.md
+      - API: zoo/api/larq_zoo.md
   - Compute Engine:
       - Getting Started: compute-engine/index.md
       - Converter: compute-engine/converter.md
