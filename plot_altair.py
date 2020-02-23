@@ -58,6 +58,15 @@ def plot_activation(source, language=None, css_class=None, options=None, md=None
     base_path = os.path.join(os.path.dirname(__file__), "docs", "plots", "generated")
     os.makedirs(base_path, exist_ok=True)
     file_name = f"{source}.vg.json"
+    file_path = os.path.join(base_path, file_name)
 
-    (forward | backward).save(os.path.join(base_path, file_name))
+    json_data = (forward | backward).to_json(indent=None)
+    try:
+        with open(file_path, "r") as f:
+            old_data = f.read()
+        if json_data != old_data:
+            raise ValueError("Old file, should regenerate")
+    except (FileNotFoundError, OSError, ValueError):
+        with open(file_path, "w") as f:
+            f.write(json_data)
     return html_format(f"/plots/generated/{file_name}")
