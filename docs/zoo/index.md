@@ -24,6 +24,11 @@ The model definitions and the train loop are available in the [Larq Zoo reposito
 | [DoReFaNet](/zoo/api/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 403 912 | 22.84 MB |
 | [XNOR-Net](/zoo/api/#xnornet)                                | 44.96 %        | 69.18 %        | 62 396 768 | 22.81 MB |
 | [Binary AlexNet](/zoo/api/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 859 192 | 7.49 MB  |
+| |
+| [QuickNet](/zoo/api/#quicknet)                               | 58.33 
+%        | 80.77 %        | 10 518 528 | 3.21 MB  |
+| [QuickNetLarge](/zoo/api/#quicknetlarge)                     | 62.50 
+%        | 84.03 %        | 11 837 696 | 4.56 MB  |
 
 ## Installation
 
