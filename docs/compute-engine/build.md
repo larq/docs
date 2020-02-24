@@ -64,10 +64,11 @@ sudo wget -O /usr/local/bin/bazel \
     https://github.com/bazelbuild/bazelisk/releases/download/v1.2.1/bazelisk-linux-amd64
 sudo chmod +x /usr/local/bin/bazel
 ```
-### 3. Configure Bazel ###
 
-Run the ```./configure.sh``` script in the LCE root directory and answer
-"Yes" to the ```manylinux2010``` question if you want to build the
+### 3. Configure Bazel
+
+Run the `./configure.sh` script in the LCE root directory and answer
+"Yes" to the `manylinux2010` question if you want to build the
 LCE converter's PIP package inside the `tensorflow:custom-op-ubuntu16`
 container. This script generates the Bazel configuration file `.bazelrc`
 in the LCE root directory.

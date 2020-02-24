@@ -69,7 +69,7 @@ and `bazel-bin/examples/lce_minimal`.
 The `bazel-bin` directory inside the `lce-volume` is a soft link to
 the build artifacts directory outside the `lce-volume`.
 As a result, in order to be able to access the inference binaries on the host machine,
-you need to manually copy them from the `bazel-bin` to the `lce-volume` directory. 
+you need to manually copy them from the `bazel-bin` to the `lce-volume` directory.
 To do so, run the following command from the LCE root directory:
 
 ```bash
