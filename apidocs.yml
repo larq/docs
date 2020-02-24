@@ -19,17 +19,21 @@
     - larq.quantizers+
 - zoo/api/index.md:
     - larq_zoo:
-        - larq_zoo.BinaryAlexNet
-        - larq_zoo.BiRealNet
-        - larq_zoo.BinaryResNetE18
-        - larq_zoo.BinaryDenseNet28
-        - larq_zoo.BinaryDenseNet37
-        - larq_zoo.BinaryDenseNet37Dilated
-        - larq_zoo.BinaryDenseNet45
-        - larq_zoo.DoReFaNet
-        - larq_zoo.XNORNet
         - larq_zoo.decode_predictions
         - larq_zoo.preprocess_input
+    - larq_zoo.literature:
+      - larq_zoo.literature.BinaryAlexNet
+      - larq_zoo.literature.BiRealNet
+      - larq_zoo.literature.BinaryResNetE18
+      - larq_zoo.literature.BinaryDenseNet28
+      - larq_zoo.literature.BinaryDenseNet37
+      - larq_zoo.literature.BinaryDenseNet37Dilated
+      - larq_zoo.literature.BinaryDenseNet45
+      - larq_zoo.literature.DoReFaNet
+      - larq_zoo.literature.XNORNet
+    - larq_zoo.sota:
+      - larq_zoo.sota.QuickNet
+      - larq_zoo.sota.QuickNetLarge
 - compute-engine/api/index.md:
     - larq_compute_engine:
         - larq_compute_engine.convert_keras_model
