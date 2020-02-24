@@ -2,8 +2,7 @@
   "name": "docs.larq.dev",
   "private": true,
   "scripts": {
-    "preinstall": "python3 -m pip install nbconvert",
-    "install": "python3 -m pip install git+https://github.com/lgeiger/pydoc-markdown.git -r requirements.txt",
+    "install": "python3 -m pip install -r requirements.txt",
     "prebuild": "./download_lce_readme.sh && python3 generate_api_docs.py",
     "build:docs": "python3 -m mkdocs build -d public",
     "build": "npm run build:docs && npm run build:docs",
