@@ -22,22 +22,26 @@ The following models are trained on the [ImageNet](http://image-net.org/) datase
 
 The model definitions and the train loop are available in the [Larq Zoo repository](https://github.com/larq/zoo).
 
+The `literature` submodule contains the following models:
+
 | Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
 | ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
-| [BinaryDenseNet45](/zoo/api/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 939 240 | 7.54 MB  |
-| [BinaryDenseNet37Dilated](/zoo/api/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 734 120  | 5.25 MB  |
-| [BinaryDenseNet37](/zoo/api/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 734 120  | 5.25 MB  |
-| [BinaryDenseNet28](/zoo/api/#binarydensenet28)               | 60.91 %        | 82.83 %        | 5 150 504  | 4.12 MB  |
-| [BinaryResNetE18](/zoo/api/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 699 368 | 4.03 MB  |
-| [Bi-Real Net](/zoo/api/#birealnet)                           | 57.47 %        | 79.84 %        | 11 699 112 | 4.03 MB  |
-| [DoReFaNet](/zoo/api/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 403 912 | 22.84 MB |
-| [XNOR-Net](/zoo/api/#xnornet)                                | 44.96 %        | 69.18 %        | 62 396 768 | 22.81 MB |
-| [Binary AlexNet](/zoo/api/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 859 192 | 7.49 MB  |
-| |
-| [QuickNet](/zoo/api/#quicknet)                               | 58.33 
-%        | 80.77 %        | 10 518 528 | 3.21 MB  |
-| [QuickNetLarge](/zoo/api/#quicknetlarge)                     | 62.50 
-%        | 84.03 %        | 11 837 696 | 4.56 MB  |
+| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 939 240 | 7.54 MB  |
+| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 734 120  | 5.25 MB  |
+| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 734 120  | 5.25 MB  |
+| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.91 %        | 82.83 %        | 5 150 504  | 4.12 MB  |
+| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 699 368 | 4.03 MB  |
+| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.47 %        | 79.84 %        | 11 699 112 | 4.03 MB  |
+| [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 403 912 | 22.84 MB |
+| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 396 768 | 22.81 MB |
+| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 859 192 | 7.49 MB  |
+
+The `sota` submodule contains these models:
+
+| Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
+| ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
+| [QuickNet](/zoo/api/sota/#quicknet)                               | 58.33 %        | 80.77 %        | 10 518 528 | 3.21 MB  |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge)                     | 62.50 %        | 84.03 %        | 11 837 696 | 4.56 MB  |
 
 ## Installation
 
@@ -53,7 +57,7 @@ Weights can be downloaded automatically when instantiating a model. They are sto
 
 Larq Zoo ships with a command-line interface powered by [`zookeeper`](https://github.com/larq/zookeeper/), allowing you to reproduce the entire training process. If you want to improve an existing model or implement your own, we recommend to installing Larq Zoo in [development mode](https://github.com/larq/zoo/blob/master/CONTRIBUTING.md#project-setup).
 
-E.g. to reproduce the training of [Binary AlexNet](/zoo/api/#binaryalexnet) run:
+E.g. to reproduce the training of [Binary AlexNet](/zoo/api/literature/#binaryalexnet) run:
 
 ```shell
 lqz train binary_alexnet --dataset imagenet2012 --dataset-version 5.0.0

@@ -1,4 +1,4 @@
-- larq/api/layers.md:
+ larq/api/layers.md:
     - larq.layers+
 - larq/api/activations.md:
     - larq.activations+
@@ -21,6 +21,7 @@
     - larq_zoo:
         - larq_zoo.decode_predictions
         - larq_zoo.preprocess_input
+- zoo/api/literature.md:
     - larq_zoo.literature:
       - larq_zoo.literature.BinaryAlexNet
       - larq_zoo.literature.BiRealNet
@@ -31,6 +32,7 @@
       - larq_zoo.literature.BinaryDenseNet45
       - larq_zoo.literature.DoReFaNet
       - larq_zoo.literature.XNORNet
+- zoo/api/sota.md:
     - larq_zoo.sota:
       - larq_zoo.sota.QuickNet
       - larq_zoo.sota.QuickNetLarge
