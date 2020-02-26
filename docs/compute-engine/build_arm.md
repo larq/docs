@@ -97,8 +97,8 @@ In the `lib` folder, you can find the TensorFlow Lite static library
 `libtensorflow-lite.a` which includes the LCE customs ops.
 
 
-!!! note ""
-    Note: on some systems the compiler is incorrectly named `aarch64-unknown-linux-gnu-gcc`
+!!! note
+    On some systems the compiler is incorrectly named `aarch64-unknown-linux-gnu-gcc`
     while it should be named `aarch64-linux-gnu-gcc`. If building with the option
     `--aarch64` results in errors then the following bash script can be used to
     create symlinks that fix this naming issue.
