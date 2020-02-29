@@ -27,6 +27,9 @@ def callable_to_source_link(obj):
     if "larq_zoo" in path:
         package_name = "larq_zoo"
         repo = "larq/zoo"
+    elif "larq_compute_engine" in path:
+        package_name = "larq_compute_engine"
+        repo = "larq/compute-engine"
     elif "larq" in path:
         package_name = "larq"
         repo = "larq/larq"

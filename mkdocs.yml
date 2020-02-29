@@ -36,6 +36,7 @@ nav:
       - Build:
           - Build from source: compute-engine/build.md
           - Build for ARM: compute-engine/build_arm.md
+      - API: compute-engine/api/index.md
   - FAQ: faq.md
 
 repo_url: https://github.com/larq/larq

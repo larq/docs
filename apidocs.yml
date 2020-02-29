@@ -30,3 +30,6 @@
         - larq_zoo.XNORNet
         - larq_zoo.decode_predictions
         - larq_zoo.preprocess_input
+- compute-engine/api/index.md:
+    - larq_compute_engine:
+        - larq_compute_engine.convert_keras_model
