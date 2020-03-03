@@ -12,7 +12,7 @@ These models are intended to provide a stable reference for ideas presented in s
 The model implementations will be maintained, but we will not attempt to improve these models over time by applying new training strategies or architecture innovations.
 
 The [`sota`](/zoo/api/sota/) submodule contains top models for various scenarios. These models are intended to use in a [`SW 2.0`](https://medium.com/@karpathy/software-2-0-a64152b37c35)-like fashion.
-We will do our best to continuously improve the models, meaning their weights and even details about there architecture may change from release to release.
+We will do our best to continuously improve the models, which means that their weights and even details of their architectures may change from release to release.
 
 If you have developed or reimplemented a Binarized or other Extremely Quantized Neural Network and want to share it with the community such that future papers can build on top of your work, please add it to Larq Zoo or get in touch with us if you need any help.
 
@@ -24,8 +24,8 @@ The model definitions and the train loop are available in the [Larq Zoo reposito
 
 The [`literature`](/zoo/api/literature/) submodule contains the following models:
 
-| Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
-| ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
+| Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
+| ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------- |
 | [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 939 240 | 7.54 MB  |
 | [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 734 120  | 5.25 MB  |
 | [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 734 120  | 5.25 MB  |
@@ -38,10 +38,10 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 
 The [`sota`](/zoo/api/sota/) submodule contains these models:
 
-| Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
-| ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
-| [QuickNet](/zoo/api/sota/#quicknet)                               | 58.33 %        | 80.77 %        | 10 518 528 | 3.21 MB  |
-| [QuickNetLarge](/zoo/api/sota/#quicknetlarge)                     | 62.50 %        | 84.03 %        | 11 837 696 | 4.56 MB  |
+| Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
+| --------------------------------------------- | -------------- | -------------- | ---------- | ------- |
+| [QuickNet](/zoo/api/sota/#quicknet)           | 58.33 %        | 80.77 %        | 10 518 528 | 3.21 MB |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.50 %        | 84.03 %        | 11 837 696 | 4.56 MB |
 
 ## Installation
 
