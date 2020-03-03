@@ -41,7 +41,6 @@ def callable_to_source_link(obj):
     version = version.replace("b", ".b")  # correct github links to beta releases
     path = normalize_path(path, package_name)
     link = f"https://github.com/{repo}/blob/v{version}/{path}#L{line}"
-    print(link)
     return f'<a class="headerlink code-link" style="float:right;" href="{link}" title="Source code"></a>'
 
 
