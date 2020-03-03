@@ -24,8 +24,8 @@ The model definitions and the train loop are available in the [Larq Zoo reposito
 
 The `literature` submodule contains the following models:
 
-| Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
-| ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
+| Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
+| ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------- |
 | [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 939 240 | 7.54 MB  |
 | [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 734 120  | 5.25 MB  |
 | [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 734 120  | 5.25 MB  |
@@ -38,10 +38,10 @@ The `literature` submodule contains the following models:
 
 The `sota` submodule contains these models:
 
-| Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
-| ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
-| [QuickNet](/zoo/api/sota/#quicknet)                               | 58.33 %        | 80.77 %        | 10 518 528 | 3.21 MB  |
-| [QuickNetLarge](/zoo/api/sota/#quicknetlarge)                     | 62.50 %        | 84.03 %        | 11 837 696 | 4.56 MB  |
+| Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
+| --------------------------------------------- | -------------- | -------------- | ---------- | ------- |
+| [QuickNet](/zoo/api/sota/#quicknet)           | 58.33 %        | 80.77 %        | 10 518 528 | 3.21 MB |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.50 %        | 84.03 %        | 11 837 696 | 4.56 MB |
 
 ## Installation
 
