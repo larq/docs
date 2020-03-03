@@ -48,7 +48,7 @@ The `sota` submodule contains these models:
 Larq Zoo is not included in Larq by default. To start using it, you can install it with Python's [pip](https://pip.pypa.io/en/stable/) package manager:
 
 ```shell
-pip install larq-zoo
+pip install --pre larq-zoo
 ```
 
 Weights can be downloaded automatically when instantiating a model. They are stored at `~/.larq/models/`.
