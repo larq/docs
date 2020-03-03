@@ -7,11 +7,11 @@ The code for all models including a reproducible training pipeline is available 
 
 Larq Zoo consists of a `literature` and a `sota` submodule.
 
-The `literature` submodule contains replications from research papers (all current models).
+The [`literature`](/zoo/api/literature/) submodule contains replications from research papers (all current models).
 These models are intended to provide a stable reference for ideas presented in specific papers.
 The model implementations will be maintained, but we will not attempt to improve these models over time by applying new training strategies or architecture innovations.
 
-The `sota` submodule contains top models for various scenarios. These models are intended to use in a [`SW 2.0`](https://medium.com/@karpathy/software-2-0-a64152b37c35)-like fashion.
+The [`sota`](/zoo/api/sota/) submodule contains top models for various scenarios. These models are intended to use in a [`SW 2.0`](https://medium.com/@karpathy/software-2-0-a64152b37c35)-like fashion.
 We will do our best to continuously improve the models, meaning their weights and even details about there architecture may change from release to release.
 
 If you have developed or reimplemented a Binarized or other Extremely Quantized Neural Network and want to share it with the community such that future papers can build on top of your work, please add it to Larq Zoo or get in touch with us if you need any help.
@@ -22,7 +22,7 @@ The following models are trained on the [ImageNet](http://image-net.org/) datase
 
 The model definitions and the train loop are available in the [Larq Zoo repository](https://github.com/larq/zoo).
 
-The `literature` submodule contains the following models:
+The [`literature`](/zoo/api/literature/) submodule contains the following models:
 
 | Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
 | ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
@@ -36,7 +36,7 @@ The `literature` submodule contains the following models:
 | [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 396 768 | 22.81 MB |
 | [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 859 192 | 7.49 MB  |
 
-The `sota` submodule contains these models:
+The [`sota`](/zoo/api/sota/) submodule contains these models:
 
 | Model                                                        | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
 | ------------------------------------------------------------ | -------------- | -------------- | ---------- | -------- |
