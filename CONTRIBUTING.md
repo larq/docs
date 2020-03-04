@@ -13,11 +13,8 @@ Serve docs locally:
 ```shell
 ./download_lce_readme.sh
 python generate_api_docs.py
-mkdocs serve
+python -m mkdocs serve
 ```
-
-If `mkdocs serve` doesn't work, try `python3 -m mkdocs serve`.
-
 ## Build documentation locally using `npm`
 
 Installs dependencies for building the docs:
