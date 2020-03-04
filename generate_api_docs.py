@@ -4,6 +4,7 @@ import inspect
 import os
 import pkg_resources
 import sys
+import urllib
 
 import yaml
 
@@ -38,8 +39,13 @@ def callable_to_source_link(obj):
     source = inspect.getsourcelines(obj)
     line = source[-1] + 1 if source[0][0].startswith("@") else source[-1]
     version = get_version(package_name)
+    version = version.replace("b", ".b")  # correct github links to beta releases
     path = normalize_path(path, package_name)
     link = f"https://github.com/{repo}/blob/v{version}/{path}#L{line}"
+    try:
+        assert urllib.request.urlopen(link).getcode() == 200
+    except (AssertionError, urllib.error.HTTPError):
+        raise ValueError(f"Could not confirm retrieve {link}.")
     return f'<a class="headerlink code-link" style="float:right;" href="{link}" title="Source code"></a>'
 
 

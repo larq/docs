@@ -27,7 +27,10 @@ nav:
   - Zoo:
       - Getting Started: zoo/index.md
       - Tutorials: zoo/tutorials.ipynb
-      - API: zoo/api/index.md
+      - API:
+          - zoo: zoo/api/index.md
+          - zoo.literature: zoo/api/literature.md
+          - zoo.sota: zoo/api/sota.md
   - Compute Engine:
       - Getting Started: compute-engine/index.md
       - Converter: compute-engine/converter.md
