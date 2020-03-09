@@ -6,7 +6,7 @@ larq==0.8.4
 mkdocs==1.1
 mkdocs-material==4.6.3
 pymdown-extensions==6.3
-mknotebooks==0.3.3
+mknotebooks==0.3.3.post0.dev2
 mkdocs-minify-plugin==0.2.3
 larq-zoo==1.0.b2
 altair==4.0.1
