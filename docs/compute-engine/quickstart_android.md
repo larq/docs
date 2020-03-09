@@ -1,9 +1,20 @@
 # Larq Compute Engine Android Quickstart
 
+This guide consists of two main sections. In the [first section](Create-Your-Own-Android-app-using-LCE-and-TensorFlow-Lite),
+we describe how to build your own Android app using LCE and
+[TensorFlow Lite Java APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java)
+to perform inference with a model built and trained with [Larq](https://larq.dev). 
+This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine)
+(see [here](#Use-the-LCE-AAR-from-Bintray)) or you can build the LCE Lite AAR on
+your local machine by following the guide [here](#Build-LCE-AAR-locally).
+In the [second section](#Build-an-LCE-inference-binary), we describe how to build
+a LCE-compatible inference binary that can be executed on Android OS
+(e.g, a binary to benchmark your models).
+
 ## Create Your Own Android app using LCE and TensorFlow Lite ##
 In this section, we demonstrate how to perform inference with a Larq model in an
 Android app. We provide a custom LCE-compatible TensorFlow Lite [Android Archive](https://developer.android.com/studio/projects/android-library) (AAR)
-which you can use in your own Android app to perform inference with the [TensorFlow Lite Java inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java).
+which you can use in your own Android app to perform inference with the [TensorFlow Lite Java inference APIs].
 In this guide, we use the [TensorFlow Lite Android image classification app](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/android)
 as an example.
 We provide a bash script to build a custom TensorFlow Lite AAR. The AAR package
@@ -42,6 +53,7 @@ allprojects {
         }
     }
 }
+
 dependencies {
     implementation 'org.larq:lce-lite:0.1.2'
 }
@@ -117,12 +129,12 @@ dependencies {
 
 ### 3. Add Larq Model to the project ###
 
-In this guide, we use the Larq QuickNet model for efficient and
-fast image classification. The FlatBuffer format of the QuickNet model
+In this guide, we use the [Larq QuickNet](https://docs.larq.dev/zoo/api/sota/#quicknet)
+model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
 'quicknet.tflite' (see [here](/compute-engine/converter) to convert a Larq model 
-to FlatBuffer format)
-and its corresponding labels file `quicknet_labels.txt`
-needs to be placed in the `assets` folder of the Android project.
+to FlatBuffer format) needs to be placed in the `assets` folder of the Android project.
+You also needs to use the `labels_without_background.txt`  as its corresponding labels file.
+The Labels file is already available in the `asset` folder of Android project.
 
 The TensorFlow Lite classifier in the image classifaction app works with the
 float MobileNet model. To replace the MobileNet with QuickNet, you need to modify
@@ -137,7 +149,7 @@ protected String getModelPath() {
 
 @Override
 protected String getLabelPath() {
-    return "quicknet_labels.txt";
+    return "labels_without_background.txt";
 }
 ```
 
@@ -151,6 +163,10 @@ private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 2
 
 Now you will be able to build the App in Android Studio and run the it on your Android phone.
 Choose the `FLoat` model in the app drop-down list to use QuickNet for inference.
+
+The following screenshot shows an example of image classification using LCE Lite AAR as 
+the inference engine.
+![](/images/image_class_schroedi.png)
 
 ## Create an LCE inference binary for Android ##
 
