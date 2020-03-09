@@ -166,7 +166,8 @@ Choose the `FLoat` model in the app drop-down list to use QuickNet for inference
 
 The following screenshot shows an example of image classification using LCE Lite AAR as 
 the inference engine.
-![](/images/image_class_schroedi.png)
+
+<img src="/images/image_class_schroedi.png" width="300">
 
 ## Create an LCE inference binary for Android ##
 
