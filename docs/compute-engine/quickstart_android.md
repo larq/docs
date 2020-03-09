@@ -43,7 +43,7 @@ allprojects {
     }
 }
 dependencies {
-    implementation 'org.larq:lce-lite:0.1.2
+    implementation 'org.larq:lce-lite:0.1.2'
 }
 ```
 
