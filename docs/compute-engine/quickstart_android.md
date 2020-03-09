@@ -63,6 +63,7 @@ in the Gradle build as described [here](https://www.tensorflow.org/lite/guide/an
         // implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
     }
     ```
+    Note that the dependencies `tensorflow-lite-gpu` and `tensorflow-lite-support` are still required!
 
 #### Build LCE AAR locally ####
 
@@ -81,7 +82,7 @@ directory inside the container:
 The script will build the LCE Android archive 'lce-lite-\<version\>.aar` and
 store the file in the root directory of LCE repository.
 
-Transfer the LCE Adnroid archive file from the LCE container to the host
+Transfer the LCE Android archive file from the LCE container to the host
 machine (where the Android Studio is setup).
 Execute the following command to install the LCE Android Archive
 to local Maven repository:
@@ -119,7 +120,7 @@ dependencies {
 In this guide, we use the Larq QuickNet model for efficient and
 fast image classification. The FlatBuffer format of the QuickNet model
 'quicknet.tflite' (see [here](/compute-engine/converter) to convert a Larq model 
-to FlatBuffer foramt)
+to FlatBuffer format)
 and its corresponding labels file `quicknet_labels.txt`
 needs to be placed in the `assets` folder of the Android project.
 
