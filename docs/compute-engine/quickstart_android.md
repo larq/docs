@@ -161,7 +161,7 @@ private static final float[] IMAGE_MEAN = {0.485f * 255, 0.456f * 255, 0.406f * 
 private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 255};
 ```
 
-Now you will be able to build the App in Android Studio and run the it on your Android phone.
+Now you will be able to build the App in Android Studio and run it on your Android phone.
 Choose the `Float` model in the app drop-down list to use QuickNet for inference.
 The following screenshot shows an example of image classification using LCE Lite AAR as 
 the inference engine.
