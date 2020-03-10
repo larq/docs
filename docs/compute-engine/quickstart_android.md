@@ -1,11 +1,11 @@
 # Larq Compute Engine Android Quickstart
 
 This guide consists of two main sections. In the [first section](#Create-Your-Own-Android-app-using-LCE-and-TensorFlow-Lite),
-we describe how to build your own Android app using LCE and
+we describe how to build your own Android app using Larq Compute Engine (LCE) and
 [TensorFlow Lite Java Inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java)
 to perform inference with a model built and trained with [Larq](https://larq.dev). 
 This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine)
-(see [here](#Use-the-LCE-AAR-from-Bintray)) or you can build the LCE Lite AAR on
+(see [here](#Use-the-LCE-AAR-from-Bintray) for instructions) or you can build the LCE Lite AAR on
 your local machine by following the guide [here](#Build-LCE-AAR-locally).
 In the [second section](#Build-an-LCE-inference-binary), we describe how to build
 a LCE-compatible inference binary that can be executed on Android OS
@@ -132,7 +132,7 @@ In this guide, we use the Larq [QuickNet](https://docs.larq.dev/zoo/api/sota/#qu
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
 `quicknet.tflite` can be created by using the [LCE converter](/compute-engine/converter)
 and needs to be placed in the `assets` folder of the Android project.
-You also needs to use the `labels_without_background.txt` as its corresponding labels file.
+You also need to use the `labels_without_background.txt` as its corresponding labels file.
 The labels file is already available in the `asset` folder of
 the TensorFlow Lite image classification Android app.
 
@@ -163,7 +163,6 @@ private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 2
 
 Now you will be able to build the App in Android Studio and run the it on your Android phone.
 Choose the `Float` model in the app drop-down list to use QuickNet for inference.
-
 The following screenshot shows an example of image classification using LCE Lite AAR as 
 the inference engine.
 
