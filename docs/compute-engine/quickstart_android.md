@@ -119,7 +119,7 @@ local LCE Lite AAR:
 
 ```
 dependencies {
-    implementation 'org.larq:lce-lite:0.1.000
+    implementation 'org.larq:lce-lite:0.1.000'
 }
 ```
 
@@ -162,7 +162,7 @@ private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 2
 ```
 
 Now you will be able to build the App in Android Studio and run the it on your Android phone.
-Choose the `FLoat` model in the app drop-down list to use QuickNet for inference.
+Choose the `Float` model in the app drop-down list to use QuickNet for inference.
 
 The following screenshot shows an example of image classification using LCE Lite AAR as 
 the inference engine.
