@@ -1,13 +1,13 @@
 # Larq Compute Engine Android Quickstart
 
-This guide consists of two main sections. In the [first section](#Create-Your-Own-Android-app-using-LCE-and-TensorFlow-Lite),
+This guide consists of two main sections. In the [first section](#create-your-own-android-app-using-lce-and-tensorflow-lite),
 we describe how to build your own Android app using Larq Compute Engine (LCE) and
 [TensorFlow Lite Java Inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java)
 to perform inference with a model built and trained with [Larq](https://larq.dev). 
 This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine)
-(see [here](#Use-the-LCE-AAR-from-Bintray) for instructions) or you can build the LCE Lite AAR on
-your local machine by following the guide [here](#Build-LCE-AAR-locally).
-In the [second section](#Build-an-LCE-inference-binary), we describe how to build
+(see [here](#use-the-lce-lite-aar-from-bintray) for instructions) or you can build the LCE Lite AAR on
+your local machine by following the guide [here](#build-lce-lite-aar-locally).
+In the [second section](#build-an-lce-inference-binary), we describe how to build
 a LCE-compatible inference binary that can be executed on Android OS
 (e.g, a binary to benchmark your models).
 
@@ -38,7 +38,7 @@ in detail in the following sections.
 #### Use the LCE Lite AAR from Bintray ####
 To use LCE Lite AAR in the android app, we recommend using the
 [LCE package hosted at Bintray](https://bintray.com/plumeraihq/larq-compute-engine).
-Modify the `build.gradle` file in the anroid project to include the
+Modify the `build.gradle` file in the Android project to include the
 `lce-lite` dependency:
 
 ```
@@ -75,7 +75,7 @@ in the Gradle build as described [here](https://www.tensorflow.org/lite/guide/an
 
 #### Build LCE Lite AAR locally ####
 
-In cases that you would like to make local changes to the LCE code or
+In case that you would like to make local changes to the LCE code or
 TensorFlow Lite binaries, you might wish to build the LCE Lite AAR locally.
 We provide a bash script to build the LCE Lite AAR. The bash script is only
 tested inside the LCE docker container. See LCE [build guide](/compute-engine/build) to
@@ -128,7 +128,7 @@ passed to the `-Dversion` argument in Maven command executed previously.
 
 ### 3. Add Larq Model to the project ###
 
-In this guide, we use the Larq [QuickNet](https://docs.larq.dev/zoo/api/sota/#quicknet)
+In this guide, we use the Larq [QuickNet](/zoo/api/sota/#quicknet)
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
 `quicknet.tflite` can be created by using the [LCE converter](/compute-engine/converter)
 and needs to be placed in the `assets` folder of the Android project.
