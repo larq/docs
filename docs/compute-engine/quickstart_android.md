@@ -1,8 +1,8 @@
 # Larq Compute Engine Android Quickstart
 
-This guide consists of two main sections. In the [first section](Create-Your-Own-Android-app-using-LCE-and-TensorFlow-Lite),
+This guide consists of two main sections. In the [first section](#Create-Your-Own-Android-app-using-LCE-and-TensorFlow-Lite),
 we describe how to build your own Android app using LCE and
-[TensorFlow Lite Java APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java)
+[TensorFlow Lite Java Inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java)
 to perform inference with a model built and trained with [Larq](https://larq.dev). 
 This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine)
 (see [here](#Use-the-LCE-AAR-from-Bintray)) or you can build the LCE Lite AAR on
@@ -14,20 +14,12 @@ a LCE-compatible inference binary that can be executed on Android OS
 ## Create Your Own Android app using LCE and TensorFlow Lite ##
 In this section, we demonstrate how to perform inference with a Larq model in an
 Android app. We provide a custom LCE-compatible TensorFlow Lite [Android Archive](https://developer.android.com/studio/projects/android-library) (AAR)
-which you can use in your own Android app to perform inference with the [TensorFlow Lite Java inference APIs].
+which you can use in your own Android app to perform inference with the [TensorFlow Lite Java inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java).
 In this guide, we use the [TensorFlow Lite Android image classification app](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/android)
 as an example.
-We provide a bash script to build a custom TensorFlow Lite AAR. The AAR package
-created with LCE build script, in addition to the built-in TensorFlow Lite operators,
-includes custom LCE operators which are registered by the TensorFlow Lite interpreter.
-
-In the following sections, we describe how to build a LCE-compatible
-TensorFlow Lite AAR package and use it in TensorFlow Lite Android image
-classification app.
-We rely on TensorFlow Lite Java inference APIs to perform inference with a Larq
-model. To get started with TensorFlow Lite on Android, we recommend reading the
-Tensorflow Lite [Android quickstart](https://www.tensorflow.org/lite/guide/android)
-carefully before proceeding with the next steps in this guide.
+To get started with TensorFlow Lite on Android, we recommend to carefully read the
+TensorFlow Lite [Android quickstart](https://www.tensorflow.org/lite/guide/android)
+before proceeding with the next steps in this guide.
 
 ### 1. Build in Android Studio ###
 
@@ -38,12 +30,16 @@ For an explanation of the source code,
 see [here](https://github.com/tensorflow/examples/blob/master/lite/examples/image_classification/android/EXPLORE_THE_CODE.md).
 
 ### 2. Add LCE-compatible TensorFlow Lite AAR to the project ###
+To add the LCE Lite AAR to your android project, you can either use the pre-built
+[LCE Lite AAR hosted on Bintray]((https://bintray.com/plumeraihq/larq-compute-engine))
+or build the LCE Lite AAR yourself on your local machine. Both approaches are explained
+in detail in the following sections.
 
-#### Use the LCE AAR from Bintray ####
-To use LCE AAR in the android app, we recommend using the
+#### Use the LCE Lite AAR from Bintray ####
+To use LCE Lite AAR in the android app, we recommend using the
 [LCE package hosted at Bintray](https://bintray.com/plumeraihq/larq-compute-engine).
-Modify the `build.gradle` dependencies in the anroid project to include the
-`lce-lite` target:
+Modify the `build.gradle` file in the anroid project to include the
+`lce-lite` dependency:
 
 ```
 allprojects {
@@ -59,8 +55,8 @@ dependencies {
 }
 ```
 
-This AAR includes binaries for 'arm64-v8a', 'x86_64', 'x86' [Android ABIs](https://developer.android.com/ndk/guides/abis).
-Please note that currently hand-optimized LCE operators are available only for 'arm64-v8a'.
+This AAR includes binaries for `arm64-v8a`, `x86_64`, `x86` [Android ABIs](https://developer.android.com/ndk/guides/abis).
+Please note that currently hand-optimized LCE operators are available only for `arm64-v8a`.
 To include binaries only for Android ABIs you need to support, modify `abiFilters`
 in the Gradle build as described [here](https://www.tensorflow.org/lite/guide/android#use_the_tensorflow_lite_aar_from_jcenter).
 
@@ -77,11 +73,11 @@ in the Gradle build as described [here](https://www.tensorflow.org/lite/guide/an
     ```
     Note that the dependencies `tensorflow-lite-gpu` and `tensorflow-lite-support` are still required!
 
-#### Build LCE AAR locally ####
+#### Build LCE Lite AAR locally ####
 
 In cases that you would like to make local changes to the LCE code or
-TensorFlow Lite binaries, you might wish to build the LCE AAR locally.
-We provide a bash script to build the LCE AAR. The bash script is only
+TensorFlow Lite binaries, you might wish to build the LCE Lite AAR locally.
+We provide a bash script to build the LCE Lite AAR. The bash script is only
 tested inside the LCE docker container. See LCE [build guide](/compute-engine/build) to
 setup the docker container.
 
@@ -91,18 +87,18 @@ directory inside the container:
 ``` bash
 ./larq_compute_engine/tflite/java/build_lce_aar.sh
 ```
-The script will build the LCE Android archive 'lce-lite-\<version\>.aar` and
+The script will build the LCE Android archive `lce-lite-<version>.aar` and
 store the file in the root directory of LCE repository.
 
 Transfer the LCE Android archive file from the LCE container to the host
 machine (where the Android Studio is setup).
 Execute the following command to install the LCE Android Archive
-to local Maven repository:
+to local [Maven](https://maven.apache.org) repository:
 
 ```
 mvn install:install-file \
-  -Dfile=lce-lite-0.1.aar \
-  -DgroupId=org.tensorflow \
+  -Dfile=lce-lite-0.1.2.aar \
+  -DgroupId=org.larq \
   -DartifactId=lce-lite -Dversion=0.1.000 -Dpackaging=aar
 ```
 
@@ -119,22 +115,26 @@ allprojects {
 ```
 
 Replace the standard TensorFlow Lite dependency with
-local LCE AAR:
+local LCE Lite AAR:
 
 ```
 dependencies {
-    implementation 'org.tensorflow:lce-lite:0.1.000
+    implementation 'org.larq:lce-lite:0.1.000
 }
 ```
 
+Note that the version `0.1.000` is chosen arbitrarily and should match the version
+passed to the `-Dversion` argument in Maven command executed previously.
+
 ### 3. Add Larq Model to the project ###
 
-In this guide, we use the [Larq QuickNet](https://docs.larq.dev/zoo/api/sota/#quicknet)
+In this guide, we use the Larq [QuickNet](https://docs.larq.dev/zoo/api/sota/#quicknet)
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
-'quicknet.tflite' (see [here](/compute-engine/converter) to convert a Larq model 
-to FlatBuffer format) needs to be placed in the `assets` folder of the Android project.
-You also needs to use the `labels_without_background.txt`  as its corresponding labels file.
-The Labels file is already available in the `asset` folder of Android project.
+`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/converter)
+and needs to be placed in the `assets` folder of the Android project.
+You also needs to use the `labels_without_background.txt` as its corresponding labels file.
+The labels file is already available in the `asset` folder of
+the TensorFlow Lite image classification Android app.
 
 The TensorFlow Lite classifier in the image classifaction app works with the
 float MobileNet model. To replace the MobileNet with QuickNet, you need to modify
