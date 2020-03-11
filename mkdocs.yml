@@ -19,6 +19,7 @@ nav:
           - Quantizers: larq/api/quantizers.md
           - Activations: larq/api/activations.md
           - Constraints: larq/api/constraints.md
+          - Context: larq/api/context.md
           - Callbacks: larq/api/callbacks.md
           - Optimizers: larq/api/optimizers.md
           - Math: larq/api/math.md
