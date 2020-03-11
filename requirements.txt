@@ -2,7 +2,7 @@ tensorflow==2.1.0
 tensorflow_datasets==2.1.0
 Pillow==7.0.0
 matplotlib==3.2.0
-larq==0.8.4
+larq==0.9.0
 mkdocs==1.1
 mkdocs-material==4.6.3
 pymdown-extensions==6.3
