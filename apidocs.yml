@@ -6,6 +6,8 @@
     - larq.callbacks+
 - larq/api/constraints.md:
     - larq.constraints+
+- larq/api/context.md:
+    - larq.context+
 - larq/api/optimizers.md:
     - larq.optimizers+
 - larq/api/math.md:
