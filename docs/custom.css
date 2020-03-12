@@ -76,13 +76,14 @@ button[data-md-color-accent="larq"] {
     background-color: #0a1d3c;
   }
 }
-@media only screen and (min-width: 76.25em) {
-  [data-md-color-primary="larq"] .md-tabs {
-    background-color: #0a1d3c;
-  }
-  [data-md-color-primary=white] .md-tabs {
-    border: none;
-  }
+[data-md-color-primary="larq"] .md-tabs {
+  background-color: #0a1d3c;
+}
+[data-md-color-primary="white"] .md-tabs {
+  border: none;
+  display: block;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
 }
 .md-typeset table:not([class]) th {
   background-color: #0a1d3c;
