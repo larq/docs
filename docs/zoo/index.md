@@ -40,8 +40,9 @@ The [`sota`](/zoo/api/sota/) submodule contains these models:
 
 | Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
 | --------------------------------------------- | -------------- | -------------- | ---------- | ------- |
-| [QuickNet](/zoo/api/sota/#quicknet)           | 58.33 %        | 80.77 %        | 10 518 528 | 3.21 MB |
-| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.50 %        | 84.03 %        | 11 837 696 | 4.56 MB |
+| [QuickNet](/zoo/api/sota/#quicknet)           | 58.7 %         | 81.0 %         | 10 518 528 | 3.21 MB |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.8 %         | 84.0 %         | 11 837 696 | 4.56 MB |
+| [QuickNetXL](/zoo/api/sota/#quicknetxl)       | 67.1 %         | 87.3 %         | 22 058 368 | 6.22 MB |
 
 ## Installation
 
