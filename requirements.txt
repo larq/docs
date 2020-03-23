@@ -11,5 +11,5 @@ mkdocs-minify-plugin==0.2.3
 larq-zoo==1.0b4
 altair==4.0.1
 pandas==1.0.3
-larq-compute-engine==0.1.2
+larq-compute-engine==0.2.0
 git+https://github.com/lgeiger/pydoc-markdown.git
