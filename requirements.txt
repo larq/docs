@@ -8,7 +8,7 @@ mkdocs-material==4.6.3
 pymdown-extensions==6.3
 mknotebooks==0.3.5
 mkdocs-minify-plugin==0.2.3
-larq-zoo==1.0.b3
+larq-zoo==1.0b4
 altair==4.0.1
 pandas==1.0.3
 larq-compute-engine==0.1.2
