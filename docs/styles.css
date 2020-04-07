@@ -2,3 +2,18 @@
 .md-header-nav__button.md-logo img {
   width: unset;
 }
+
+.md-nav--primary .md-nav__title[for="__drawer"] .md-nav__button {
+  top: 1.6rem;
+}
+
+.md-header-nav__tabs {
+  flex-grow: 1;
+}
+
+.md-header .md-tabs {
+  border-bottom: none;
+  display: block;
+  background-color: inherit;
+  color: inherit;
+}

@@ -1,0 +1,36 @@
+{#- This file was automatically generated - do not edit -#}
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="{{ lang.t('header.title') }}">
+    <a
+      href="{{ config.site_url | default(nav.homepage.url, true) | url }}"
+      title="{{ config.site_name }}"
+      class="md-header-nav__button md-logo"
+      aria-label="{{ config.site_name }}"
+    >
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      {% include ".icons/material/menu" ~ ".svg" %}
+    </label>
+    <div class="md-header-nav__tabs" data-md-component="header-title">
+      <nav
+        class="md-tabs md-tabs--active md-tabs__inner md-grid"
+        aria-label="{{ lang.t('tabs.title') }}"
+      >
+        <ul class="md-tabs__list">
+          {% for nav_item in nav %} {% include "partials/tabs-item.html" %} {%
+          endfor %}
+        </ul>
+      </nav>
+    </div>
+    {% if "search" in config["plugins"] %}
+    <label class="md-header-nav__button md-icon" for="__search">
+      {% include ".icons/material/magnify.svg" %}
+    </label>
+    {% include "partials/search.html" %} {% endif %} {% if config.repo_url %}
+    <div class="md-header-nav__source">
+      {% include "partials/source.html" %}
+    </div>
+    {% endif %}
+  </nav>
+</header>
