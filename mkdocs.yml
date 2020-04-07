@@ -1,5 +1,4 @@
-site_name: Documentation
-title: Larq
+site_name: Larq
 site_description: "Larq is an open-source deep learning library based on TensorFlow and Keras for training neural networks with extremely low-precision weights and activations, such as Binarized Neural Networks."
 site_author: "Plumerai"
 site_url: "https://docs.larq.dev/"
@@ -51,23 +50,25 @@ theme:
   custom_dir: theme
   logo: images/logo-big-font.svg
   favicon: images/favicon-32.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
     primary: white
-    accent: larq
+    # accent: blue
   font:
     text: "Work Sans"
     code: "Roboto Mono"
-  feature:
-    tabs: true
+  features:
+    - tabs
 
 extra:
   social:
-    - type: "github"
-      link: "https://github.com/larq"
-    - type: "twitter"
-      link: "https://twitter.com/PlumeraiHQ"
-    - type: "linkedin"
-      link: "https://www.linkedin.com/company/plumerai/"
+    - icon: fontawesome/brands/github
+      link: https://github.com/larq
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/PlumeraiHQ
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/plumerai/
 
 markdown_extensions:
   - admonition
@@ -89,13 +90,13 @@ markdown_extensions:
       permalink: true
 
 extra_javascript:
-  - "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-  - "https://cdn.jsdelivr.net/npm/vega@5"
-  - "https://cdn.jsdelivr.net/npm/vega-lite@4"
-  - "https://cdn.jsdelivr.net/npm/vega-embed@6"
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@4
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
 
 extra_css:
-  - custom.css
+  - styles.css
 
 google_analytics:
   - "UA-144491780-1"

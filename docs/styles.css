@@ -1,0 +1,4 @@
+.md-nav__title .md-nav__button.md-logo img,
+.md-header-nav__button.md-logo img {
+  width: unset;
+}
