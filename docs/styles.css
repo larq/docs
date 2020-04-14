@@ -1,3 +1,9 @@
+:root {
+  --md-default-fg-color: #0a1d3c;
+  --md-default-fg-color--light: #0a1d3c99;
+  --md-default-fg-color--lightest: #0a1d3c14;
+}
+
 .md-nav__title .md-nav__button.md-logo img,
 .md-header-nav__button.md-logo img {
   width: unset;
