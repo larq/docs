@@ -16,7 +16,7 @@ We will do our best to continuously improve the models, which means that their w
 
 If you have developed or reimplemented a Binarized or other Extremely Quantized Neural Network and want to share it with the community such that future papers can build on top of your work, please add it to Larq Zoo or get in touch with us if you need any help.
 
-*Larq Zoo is part of a family of libraries for BNN development; you can also check out [Larq](https://docs.larq.dev/) for building and training BNNs and [Larq Compute Engine](https://docs.larq.dev/compute-engine/) for optimized deployment.*
+*Larq Zoo is part of a family of libraries for BNN development; you can also check out [Larq](https://docs.larq.dev/) for building and training BNNs and [Larq Compute Engine](/compute-engine/) for optimized deployment.*
 
 ## Available models
 

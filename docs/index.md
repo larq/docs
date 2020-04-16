@@ -8,7 +8,7 @@ To build a QNN, Larq introduces the concept of [quantized layers](/larq/api/laye
 
 For a detailed explanation checkout our [user guide](/larq/guides/key-concepts/).
 
-*Larq is part of a family of libraries for BNN development; you can also check out [Larq Zoo](https://docs.larq.dev/zoo/) for pre-trained models and [Larq Compute Engine](https://docs.larq.dev/compute-engine/) for optimized deployment.*
+*Larq is part of a family of libraries for BNN development; you can also check out [Larq Zoo](/zoo/) for pre-trained models and [Larq Compute Engine](/compute-engine/) for optimized deployment.*
 
 ## Defining a simple BNN
 
