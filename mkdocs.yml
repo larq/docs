@@ -66,6 +66,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/larq
+    - icon: fontawesome/solid/comment
+      link: https://spectrum.chat/larq
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/PlumeraiHQ
     - icon: fontawesome/brands/linkedin
