@@ -19,7 +19,7 @@ repo_apis = {
         "callbacks.md": get_classes("larq.callbacks"),
         "constraints.md": get_classes("larq.constraints"),
         "context.md": get_functions("larq.context"),
-        "optimizers.md": ["larq.optimizers.CaseOptimizer" "larq.optimizers.Bop"],
+        "optimizers.md": ["larq.optimizers.CaseOptimizer", "larq.optimizers.Bop"],
         "math.md": get_functions("larq.math"),
         # "models.md": ["larq.models.summary"],  #  parse error, suspecting `print`
         "metrics.md": get_classes("larq.metrics"),
