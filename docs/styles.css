@@ -35,3 +35,12 @@
   border-radius: 2px;
   cursor: pointer;
 }
+
+.code-link::before {
+  content: "</>";
+}
+
+.md-typeset .code-link {
+  opacity: 1;
+  visibility: visible;
+}
