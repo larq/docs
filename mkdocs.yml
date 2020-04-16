@@ -87,6 +87,7 @@ markdown_extensions:
           class: larq-netron
           format: !!python/name:netron_link.html_format
   - pymdownx.arithmatex
+  - pymdownx.tabbed
   - toc:
       permalink: true
 
