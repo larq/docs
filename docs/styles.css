@@ -24,14 +24,15 @@
   color: inherit;
 }
 
-.output pre {
+.output pre,
+.model-summary {
   overflow: scroll;
   max-height: 20rem;
 }
 
 .notebook-badge {
-  border: .05rem solid var(--md-default-fg-color--lightest);
-  padding: .45em 1.05em;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  padding: 0.45em 1.05em;
   border-radius: 2px;
   cursor: pointer;
 }

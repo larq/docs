@@ -86,6 +86,9 @@ markdown_extensions:
         - name: netron
           class: larq-netron
           format: !!python/name:netron_link.html_format
+        - name: summary
+          class: larq-netron
+          format: !!python/name:model_summary.html_format
   - pymdownx.arithmatex
   - toc:
       permalink: true
