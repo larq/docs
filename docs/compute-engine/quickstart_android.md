@@ -3,7 +3,7 @@
 This guide consists of two main sections. In the [first section](#create-your-own-android-app-using-lce-and-tensorflow-lite),
 we describe how to build your own Android app using Larq Compute Engine (LCE) and
 [TensorFlow Lite Java Inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java)
-to perform inference with a model built and trained with [Larq](https://larq.dev). 
+to perform inference with a model built and trained with [Larq](https://larq.dev).
 This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine)
 (see [here](#use-the-lce-lite-aar-from-bintray) for instructions) or you can build the LCE Lite AAR on
 your local machine by following the guide [here](#build-lce-lite-aar-locally).
@@ -31,7 +31,7 @@ see [here](https://github.com/tensorflow/examples/blob/master/lite/examples/imag
 
 ### 2. Add LCE-compatible TensorFlow Lite AAR to the project ###
 To add the LCE Lite AAR to your android project, you can either use the pre-built
-[LCE Lite AAR hosted on Bintray]((https://bintray.com/plumeraihq/larq-compute-engine))
+[LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine)
 or build the LCE Lite AAR yourself on your local machine. Both approaches are explained
 in detail in the following sections.
 
@@ -78,7 +78,7 @@ in the Gradle build as described [here](https://www.tensorflow.org/lite/guide/an
 In case that you would like to make local changes to the LCE code or
 TensorFlow Lite binaries, you might wish to build the LCE Lite AAR locally.
 We provide a bash script to build the LCE Lite AAR. The bash script is only
-tested inside the LCE docker container. See LCE [build guide](/compute-engine/build) to
+tested inside the LCE docker container. See LCE [build guide](/compute-engine/build/) to
 setup the docker container.
 
 Once the docker container is setup, run the following command from the LCE root
@@ -130,7 +130,7 @@ passed to the `-Dversion` argument in Maven command executed previously.
 
 In this guide, we use the Larq [QuickNet](/zoo/api/sota/#quicknet)
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
-`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/converter)
+`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/converter/)
 and needs to be placed in the `assets` folder of the Android project.
 You also need to use the `labels_without_background.txt` as its corresponding labels file.
 The labels file is already available in the `asset` folder of
@@ -163,7 +163,7 @@ private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 2
 
 Now you will be able to build the App in Android Studio and run it on your Android phone.
 Choose the `Float` model in the app drop-down list to use QuickNet for inference.
-The following screenshot shows an example of image classification using LCE Lite AAR as 
+The following screenshot shows an example of image classification using LCE Lite AAR as
 the inference engine.
 
 <img src="/images/image_class_schroedi.png" width="300">
@@ -176,11 +176,11 @@ you must have the [Android NDK](https://developer.android.com/ndk) and
 Below we explain how to install the Android prerequisites in the LCE
 Docker container and how to configure the LCE Bazel build settings
 accordingly. Before proceeding with the next steps, please follow
-the instructions in the main [LCE build guide](/compute-engine/build) to setup
+the instructions in the main [LCE build guide](/compute-engine/build/) to setup
 the Docker container for LCE and the Bazel build system.
 
 NOTE: we recommend using the docker volume as described in the
-[LCE build guide](/compute-engine/build) to be able to easily transfer
+[LCE build guide](/compute-engine/build/) to be able to easily transfer
 files in-between the container and the host machine.
 
 ##### Install prerequisites #####
@@ -217,7 +217,7 @@ build --action_env ANDROID_SDK_HOME="/usr/local/android/android-sdk-linux"
 
 ### Build an LCE inference binary ###
 
-To build an LCE inference binary for Android (see [here](/compute-engine/inference) for creating your
+To build an LCE inference binary for Android (see [here](/compute-engine/inference/) for creating your
 own LCE binary) the Bazel target needs to built with `--config=android_arm64` flag.
 For example, to build the [minimal example](https://github.com/larq/compute-engine/blob/master/examples/lce_minimal.cc) for Android,
 run the following command from the LCE root directory:
@@ -250,7 +250,7 @@ on your Android device.
 
 ##### Run inference #####
 
-To run the inference with a [Larq converted model](/compute-engine/converter) on an Android phone,
+To run the inference with a [Larq converted model](/compute-engine/converter/) on an Android phone,
 please follow these steps on your host machine (replace the `lce_benchmark_model` with your
 desired inference binary):
 
