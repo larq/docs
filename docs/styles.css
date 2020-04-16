@@ -44,3 +44,9 @@
   opacity: 1;
   visibility: visible;
 }
+
+.md-typeset a.netron-link {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  line-height: 1em;
+}
