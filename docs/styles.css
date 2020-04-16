@@ -23,3 +23,8 @@
   background-color: inherit;
   color: inherit;
 }
+
+.output pre {
+  overflow: scroll;
+  max-height: 20rem;
+}
