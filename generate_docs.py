@@ -48,5 +48,7 @@ repo_apis = {
 }
 
 for repo, api_pages in repo_apis.items():
-    doc_generator = DocumentationGenerator(api_pages)
+    doc_generator = DocumentationGenerator(
+        api_pages, project_url=f"https://github.com/larq/{repo}/blob/master/",
+    )
     doc_generator.generate(f"./docs/{repo}/api")
