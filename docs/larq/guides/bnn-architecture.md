@@ -15,19 +15,17 @@ When viewing binarization as an activation function just like ReLU, one may be i
 A typical binarized layer looks something like:
 
 ```python
-import larq as lq
-...
-x_out = lq.layers.QuantDense(
+x_out = larq.layers.QuantDense(
     units=1024,
-    input_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_constraint=lq.constraints.WeightClip(clip_value=1.0),
+    input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
     )(x_in)
 ```
 
 ## First & Last Layer
 
-Binarizing the first and last layers hurts accuracy much more than binarizing other layers in the network. Meanwhile, the number of weights and operations in these layers are relatively small. Therefore it has become standard to leave these layers in higher precision. This applies to the incoming activations as well as the weights.
+Binarizing the first and last layers hurts accuracy much more than binarizing other layers in the network. Meanwhile, the number of weights and operations in these layers are often relatively small. Therefore it has become standard to leave these layers in higher precision. This applies to the incoming activations as well as the weights.
 The following shows a network that was trained on CIFAR10 with different precisions for the first and last layers.
 
 ```plot-altair
@@ -55,8 +53,6 @@ We recommend to use as many shortcuts as you can: for example, in ResNet-style a
 An example of a convolutional block with shortcut in Larq could look something like this:
 
 ```python
-import larq as lq
-...
 def conv_with_shortcut(x):
     """Convolutional block with shortcut connection.
 
@@ -73,14 +69,14 @@ def conv_with_shortcut(x):
     shortcut = x
 
     # efficient binarized convolutions (note inputs are also binarized)
-    x = lq.layers.QuantConv2D(
+    x = larq.layers.QuantConv2D(
         filters=filters,
         kernel_size=3,
         padding="same",
-        input_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-        kernel_quantizer=lq.quantizers.SteSign(clip_value=1.0),
+        input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+        kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
         kernel_initializer="glorot_normal",
-        kernel_constraint=lq.constraints.WeightClip(clip_value=1.0),
+        kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
         use_bias=False,
     )(x)
 
@@ -99,15 +95,13 @@ The [XNOR-net authors](https://arxiv.org/abs/1603.05279) found that accuracy imp
 Thus, in a VGG-style network a layer could look like this:
 
 ```python
-import larq as lq
-...
-x = lq.layers.QuantConv2D(
+x = larq.layers.QuantConv2D(
     filters=512,
     kernel_size=3,
     padding="same",
-    input_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_constraint=lq.constraints.WeightClip(clip_value=1.0),
+    input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
     use_bias=False,
     )(x)
 x = tf.keras.layers.MaxPool2D(pool_size=3, strides=2)(x)
