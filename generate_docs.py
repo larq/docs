@@ -2,7 +2,19 @@ from keras_autodoc import DocumentationGenerator, get_classes, get_functions
 
 repo_apis = {
     "larq": {
-        "layers.md": get_classes("larq.layers"),
+        "layers.md": [
+            "larq.layers.QuantDense",
+            "larq.layers.QuantConv1D",
+            "larq.layers.QuantConv2D",
+            "larq.layers.QuantConv3D",
+            "larq.layers.QuantDepthwiseConv2D",
+            "larq.layers.QuantSeparableConv1D",
+            "larq.layers.QuantSeparableConv2D",
+            "larq.layers.QuantConv2DTranspose",
+            "larq.layers.QuantConv3DTranspose",
+            "larq.layers.QuantLocallyConnected1D",
+            "larq.layers.QuantLocallyConnected2D",
+        ],
         "activations.md": get_classes("larq.activations"),
         "callbacks.md": get_classes("larq.constraints"),
         "constraints.md": get_classes("larq.constraints"),
