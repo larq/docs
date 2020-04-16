@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "install": "python3 -m pip install -r requirements.txt",
-    "prebuild": "./download_lce_readme.sh && python3 generate_api_docs.py",
+    "prebuild": "./download_lce_readme.sh && python3 generate_docs.py",
     "build:docs": "python3 -m mkdocs build -d public",
     "build": "npm run build:docs && npm run build:docs",
     "dev": "python3 -m mkdocs serve"
