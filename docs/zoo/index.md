@@ -11,10 +11,10 @@ The [`literature`](/zoo/api/literature/) submodule contains replications from re
 These models are intended to provide a stable reference for ideas presented in specific papers.
 The model implementations will be maintained, but we will not attempt to improve these models over time by applying new training strategies or architecture innovations.
 
-The [`sota`](/zoo/api/sota/) submodule contains top models for various scenarios. These models are intended to use in a [`SW 2.0`](https://medium.com/@karpathy/software-2-0-a64152b37c35)-like fashion.
+The [`sota`](/zoo/api/sota/) submodule contains top models for various scenarios. These models are intended to be used in a [`SW 2.0`](https://medium.com/@karpathy/software-2-0-a64152b37c35)-like fashion.
 We will do our best to continuously improve the models, which means that their weights and even details of their architectures may change from release to release.
 
-If you have developed or reimplemented a Binarized or other Extremely Quantized Neural Network and want to share it with the community such that future papers can build on top of your work, please add it to Larq Zoo or get in touch with us if you need any help.
+If you have developed or reimplemented a Binarized or other Extremely Quantized Neural Network and want to share it with the community such that future papers can build on top of your work, please add it to Larq Zoo or [get in touch with us](https://spectrum.chat/larq/) if you need any help.
 
 *Larq Zoo is part of a family of libraries for BNN development; you can also check out [Larq](https://docs.larq.dev/) for building and training BNNs and [Larq Compute Engine](/compute-engine/) for optimized deployment.*
 
@@ -22,7 +22,7 @@ If you have developed or reimplemented a Binarized or other Extremely Quantized 
 
 The following models are trained on the [ImageNet](http://image-net.org/) dataset. The Top-1 and Top-5 accuracy refers to the model's performance on the ImageNet validation dataset, memory refers to the memory after quantization of the weights.
 
-The model definitions and the train loop are available in the [Larq Zoo repository](https://github.com/larq/zoo).
+The model definitions and the train loops are available in the [Larq Zoo repository](https://github.com/larq/zoo).
 
 The [`literature`](/zoo/api/literature/) submodule contains the following models:
 
