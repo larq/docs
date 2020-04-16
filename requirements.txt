@@ -1,5 +1,5 @@
 tensorflow==2.1.0
-tensorflow_datasets==2.1.0
+tensorflow_datasets==3.0.0
 Pillow==7.1.1
 matplotlib==3.2.1
 larq==0.9.3
