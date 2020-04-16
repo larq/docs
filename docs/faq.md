@@ -66,7 +66,7 @@ We put a lot of thought into the question of which framework we should build Lar
 
 - We really like the Keras API for its simplicity. At the same time, it is still very flexible if you want to build complex architectures or custom training loops.
 - The TensorFlow ecosystem provides a wide range of tools for both researchers and developers. We think integration into that ecosystem will be beneficial for people working with BNNs.
-- We are big fans of [`tf.datasets`](https://www.tensorflow.org/datasets/datasets).
+- We are big fans of [`tf.datasets`](https://www.tensorflow.org/datasets/).
 - Reproducibility is a key concern to us, and our approach for [`larq-zoo`](https://github.com/larq/zoo) is heavily inspired by [Keras Applications](https://keras.io/applications/).
 
 ## Will there be a `PyTorch` version of Larq?
