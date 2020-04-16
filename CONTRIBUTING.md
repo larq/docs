@@ -11,7 +11,6 @@ pip install -r requirements.txt
 Serve docs locally:
 
 ```shell
-./download_lce_readme.sh
 python generate_api_docs.py
 python -m mkdocs serve
 ```
