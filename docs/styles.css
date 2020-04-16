@@ -1,0 +1,37 @@
+:root {
+  --md-default-fg-color: #0a1d3c;
+  --md-default-fg-color--light: #0a1d3c99;
+  --md-default-fg-color--lightest: #0a1d3c14;
+}
+
+.md-nav__title .md-nav__button.md-logo img,
+.md-header-nav__button.md-logo img {
+  width: unset;
+}
+
+.md-nav--primary .md-nav__title[for="__drawer"] .md-nav__button {
+  top: 1.6rem;
+}
+
+.md-header-nav__tabs {
+  flex-grow: 1;
+}
+
+.md-header .md-tabs {
+  border-bottom: none;
+  display: block;
+  background-color: inherit;
+  color: inherit;
+}
+
+.output pre {
+  overflow: scroll;
+  max-height: 20rem;
+}
+
+.notebook-badge {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  padding: .45em 1.05em;
+  border-radius: 2px;
+  cursor: pointer;
+}

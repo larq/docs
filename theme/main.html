@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
-<!-- Extrahead -->
 {% block extrahead %}
+<script
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+></script>
+<script defer src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
 <meta name="twitter:site" content="@PlumeraiHQ" />
 <meta name="twitter:creator" content="@PlumeraiHQ" />
@@ -35,13 +41,5 @@
 <meta property="og:title" content="{{ config.title }}" />
 {% endif %}
 <meta property="og:description" content="{{ config.site_description }}" />
-{% endblock %}
 
-<!-- Htmltitle -->
-{% block htmltitle %} {% if page and page.meta and page.meta.title %}
-<title>{{ page.meta.title }}</title>
-{% elif page and page.title and not page.is_homepage %}
-<title>{{ page.title | striptags }} - {{ config.title }}</title>
-{% else %}
-<title>{{ config.title }}</title>
-{% endif %} {% endblock %}
+{% endblock %}
