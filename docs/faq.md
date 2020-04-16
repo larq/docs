@@ -75,4 +75,4 @@ No, currently we are not planning on releasing a `PyTorch` version of Larq.
 
 ## Can I use Larq for the deployment of my models?
 
-Absolutely! For this purpose We have [Larq Compute Engine (LCE)](https://docs.larq.dev/compute-engine/): a highly optimized inference engine for deploying extremely quantized neural networks, such as Binarized Neural Networks (BNNs). The LCE works seamlessly with the rest of Larq.
+Absolutely! For this purpose we have [Larq Compute Engine (LCE)](https://docs.larq.dev/compute-engine/): a highly optimized inference engine for deploying extremely quantized neural networks, such as Binarized Neural Networks (BNNs). The LCE works seamlessly with the rest of Larq.
