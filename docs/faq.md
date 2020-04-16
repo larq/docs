@@ -75,6 +75,4 @@ No, currently we are not planning on releasing a `PyTorch` version of Larq.
 
 ## Can I use Larq for the deployment of my models?
 
-Currently, Larq is designed purely for training BNNs and there is no support for deployment of binarized models. This means that at this moment Larq is most useful to researchers and less so for developers working on applications.
-
-Of course, the real goal of BNNs is efficient deployment, and in the future we will offer solutions for smooth deployment of models created and trained with Larq.
+Absolutely! For this purpose We have [Larq Compute Engine (LCE)](https://docs.larq.dev/compute-engine/): a highly optimized inference engine for deploying extremely quantized neural networks, such as Binarized Neural Networks (BNNs). The LCE works seamlessly with the rest of Larq.
