@@ -40,9 +40,9 @@ Note that when no residuals are used, the batch norm operation can be simplified
 
 ## High-Precision Shortcuts
 
-A binarized layer outputs an integer activation matrix that is binarized before the next layer. This means that in a VGG-style network such as *BinaryNet* ( [paper](https://arxiv.org/abs/1602.02830) | [larq zoo model](/zoo/api/literature/#binaryalexnet) ) information is lost between every two layers, and one may wonder if this is optimal in terms of efficiency.
+A binarized layer outputs an integer activation matrix that is binarized before the next layer. This means that in a VGG-style network such as *BinaryNet* ([paper](https://arxiv.org/abs/1602.02830); [Larq Zoo model](/zoo/api/literature/#binaryalexnet)) information is lost between every two layers, and one may wonder if this is optimal in terms of efficiency.
 
-High-precision shortcuts avoid this loss of information. Examples of networks that include such shortcuts are *Bi-Real net* ( [paper](https://arxiv.org/abs/1808.00278) | [larq zoo model](/zoo/api/literature/#birealnet) )  and *Binary Densenets* ( [paper](https://arxiv.org/abs/1906.08637) | [larq zoo model](/zoo/api/literature/#binarydensenet28) ). Note that the argument for introducing these shortcuts is no longer just to improve gradient flow, as it is in real-valued models: in BNNs, high-precision shortcuts really improve the expressivity of the model.
+High-precision shortcuts avoid this loss of information. Examples of networks that include such shortcuts are *Bi-Real net* ([paper](https://arxiv.org/abs/1808.00278); [Larq Zoo model](/zoo/api/literature/#birealnet)) and *Binary Densenets* ([paper](https://arxiv.org/abs/1906.08637); [Larq Zoo model](/zoo/api/literature/#binarydensenet28)). Note that the argument for introducing these shortcuts is no longer just to improve gradient flow, as it is in real-valued models: in BNNs, high-precision shortcuts really improve the expressivity of the model.
 
 Such shortcuts are relatively cheap in terms of memory footprint and computational cost, and they greatly improve accuracy. Beware that they do increase the runtime memory requirements of the model.
 
@@ -90,7 +90,7 @@ def conv_with_shortcut(x):
 
 ## Pooling
 
-The *XNOR-net* ( [paper](https://arxiv.org/abs/1603.05279) | [larq zoo model](/zoo/api/literature/#xnornet) ) authors found that accuracy improves when applying batch normalization after instead of before max-pooling. In general, max pooling in BNNs can be problematic as it can lead to skewed binarized activations.
+The *XNOR-net* ([paper](https://arxiv.org/abs/1603.05279); [Larq Zoo model](/zoo/api/literature/#xnornet)) authors found that accuracy improves when applying batch normalization after instead of before max-pooling. In general, max pooling in BNNs can be problematic as it can lead to skewed binarized activations.
 
 Thus, in a VGG-style network a layer could look like this:
 
