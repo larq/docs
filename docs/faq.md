@@ -10,7 +10,7 @@ A BNN is a deep neural network in which the bulk of the computations are perform
 
 Binarization enables the creation of deep learning models that are extremely efficient: storing the model only requires a single bit per weight, and evaluating the model can be done very efficiently because of the bitwise nature of the operations.
 
-Note that in BNN not everything is binary: usually higher-precision computations are still used for things like the first layer, batch-normalization and residual connections.
+Note that in BNNs not everything is binary: usually higher-precision computations are still used for things like the first layer, batch-normalization and residual connections.
 
 ## How can I cite Larq?
 

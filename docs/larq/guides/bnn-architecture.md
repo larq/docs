@@ -4,7 +4,7 @@ Here you will find a quick overview of the best practices that have evolved in t
 
 Any layer has two types of inputs: the layer parameters, such as a weight matrix and biases, and incoming activations.
 
-We can reduce the memory footprint of the model by binarizing parameters. In Larq, this can be done by passing a `kernel_quantizer` from [`larq.quantizers`](/larq/api/quantizers/) when instantiating a [`larq.layer`](/larq/api/layers/) object, or by using a custom BNN optimizer such as [Bop](/larq/api/optimizers/#bop) (note that by default Bop only targets kernels of layers in [`larq.layers`](/larq/api/layers/)).
+We can reduce the memory footprint of the model by binarizing parameters. In Larq, this can be done by passing a `kernel_quantizer` from [`larq.quantizers`](/larq/api/quantizers/) when instantiating a [`larq.layer`](/larq/api/layers/) object.
 
 To get the efficiency of binary computations, the incoming activations need to be binary as well. This can be done by setting a `input_quantizer`.
 
@@ -15,19 +15,17 @@ When viewing binarization as an activation function just like ReLU, one may be i
 A typical binarized layer looks something like:
 
 ```python
-import larq as lq
-...
-x_out = lq.layers.QuantDense(
+x_out = larq.layers.QuantDense(
     units=1024,
-    input_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_constraint=lq.constraints.WeightClip(clip_value=1.0),
+    input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
     )(x_in)
 ```
 
 ## First & Last Layer
 
-Binarizing the first and last layers hurts accuracy much more than binarizing other layers in the network. Meanwhile, the number of weights and operations in these layers are relatively small. Therefore it has become standard to leave these layers in higher precision. This applies to the incoming activations as well as the weights.
+Binarizing the first and last layers hurts accuracy much more than binarizing other layers in the network. Meanwhile, the number of weights and operations in these layers are often relatively small. Therefore it has become standard to leave these layers in higher precision. This applies to the incoming activations as well as the weights.
 The following shows a network that was trained on CIFAR10 with different precisions for the first and last layers.
 
 ```plot-altair
@@ -42,9 +40,9 @@ Note that when no residuals are used, the batch norm operation can be simplified
 
 ## High-Precision Shortcuts
 
-A binarized layer outputs an integer activation matrix that is binarized before the next layer. This means that in a VGG-style network such as [BinaryNet](https://arxiv.org/abs/1602.02830) information is lost between every two layers, and one may wonder if this is optimal in terms of efficiency.
+A binarized layer outputs an integer activation matrix that is binarized before the next layer. This means that in a VGG-style network such as *BinaryNet* ([paper](https://arxiv.org/abs/1602.02830); [Larq Zoo model](/zoo/api/literature/#binaryalexnet)) information is lost between every two layers, and one may wonder if this is optimal in terms of efficiency.
 
-High-precision shortcuts avoid this loss of information. Examples of networks that include such shortcuts are [Bi-Real net](https://arxiv.org/abs/1808.00278) and [Binary Densenets](https://arxiv.org/abs/1906.08637). Note that the argument for introducing these shortcuts is no longer just to improve gradient flow, as it is in real-valued models: in BNNs, high-precision shortcuts really improve the expressivity of the model.
+High-precision shortcuts avoid this loss of information. Examples of networks that include such shortcuts are *Bi-Real net* ([paper](https://arxiv.org/abs/1808.00278); [Larq Zoo model](/zoo/api/literature/#birealnet)) and *Binary Densenets* ([paper](https://arxiv.org/abs/1906.08637); [Larq Zoo model](/zoo/api/literature/#binarydensenet28)). Note that the argument for introducing these shortcuts is no longer just to improve gradient flow, as it is in real-valued models: in BNNs, high-precision shortcuts really improve the expressivity of the model.
 
 Such shortcuts are relatively cheap in terms of memory footprint and computational cost, and they greatly improve accuracy. Beware that they do increase the runtime memory requirements of the model.
 
@@ -55,8 +53,6 @@ We recommend to use as many shortcuts as you can: for example, in ResNet-style a
 An example of a convolutional block with shortcut in Larq could look something like this:
 
 ```python
-import larq as lq
-...
 def conv_with_shortcut(x):
     """Convolutional block with shortcut connection.
 
@@ -73,14 +69,14 @@ def conv_with_shortcut(x):
     shortcut = x
 
     # efficient binarized convolutions (note inputs are also binarized)
-    x = lq.layers.QuantConv2D(
+    x = larq.layers.QuantConv2D(
         filters=filters,
         kernel_size=3,
         padding="same",
-        input_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-        kernel_quantizer=lq.quantizers.SteSign(clip_value=1.0),
+        input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+        kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
         kernel_initializer="glorot_normal",
-        kernel_constraint=lq.constraints.WeightClip(clip_value=1.0),
+        kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
         use_bias=False,
     )(x)
 
@@ -94,20 +90,18 @@ def conv_with_shortcut(x):
 
 ## Pooling
 
-The [XNOR-net authors](https://arxiv.org/abs/1603.05279) found that accuracy improves when applying batch normalization after instead of before max-pooling. In general, max pooling in BNNs can be problematic as it can lead to skewed binarized activations.
+The *XNOR-net* ([paper](https://arxiv.org/abs/1603.05279); [Larq Zoo model](/zoo/api/literature/#xnornet)) authors found that accuracy improves when applying batch normalization after instead of before max-pooling. In general, max pooling in BNNs can be problematic as it can lead to skewed binarized activations.
 
 Thus, in a VGG-style network a layer could look like this:
 
 ```python
-import larq as lq
-...
-x = lq.layers.QuantConv2D(
+x = larq.layers.QuantConv2D(
     filters=512,
     kernel_size=3,
     padding="same",
-    input_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_quantizer=lq.quantizers.SteSign(clip_value=1.0),
-    kernel_constraint=lq.constraints.WeightClip(clip_value=1.0),
+    input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
+    kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
     use_bias=False,
     )(x)
 x = tf.keras.layers.MaxPool2D(pool_size=3, strides=2)(x)
