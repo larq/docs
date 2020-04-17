@@ -26,6 +26,7 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 
 | Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
 | ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------- |
+| [BinaryDenseNet45](/zoo/api/literature/#realtobinarynet)                | 65.01 %        | 85.72 %        | 11 995 624 | 5.13 MB  |
 | [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 939 240 | 7.54 MB  |
 | [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 734 120  | 5.25 MB  |
 | [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 734 120  | 5.25 MB  |
