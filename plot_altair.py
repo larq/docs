@@ -26,21 +26,33 @@ def calculate_activation(function, x):
 def html_format(source, language=None, css_class=None, options=None, md=None):
     div_id = f"altair-plot-{uuid.uuid4()}"
     return f"""
-        <div id="{ div_id }">
-        <script>
-          // embed when document is loaded, to ensure vega library is available
-          // this works on all modern browsers, except IE8 and older
-          document.addEventListener("DOMContentLoaded", function(event) {{
-              var opt = {{
-                "mode": "vega-lite",
-                "renderer": "canvas",
-                "actions": false,
-              }};
-              vegaEmbed('#{ div_id }', '{source}', opt).catch(console.err);
-          }}, {{passive: true, once: true}});
-        </script>
-        </div>
-        """
+<div id="{ div_id }">
+  <script>
+    function render(event) {{
+      if (document.getElementById("{ div_id }")) {{
+        var opt = {{
+          mode: "vega-lite",
+          renderer: "canvas",
+          actions: false
+        }};
+        vegaEmbed("#{ div_id }", "{source}", opt).catch(console.err);
+      }}
+    }}
+
+    // embed when document is loaded, to ensure vega library is available
+    document.addEventListener("DOMContentLoaded", render, {{
+      passive: true,
+      once: true
+    }});
+
+    // Re-render Vega chart on document switch (instant loading, custom event)
+    document.addEventListener("DOMContentSwitch", render, {{
+      passive: true,
+      once: true
+    }});
+  </script>
+</div>
+"""
 
 
 def plot_activation(source, language=None, css_class=None, options=None, md=None):
