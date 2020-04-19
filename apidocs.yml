@@ -18,7 +18,15 @@
 - larq/api/metrics.md:
     - larq.metrics+
 - larq/api/quantizers.md:
-    - larq.quantizers+
+    - larq.quantizers:
+        - larq.quantizers.SteSign
+        - larq.quantizers.ApproxSign
+        - larq.quantizers.SteHeaviside
+        - larq.quantizers.SwishSign
+        - larq.quantizers.MagnitudeAwareSign
+        - larq.quantizers.SteTern
+        - larq.quantizers.DoReFa
+        - larq.quantizers.NoOp
 - zoo/api/index.md:
     - larq_zoo:
         - larq_zoo.decode_predictions
