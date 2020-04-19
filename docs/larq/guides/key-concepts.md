@@ -129,7 +129,7 @@ model = tf.keras.models.Sequential([
 
 ## Using Custom Quantizers
 
-Quantizers are functions that transform a full-precision input to a quantized output.
+Quantizers are functions or Keras layers that transform a full-precision input to a quantized output.
 Since this transformation is usually non-differentiable, it is necessary to modify the gradient to be able to train the resulting QNN.
 This can be done with the [`tf.custom_gradient`](https://www.tensorflow.org/api_docs/python/tf/custom_gradient) decorator.
 
