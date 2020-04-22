@@ -28,22 +28,22 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 
 | Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
 | ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------- |
-| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 939 240 | 7.54 MB  |
-| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 734 120  | 5.25 MB  |
-| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 734 120  | 5.25 MB  |
-| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.91 %        | 82.83 %        | 5 150 504  | 4.12 MB  |
-| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 699 368 | 4.03 MB  |
-| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.47 %        | 79.84 %        | 11 699 112 | 4.03 MB  |
-| [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 403 912 | 22.84 MB |
-| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 396 768 | 22.81 MB |
-| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 859 192 | 7.49 MB  |
+| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 889 512 | 7.35 MB  |
+| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 702 248  | 5.13 MB  |
+| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 702 248  | 5.13 MB  |
+| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.91 %        | 82.83 %        | 5 131 496  | 4.04 MB  |
+| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 689 640 | 4.00 MB  |
+| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.47 %        | 79.84 %        | 10 985 472 | 4.00 MB  |
+| [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 394 440 | 22.80 MB |
+| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 387 104 | 22.77 MB |
+| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 848 720 | 7.45 MB  |
 
 The [`sota`](/zoo/api/sota/) submodule contains these models:
 
 | Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
 | --------------------------------------------- | -------------- | -------------- | ---------- | ------- |
-| [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %         | 10 518 528 | 3.21 MB |
-| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %         | 11 837 696 | 4.56 MB |
+| [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %         | 10 511 232 | 3.18 MB |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %         | 11 819 136 | 4.49 MB |
 | [QuickNetXL](/zoo/api/sota/#quicknetxl)       | 67.0 %         | 87.3 %         | 22 058 368 | 6.22 MB |
 
 ## Installation
