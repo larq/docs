@@ -35,7 +35,7 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 | [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 689 640 | 4.00 MB  |
 | [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.47 %        | 79.84 %        | 10 985 472 | 4.00 MB  |
 | [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 394 440 | 22.80 MB |
-| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 396 768 | 22.81 MB |
+| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 387 104 | 22.77 MB |
 | [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 859 192 | 7.49 MB  |
 
 The [`sota`](/zoo/api/sota/) submodule contains these models:
