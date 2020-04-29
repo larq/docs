@@ -40,11 +40,11 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 | [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 889 512 | 7.35 MB  |
 | [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 702 248  | 5.13 MB  |
 | [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 702 248  | 5.13 MB  |
+| [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 6 944 584  | 3.88 MB  |
 | [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.91 %        | 82.83 %        | 5 131 496  | 4.04 MB  |
 | [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 689 640 | 4.00 MB  |
 | [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.47 %        | 79.84 %        | 10 985 472 | 4.00 MB  |
 | [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 394 440 | 22.80 MB |
-| [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 6 944 584  | 3.88 MB  |
 | [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 387 104 | 22.77 MB |
 | [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 848 720 | 7.45 MB  |
 
