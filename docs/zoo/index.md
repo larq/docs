@@ -24,22 +24,6 @@ The following models are trained on the [ImageNet](http://image-net.org/) datase
 
 The model definitions and the train loops are available in the [Larq Zoo repository](https://github.com/larq/zoo).
 
-The [`literature`](/zoo/api/literature/) submodule contains the following models:
-
-| Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
-| ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------- |
-| [RealToBinaryNet](/zoo/api/literature/#realtobinarynet)                 | 65.01 %        | 85.72 %        | 11 995 624 | 5.13 MB  |
-| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.59 %        | 85.21 %        | 13 889 512 | 7.35 MB  |
-| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.34 %        | 85.15 %        | 8 702 248  | 5.13 MB  |
-| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.89 %        | 84.19 %        | 8 702 248  | 5.13 MB  |
-| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.91 %        | 82.83 %        | 5 131 496  | 4.04 MB  |
-| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.32 %        | 80.79 %        | 11 689 640 | 4.00 MB  |
-| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.47 %        | 79.84 %        | 10 985 472 | 4.00 MB  |
-| [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.39 %        | 76.50 %        | 62 394 440 | 22.80 MB |
-| [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 6 944 584  | 3.88 MB  |
-| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 387 104 | 22.77 MB |
-| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 848 720 | 7.45 MB  |
-
 The [`sota`](/zoo/api/sota/) submodule contains these models:
 
 | Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
@@ -47,6 +31,22 @@ The [`sota`](/zoo/api/sota/) submodule contains these models:
 | [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %         | 10 511 232 | 3.18 MB |
 | [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %         | 11 819 136 | 4.49 MB |
 | [QuickNetXL](/zoo/api/sota/#quicknetxl)       | 67.0 %         | 87.3 %         | 22 058 368 | 6.22 MB |
+
+The [`literature`](/zoo/api/literature/) submodule contains the following models:
+
+| Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
+| ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------- |
+| [RealToBinaryNet](/zoo/api/literature/#realtobinarynet)                 | 65.0 %         | 85.7 %         | 11 995 624 | 5.13 MB  |
+| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.6 %         | 85.2 %         | 13 889 512 | 7.35 MB  |
+| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.3 %         | 85.2 %         | 8 702 248  | 5.13 MB  |
+| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.9 %         | 84.2 %         | 8 702 248  | 5.13 MB  |
+| [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 6 944 584  | 3.88 MB  |
+| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.9 %         | 82.8 %         | 5 131 496  | 4.04 MB  |
+| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.3 %         | 80.8 %         | 11 689 640 | 4.00 MB  |
+| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.5 %         | 79.8 %         | 10 985 472 | 4.00 MB  |
+| [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.4 %         | 76.5 %         | 62 394 440 | 22.80 MB |
+| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 45.0 %         | 69.2 %         | 62 387 104 | 22.77 MB |
+| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.3 %         | 61.5 %         | 61 848 720 | 7.45 MB  |
 
 ## Installation
 
