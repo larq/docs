@@ -24,6 +24,14 @@ The following models are trained on the [ImageNet](http://image-net.org/) datase
 
 The model definitions and the train loops are available in the [Larq Zoo repository](https://github.com/larq/zoo).
 
+The [`sota`](/zoo/api/sota/) submodule contains these models:
+
+| Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
+| --------------------------------------------- | -------------- | -------------- | ---------- | ------- |
+| [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %         | 10 511 232 | 3.18 MB |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %         | 11 819 136 | 4.49 MB |
+| [QuickNetXL](/zoo/api/sota/#quicknetxl)       | 67.0 %         | 87.3 %         | 22 058 368 | 6.22 MB |
+
 The [`literature`](/zoo/api/literature/) submodule contains the following models:
 
 | Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory   |
@@ -39,14 +47,6 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 | [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 6 944 584  | 3.88 MB  |
 | [XNOR-Net](/zoo/api/literature/#xnornet)                                | 44.96 %        | 69.18 %        | 62 387 104 | 22.77 MB |
 | [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.30 %        | 61.53 %        | 61 848 720 | 7.45 MB  |
-
-The [`sota`](/zoo/api/sota/) submodule contains these models:
-
-| Model                                         | Top-1 Accuracy | Top-5 Accuracy | Parameters | Memory  |
-| --------------------------------------------- | -------------- | -------------- | ---------- | ------- |
-| [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %         | 10 511 232 | 3.18 MB |
-| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %         | 11 819 136 | 4.49 MB |
-| [QuickNetXL](/zoo/api/sota/#quicknetxl)       | 67.0 %         | 87.3 %         | 22 058 368 | 6.22 MB |
 
 ## Installation
 
