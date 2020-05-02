@@ -24,7 +24,6 @@
   color: inherit;
 }
 
-.output pre,
 .model-summary {
   overflow: scroll;
   max-height: 20rem;
@@ -67,6 +66,7 @@
   background-color: unset;
   border: 1px solid var(--md-code-bg-color);
   border-top: none;
+  max-height: 20rem;
 }
 
 .output pre {
