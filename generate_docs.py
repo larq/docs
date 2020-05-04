@@ -21,7 +21,7 @@ repo_apis = {
         "context.md": get_functions("larq.context"),
         "optimizers.md": ["larq.optimizers.CaseOptimizer", "larq.optimizers.Bop"],
         "math.md": get_functions("larq.math"),
-        # "models.md": ["larq.models.summary"],  #  parse error, suspecting `print`
+        "models.md": ["larq.models.summary"],  #  parse error, suspecting `print`
         "metrics.md": get_classes("larq.metrics"),
         "quantizers.md": [
             "larq.quantizers.NoOpQuantizer",
