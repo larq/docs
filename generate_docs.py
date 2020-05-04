@@ -64,6 +64,7 @@ for repo, api_pages in repo_apis.items():
         extra_aliases={
             "tensorflow.python.ops.variables.Variable": "tf.Variable",
             "tensorflow.python.keras.optimizer_v2.optimizer_v2.OptimizerV2": "tf.keras.optimizers.Optimizer",
+            "tensorflow.python.framework.ops.Tensor": "tf.Tensor",
         },
         max_signature_line_length=88,
     )
