@@ -65,5 +65,6 @@ for repo, api_pages in repo_apis.items():
             "tensorflow.python.ops.variables.Variable": "tf.Variable",
             "tensorflow.python.keras.optimizer_v2.optimizer_v2.OptimizerV2": "tf.keras.optimizers.Optimizer",
         },
+        max_signature_line_length=88,
     )
     doc_generator.generate(f"./docs/{repo}/api")
