@@ -86,27 +86,51 @@ model = tf.keras.models.Sequential([
 ])
 ```
 
-### Using Quantizers as Activations
+Kernels and inputs can be quantized independently. For instance, a network which contains layers where only the kernels are quantized is referred to as a Binary Weight Network (BWN). When only the inputs are binarized, the network is referred to as a Binary Activation Network (BAN). When a network contains layers in which both the inputs as well as the kernels are binarized the network is referred to as a Binary Neural Network (BNN).
 
-Although quantizers are usually passed as specialized arguments to a Quantization layer, they can be used just like `tf.keras` activations:
-
-```python
-# Use a quantizer as activation
-y = larq.layers.QuantDense(512, activation="ste_sign")(x)
+```python tab="Binary Weight Network (BWN)"
+model = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(),
+    larq.layers.QuantDense(512,
+                           kernel_quantizer="ste_sign",
+                           kernel_constraint="weight_clip"),
+    larq.layers.QuantDense(10,
+                           input_quantizer=None,
+                           kernel_quantizer="ste_sign",
+                           kernel_constraint="weight_clip",
+                           activation="softmax")])
 ```
 
-Just like activations, quantizers can also be used on their own:
+```python tab="Binary Activation Network (BAN)"
+model = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(),
+    larq.layers.QuantDense(512,
+                           kernel_quantizer=None,
+                           kernel_constraint=None),
+    larq.layers.QuantDense(10,
+                           input_quantizer="ste_sign",
+                           kernel_quantizer=None,
+                           kernel_constraint=None,
+                           activation="softmax")])
+```
 
-```python
-# The two lines below are equivalent
-x_binarized = larq.quantizers.SteSign(clip_value=1.0)(x)
-x_binarized = tf.keras.layers.Activation("ste_sign")(x)
+```python tab="Binary Neural Network (BNN)"
+model = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(),
+    larq.layers.QuantDense(512,
+                           kernel_quantizer="ste_sign",
+                           kernel_constraint="weight_clip"),
+    larq.layers.QuantDense(10,
+                           input_quantizer="ste_sign",
+                           kernel_quantizer="ste_sign",
+                           kernel_constraint="weight_clip",
+                           activation="softmax")])
 ```
 
 ## Using Custom Quantizers
 
-Quantizers are functions that transform a full-precision input to a quantized output.
-Since this transformation usually is non-differentiable, it is necessary to modify the gradient to be able to train the resulting QNN.
+Quantizers are functions or Keras layers that transform a full-precision input to a quantized output.
+Since this transformation is usually non-differentiable, it is necessary to modify the gradient to be able to train the resulting QNN.
 This can be done with the [`tf.custom_gradient`](https://www.tensorflow.org/api_docs/python/tf/custom_gradient) decorator.
 
 In this example we will define a binarization function with an identity gradient:

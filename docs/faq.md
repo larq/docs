@@ -1,6 +1,6 @@
 ## Are there any restrictions on using Larq?
 
-We believe open research and software is the way forward for the field of Binarized Neural Network (BNN) and deep learning and general: machine learning can be a powerful engine for good, but only if it is transparent, safe and widely accessible. That is why we have made Larq open-source and free to use.
+We believe open research and software is the way forward for the field of Binarized Neural Network (BNN) and deep learning in general: machine learning can be a powerful engine for good, but only if it is transparent, safe and widely accessible. That is why we have made Larq open-source and free to use.
 
 Larq is licensed under [Apache 2.0 licence](https://github.com/larq/larq/blob/master/LICENSE) - you are free to contribute to [Larq](https://github.com/larq/larq), fork it or build commercial applications on top of it. If you distribute a modified version of Larq, you should clearly state changes you have made and consider contributing them back.
 
@@ -10,7 +10,7 @@ A BNN is a deep neural network in which the bulk of the computations are perform
 
 Binarization enables the creation of deep learning models that are extremely efficient: storing the model only requires a single bit per weight, and evaluating the model can be done very efficiently because of the bitwise nature of the operations.
 
-Note that in BNN not everything is binary: usually higher-precision computations are still used for things like the first layer, batch-normalization and residual connections.
+Note that in BNNs not everything is binary: usually higher-precision computations are still used for things like the first layer, batch-normalization and residual connections.
 
 ## How can I cite Larq?
 
@@ -66,7 +66,7 @@ We put a lot of thought into the question of which framework we should build Lar
 
 - We really like the Keras API for its simplicity. At the same time, it is still very flexible if you want to build complex architectures or custom training loops.
 - The TensorFlow ecosystem provides a wide range of tools for both researchers and developers. We think integration into that ecosystem will be beneficial for people working with BNNs.
-- We are big fans of [`tf.datasets`](https://www.tensorflow.org/datasets/datasets).
+- We are big fans of [`tf.datasets`](https://www.tensorflow.org/datasets/).
 - Reproducibility is a key concern to us, and our approach for [`larq-zoo`](https://github.com/larq/zoo) is heavily inspired by [Keras Applications](https://keras.io/applications/).
 
 ## Will there be a `PyTorch` version of Larq?
@@ -75,6 +75,4 @@ No, currently we are not planning on releasing a `PyTorch` version of Larq.
 
 ## Can I use Larq for the deployment of my models?
 
-Currently, Larq is designed purely for training BNNs and there is no support for deployment of binarized models. This means that at this moment Larq is most useful to researchers and less so for developers working on applications.
-
-Of course, the real goal of BNNs is efficient deployment, and in the future we will offer solutions for smooth deployment of models created and trained with Larq.
+Absolutely! For this purpose we have [Larq Compute Engine (LCE)](/compute-engine/): a highly optimized inference engine for deploying extremely quantized neural networks, such as Binarized Neural Networks (BNNs). LCE works seamlessly with the rest of Larq.

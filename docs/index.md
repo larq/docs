@@ -8,6 +8,8 @@ To build a QNN, Larq introduces the concept of [quantized layers](/larq/api/laye
 
 For a detailed explanation checkout our [user guide](/larq/guides/key-concepts/).
 
+*Larq is part of a family of libraries for BNN development; you can also check out [Larq Zoo](/zoo/) for pre-trained models and [Larq Compute Engine](/compute-engine/) for optimized deployment.*
+
 ## Defining a simple BNN
 
 A simple fully-connected BNN using the [Straight-Through Estimator](/larq/api/quantizers/#ste_sign) can be defined in just a few lines of code using either the Keras sequential, functional or model subclassing APIs:
@@ -66,7 +68,7 @@ model = MyModel()
 Before installing Larq, please install:
 
 - [Python](https://www.python.org) version `3.6` or `3.7`
-- [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15` or `2.0.0`:
+- [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15`, `2.0`, `2.1` or `2.2`:
   ```shell
   pip install tensorflow  # or tensorflow-gpu
   ```

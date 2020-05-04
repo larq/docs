@@ -19,7 +19,7 @@ the following order:
    [Cross-compiling LCE with Make](#cross-compiling-lce-with-make).
 
 This guide will show you how to build the [LCE example program](https://github.com/larq/compute-engine/blob/master/examples/lce_minimal.cc).
-See [here](/compute-engine/inference) to find out how you can create your own LCE
+See [here](/compute-engine/inference/) to find out how you can create your own LCE
 inference binary.
 
 NOTE: Although the Raspberry Pi 3 and Raspberry Pi 4 have 64-bit CPUs, the
@@ -102,10 +102,10 @@ In the `lib` folder, you can find the TensorFlow Lite static library
     while it should be named `aarch64-linux-gnu-gcc`. If building with the option
     `--aarch64` results in errors then the following bash script can be used to
     create symlinks that fix this naming issue.
-    
+
     ```bash
     #!/usr/bin/env bash
-    
+
     cd /usr/bin
     for unknownfile in aarch64-unknown-linux-gnu-*; do
     	newfile="${unknownfile/-unknown-/-}"    

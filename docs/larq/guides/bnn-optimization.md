@@ -11,10 +11,14 @@ However, when turning to BNNs, two fundamental issues arise with SGD:
 - The gradient of the binarization operation is zero almost everywhere, making the gradient \\(\frac{\partial L}{\partial w}\\) utterly uninformative.
 - SGD performs optimization through small update steps that are accumulated over time. Binary weights, meanwhile, cannot absorb small updates: they can only be left alone or flipped.
 
-Another way of putting this is that the loss landscape for BNN is very different than what you are used to for real-valued networks. Gone are the glowing hills you can simply glide down from: the loss is now a discrete function, and many of the intuitions and theories developed for continuous loss landscapes no longer apply.
+Another way of putting this is that the loss landscape for BNNs is very different than what you are used to for real-valued networks. Gone are the glowing hills you can simply glide down from: the loss is now a discrete function, and many of the intuitions and theories developed for continuous loss landscapes no longer apply.
 
 Luckily, there has been significant progress in solving these problems. The issue of zero gradients is resolved by replacing the gradient by some more informative
 alternative, what we call a 'pseudo-gradient'. The issue of updating can be resolved either by introducing latent weights, or by opting for a custom BNN optimizer.
+
+## Choice of Pseudo-Gradient
+
+In [`larq.quantizers`](/larq/api/quantizers/) you will find a variety of quantizers that have been introduced in different papers. Many of these quantizers behave identically during the forward pass but implement different pseudo-gradients. Studies comparing different pseudo-gradients report little difference between them. Therefore, we recommend using the classical [`ste_sign()`](/larq/api/quantizers/#ste_sign) as a default.
 
 ## Latent Weights
 
@@ -37,17 +41,27 @@ x_out = larq.layers.QuantDense(512,
 
 Any optimizer you now apply will update the latent weights; after the update the latent weights are clipped to \\([-1, 1]\\).
 
-### Alternative: Custom Optimizers
+### Choice of Optimizer
+
+When using a latent weight strategy, you can apply any optimizer you are familiar with from real-valued deep learning. However, due to the different nature of BNNs your intuitions may be off. We recommend using Adam: although other optimizers can achieve similar accuracies with a lot of finetuning, we and others have found that Adam is the quickest to converge and the least sensitive to the choice of hyperparameters.
+
+### Retrieving the binary weights
+
+When using the latent weight strategy, the weights are only quantized on the forward pass. This means that when saving the model weights, the latent weights will be saved. To access the binary weights we can use the [`quantized_scope` context](/larq/api/context/#quantized_scope):
+
+```python
+model.save("full_precision_model.h5")  # save full precision latent weights
+fp_weights = model.get_weights()  # get latent weights
+
+with larq.context.quantized_scope(True):
+    model.save("binary_model.h5")  # save binary weights
+    weights = model.get_weights()  # get binary weights
+```
+
+## Alternative: Custom Optimizers
 
 Instead of using latent weights, one can opt for a custom BNN optimizer that inherently generates binary weights. An example of such an optimizer is [Bop](/larq/api/optimizers/#bop).
 
-## Choice of Pseudo-Gradient
-
-In [`larq.quantizers`](/larq/api/quantizers/) you will find a variety of quantizers that have been introduced in different papers. Many of these quantizers behave identically during the forward pass but implement different pseudo-gradients. Studies comparing different pseudo-gradients report little difference between them. Therefore, we recommend using the classical [`ste_sign()`](/larq/api/quantizers/#ste_sign) as default.
-
-## Choice of Optimizer
-
-When using a latent weight strategy, you can apply any optimizer you are familiar with from real-valued deep learning. However, due to the different nature of BNNs your intuitions may be off. We recommend using Adam: although other optimizers can achieve similar accuracies with a lot of finetuning, we and others have found that Adam is the quickest to converge and the least sensitive to the choice of hyperparameters.
 
 ## Tips & Tricks
 
@@ -55,7 +69,7 @@ Here are some general tips and tricks that you may want to keep in mind:
 
 - BNN training is noisier due to the non-continuous nature of flipping weights; therefore, we recommend setting your batch norm momentum to 0.9.
 - Beware that BNNs tend to require many more epochs than real-valued networks to converge: 200+ epochs when training an AlexNet or ResNet-18 style network on ImageNet is not unusual.
-- Networks tend to train much quicker if they are initialized from a trained real-valued model. Importantly, this requires the overall architecture of the pretrained network to be as similar as possible to the BNN, including placement of the activation operation (which replaces the binarization operation). Note that although convergence is faster, pretraining does not seem to improve final accuracy.
+- Networks tend to train much quicker if they are initialized from a trained real-valued model. Importantly, this requires the overall architecture of the pretrained network to be as similar as possible to the BNN, including placement of the activation operation (which replaces the binarization operation). Note that although convergence is faster, pretraining does not seem to improve the final accuracy.
 
 ## Further References
 

@@ -1,0 +1,75 @@
+:root {
+  --md-default-fg-color: #0a1d3c;
+  --md-default-fg-color--light: #0a1d3c99;
+  --md-default-fg-color--lightest: #0a1d3c14;
+}
+
+.md-nav__title .md-nav__button.md-logo img,
+.md-header-nav__button.md-logo img {
+  width: unset;
+}
+
+.md-nav--primary .md-nav__title[for="__drawer"] .md-nav__button {
+  top: 1.6rem;
+}
+
+.md-header-nav__tabs {
+  flex-grow: 1;
+}
+
+.md-header .md-tabs {
+  border-bottom: none;
+  display: block;
+  background-color: inherit;
+  color: inherit;
+}
+
+.model-summary {
+  overflow: scroll;
+  max-height: 20rem;
+}
+
+.notebook-badge {
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  padding: 0.45em 1.05em;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.code-link::before {
+  content: "</>";
+}
+
+.md-typeset .code-link {
+  opacity: 1;
+  visibility: visible;
+}
+
+.md-typeset a.netron-link {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.input code {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input pre {
+  margin-bottom: 0;
+}
+
+.output code {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: unset;
+  border: 1px solid var(--md-code-bg-color);
+  border-top: none;
+  max-height: 20rem;
+}
+
+.output pre {
+  margin-top: 0;
+  display: grid;
+}

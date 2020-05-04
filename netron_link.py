@@ -4,4 +4,4 @@ release_url = "https://github.com/larq/zoo/releases/download"
 
 
 def html_format(source, language, css_class, options, md):
-    return f'<a href="{netron_link}/?url={cors_proxy}/{release_url}/{source}">Interactive architecture diagram</a>'
+    return f'<div class="admonition abstract"><a class="netron-link" href="{netron_link}/?url={cors_proxy}/{release_url}/{source}"><p>Interactive architecture diagram</p></a></div>'
