@@ -1,3 +1,5 @@
+import pkg_resources
+
 from keras_autodoc import DocumentationGenerator, get_classes, get_functions
 
 repo_apis = {
@@ -56,15 +58,24 @@ repo_apis = {
     "compute-engine": {"index.md": ["larq_compute_engine.convert_keras_model"]},
 }
 
+repo_package_names = {
+    "compute-engine": "larq-compute-engine",
+    "larq": "larq",
+    "zoo": "larq-zoo",
+}
+
+
 for repo, api_pages in repo_apis.items():
+    version = pkg_resources.require(repo_package_names[repo])[0].version
     doc_generator = DocumentationGenerator(
         api_pages,
-        project_url=f"https://github.com/larq/{repo}/blob/master/",
+        project_url=f"https://github.com/larq/{repo}/blob/v{version}",
         template_dir=f"./docs/{repo}/api_page_templates" if repo == "larq" else None,
         extra_aliases={
             "tensorflow.python.ops.variables.Variable": "tf.Variable",
             "tensorflow.python.keras.optimizer_v2.optimizer_v2.OptimizerV2": "tf.keras.optimizers.Optimizer",
             "tensorflow.python.framework.ops.Tensor": "tf.Tensor",
+            "tensorflow.python.keras.engine.training.Model": "tf.keras.models.Model",
         },
         max_signature_line_length=88,
     )
