@@ -12,5 +12,4 @@ git+git://github.com/larq/zoo@docs-refactor  # TODO: change back when released
 altair==4.1.0
 pandas==1.0.3
 larq-compute-engine==0.2.1  # TODO: bump when released
-git+https://github.com/lgeiger/pydoc-markdown.git
 git+git://github.com/keras-team/keras-autodoc@cba48a93e9dabd3b9917d1efbc7bc0bf3e66e3d1
