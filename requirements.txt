@@ -2,13 +2,13 @@ tensorflow==2.1.0
 tensorflow_datasets==3.1.0
 Pillow==7.1.2
 matplotlib==3.2.1
-git+git://github.com/larq/larq@docs-refactor  # TODO: change back when released
+larq==0.9.5
 mkdocs==1.1
 mkdocs-material==5.1.5
 pymdown-extensions==7.1
 git+git://github.com/lgeiger/mknotebooks@text-output-code
 mkdocs-minify-plugin==0.3.0
-git+git://github.com/larq/zoo@docs-refactor  # TODO: change back when released
+git+git://github.com/larq/zoo@master  # TODO: change back when released
 altair==4.1.0
 pandas==1.0.3
 larq-compute-engine==0.2.1  # TODO: bump when released
