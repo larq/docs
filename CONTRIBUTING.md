@@ -12,7 +12,7 @@ Serve docs locally:
 
 ```shell
 ./download_lce_readme.sh
-python generate_api_docs.py
+python generate_docs.py
 python -m mkdocs serve
 ```
 ## Build documentation locally using `npm`
