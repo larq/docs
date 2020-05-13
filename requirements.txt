@@ -1,10 +1,10 @@
-tensorflow==2.1.0
+tensorflow==2.2.0
 tensorflow_datasets==3.1.0
 Pillow==7.1.2
 matplotlib==3.2.1
 larq==0.9.5
-mkdocs==1.1
-mkdocs-material==5.1.5
+mkdocs==1.1.1
+mkdocs-material==5.1.6
 pymdown-extensions==7.1
 git+git://github.com/lgeiger/mknotebooks@text-output-code
 mkdocs-minify-plugin==0.3.0
