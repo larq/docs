@@ -11,7 +11,7 @@ altair==4.1.0
 pandas==1.0.3
 
 larq==0.9.5
-git+git://github.com/larq/zoo@master
+larq-zoo==1.0.2
 larq-compute-engine==0.3.0
 
 # Our changes got merged, but not yet released. We can change this back to a non-git
