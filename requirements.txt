@@ -8,8 +8,11 @@ mkdocs-material==5.1.5
 pymdown-extensions==7.1
 git+git://github.com/lgeiger/mknotebooks@text-output-code
 mkdocs-minify-plugin==0.3.0
-git+git://github.com/larq/zoo@master  # TODO: change back when released
+larq==0.9.5
 altair==4.1.0
 pandas==1.0.3
-larq-compute-engine==0.2.1  # TODO: bump when released
+larq-compute-engine==0.3.0
+
+# Our changes got merged, but not yet released. We can change this back to a non-git
+# requirement when a version > v0.4.1 is out on PyPI.
 git+git://github.com/keras-team/keras-autodoc@cba48a93e9dabd3b9917d1efbc7bc0bf3e66e3d1
