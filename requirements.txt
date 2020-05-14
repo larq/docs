@@ -9,11 +9,8 @@ git+git://github.com/lgeiger/mknotebooks@text-output-code
 mkdocs-minify-plugin==0.3.0
 altair==4.1.0
 pandas==1.0.3
+keras-autodoc==0.5.0
 
 larq==0.9.5
 larq-zoo==1.0.2
 larq-compute-engine==0.3.0
-
-# Our changes got merged, but not yet released. We can change this back to a non-git
-# requirement when a version > v0.4.1 is out on PyPI.
-git+git://github.com/keras-team/keras-autodoc@cba48a93e9dabd3b9917d1efbc7bc0bf3e66e3d1
