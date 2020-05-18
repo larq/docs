@@ -11,6 +11,6 @@ altair==4.1.0
 pandas==1.0.3
 keras-autodoc==0.5.0
 
-larq==0.9.5
+larq==0.9.6
 larq-zoo==1.0.2
 larq-compute-engine==0.3.0
