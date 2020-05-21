@@ -53,8 +53,8 @@ and access the build artifacts directly from the host machine.
 ### 2. Install Bazelisk
 
 [Bazel](https://bazel.build/) is the primary build system for LCE.
-However, to avoid Bazel compatibility issues,
-we recommend to use [Bazelisk](https://github.com/bazelbuild/bazelisk).
+However, to avoid Bazel compatibility issues, you need to use [Bazelisk](https://github.com/bazelbuild/bazelisk) 
+as a launcher for Bazel.
 To install Bazelisk on Linux, run the following two commands
 (replace `v1.2.1` with your preferred
 [bazelisk version](https://github.com/bazelbuild/bazelisk/releases)):
