@@ -22,10 +22,11 @@ This guide will show you how to build the [LCE example program](https://github.c
 See [here](/compute-engine/inference/) to find out how you can create your own LCE
 inference binary.
 
-NOTE: Although the Raspberry Pi 3 and Raspberry Pi 4 have 64-bit CPUs, the
-officially supported OS Raspbian for the Raspberry Pi is a 32-bit OS. In order
-to use the optimized 64-bit kernels of LCE on a Raspberry Pi, a 64-bit OS such
-as [Manjaro](https://manjaro.org/download/#raspberry-pi-4-xfce) should be used.
+!!! warning
+    Although the Raspberry Pi 3 and Raspberry Pi 4 have 64-bit CPUs, the
+    officially supported OS Raspbian for the Raspberry Pi is a 32-bit OS. In order
+    to use the optimized 64-bit kernels of LCE on a Raspberry Pi, a 64-bit OS such
+    as [Manjaro](https://manjaro.org/download/#raspberry-pi-4-xfce) should be used.
 
 ## Cross-compiling LCE with Bazel
 
