@@ -24,14 +24,14 @@ where \\(\star\\) is the 2D cross-correlation operator, \\(N\\) is a batch size,
 
 **Inputs**
 
-- `Tensor<float32|int8>|BitTensor<int32,3>`: 4D input tensor \\(x\\)
-- `BitTensor<int32,3>`: 4D bitpacked binary filter tensor \\(w\\) in`OHWI` format
+- `Tensor<float32|int8> | BitTensor<int32, 3>`: 4D input tensor \\(x\\)
+- `BitTensor<int32, 3>`: 4D bitpacked binary filter tensor \\(w\\) in `OHWI` format
 - `Tensor<float32>`: 1D post activation multiplier \\(\gamma\\)
 - `Tensor<float32>`: 1D post activation bias \\(\beta\\)
 
 **Outputs**
 
-- `Tensor<float32|int8>|BitTensor<int32,3>`: Result of the 2D convolution of the input tensor \\(y\\)
+- `Tensor<float32|int8> | BitTensor<int32, 3>`: Result of the 2D convolution of the input tensor \\(y\\)
 
 **Options**
 
@@ -51,11 +51,11 @@ Max pooling operation on spatial input data.
 
 **Inputs**
 
-- `Tensor<float32|int8>|BitTensor<int32,3>`: 4D input tensor
+- `Tensor<float32|int8> | BitTensor<int32, 3>`: 4D input tensor
 
 **Outputs**
 
-- `BitTensor<int32,3>`: A tensor where each entry is the maximum of the input values in the corresponding window.
+- `BitTensor<int32, 3>`: A tensor where each entry is the maximum of the input values in the corresponding window.
 
 **Options**
 
