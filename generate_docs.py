@@ -56,7 +56,10 @@ repo_apis = {
             "larq_zoo.sota.QuickNetXL",
         ],
     },
-    "compute-engine": {"converter.md": ["larq_compute_engine.convert_keras_model"]},
+    "compute-engine": {
+        "converter.md": ["larq_compute_engine.convert_keras_model"],
+        "operators.md": [],
+    },
 }
 
 repo_package_names = {
