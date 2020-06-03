@@ -35,7 +35,7 @@ where \\(\star\\) is the 2D cross-correlation operator, \\(N\\) is a batch size,
 
 **Options**
 
-- **channels_in** `int32`: Number of input channels of the incoming activations
+- **channels_in** `int32`: Number of input channels of the incoming activations. This is necessary since input channels cannot be inferred from the shape of weights and activations if both are bitpacked.
 - **dilation_height_factor** `int32`: Vertical dilation rate of the filter window
 - **dilation_width_factor** `int32`: Horizontal dilation rate of the filter window
 - **fused_activation_function** `string`: \\(\sigma\\), one of `"NONE"`, `"RELU"`, `"RELU_N1_TO_1"` or `"RELU6"`
