@@ -41,6 +41,7 @@ nav:
           - Build for ARM: compute-engine/build_arm.md
       - API:
         - Python Converter: compute-engine/api/converter.md
+        - TFLite Operators: compute-engine/api/operators.md
 
 repo_url: https://github.com/larq/larq
 repo_name: larq/larq
