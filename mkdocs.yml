@@ -91,6 +91,7 @@ markdown_extensions:
         - name: summary
           class: larq-netron
           format: !!python/name:model_summary.html_format
+  - pymdownx.tabbed
   - pymdownx.arithmatex
   - toc:
       permalink: true

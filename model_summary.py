@@ -5,7 +5,7 @@ import io
 from functools import reduce
 
 
-def html_format(source, language, css_class, options, md):
+def html_format(source, language=None, css_class=None, options=None, md=None, **kwargs):
     model_fn = reduce(getattr, [lqz, *source.split(".")])
     stream = io.StringIO()
     tf.keras.backend.clear_session()

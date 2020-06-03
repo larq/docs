@@ -23,7 +23,7 @@ def calculate_activation(function, x):
     return activation.numpy(), tape.gradient(activation, tf_x).numpy()
 
 
-def html_format(source, language=None, css_class=None, options=None, md=None):
+def html_format(source, language=None, css_class=None, options=None, md=None, **kwargs):
     div_id = f"altair-plot-{uuid.uuid4()}"
     return f"""
 <div id="{ div_id }">
@@ -55,7 +55,9 @@ def html_format(source, language=None, css_class=None, options=None, md=None):
 """
 
 
-def plot_activation(source, language=None, css_class=None, options=None, md=None):
+def plot_activation(
+    source, language=None, css_class=None, options=None, md=None, **kwargs
+):
     function = reduce(getattr, [lq, *source.split(".")])
     if inspect.isclass(function):
         function = function()
