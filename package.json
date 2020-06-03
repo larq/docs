@@ -6,6 +6,6 @@
     "prebuild": "./download_lce_readme.sh && python3 generate_docs.py",
     "build:docs": "python3 -m mkdocs build -d public",
     "build": "npm run build:docs && npm run build:docs",
-    "dev": "python3 -m mkdocs serve"
+    "dev": "IGNORE_MODEL_SUMMARIES=1 python3 -m mkdocs serve"
   }
 }
