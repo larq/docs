@@ -13,7 +13,7 @@ Serve docs locally:
 ```shell
 ./download_lce_readme.sh
 python generate_docs.py
-python -m mkdocs serve
+IGNORE_MODEL_SUMMARIES=1 python -m mkdocs serve
 ```
 ## Build documentation locally using `npm`
 
