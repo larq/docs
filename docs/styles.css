@@ -4,12 +4,17 @@
   --md-default-fg-color--lightest: #0a1d3c14;
 }
 
+.md-footer {
+  --md-footer-bg-color: #0a1d3c;
+}
+
 h3 {
   margin-top: -10px !important;
   padding-top: 8px !important;
 }
 
-.md-nav__title .md-nav__button.md-logo img, .md-header-nav__button.md-logo img {
+.md-nav__title .md-nav__button.md-logo img,
+.md-header-nav__button.md-logo img {
   width: unset;
 }
 
