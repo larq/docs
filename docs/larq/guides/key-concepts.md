@@ -72,64 +72,81 @@ Larq layers are fully compatible with the Keras API so you can use them with Ker
 
 === "Larq 32-bit model"
     ```python
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(),
-        larq.layers.QuantDense(512, activation="relu"),
-        larq.layers.QuantDense(10, activation="softmax")
-    ])
+    model = tf.keras.models.Sequential(
+        [
+            tf.keras.layers.Flatten(),
+            larq.layers.QuantDense(512, activation="relu"),
+            larq.layers.QuantDense(10, activation="softmax"),
+        ]
+    )
     ```
 
 === "Keras 32-bit model"
     ```python
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(),
-        tf.keras.layers.Dense(512, activation="relu"),
-        tf.keras.layers.Dense(10, activation="softmax")
-    ])
+    model = tf.keras.models.Sequential(
+        [
+            tf.keras.layers.Flatten(),
+            tf.keras.layers.Dense(512, activation="relu"),
+            tf.keras.layers.Dense(10, activation="softmax"),
+        ]
+    )
     ```
 
 Kernels and inputs can be quantized independently. For instance, a network which contains layers where only the kernels are quantized is referred to as a Binary Weight Network (BWN). When only the inputs are binarized, the network is referred to as a Binary Activation Network (BAN). When a network contains layers in which both the inputs as well as the kernels are binarized the network is referred to as a Binary Neural Network (BNN).
 
 === "Binary Weight Network (BWN)"
     ```python
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(),
-        larq.layers.QuantDense(512,
-                               kernel_quantizer="ste_sign",
-                               kernel_constraint="weight_clip"),
-        larq.layers.QuantDense(10,
-                               input_quantizer=None,
-                               kernel_quantizer="ste_sign",
-                               kernel_constraint="weight_clip",
-                               activation="softmax")])
+    model = tf.keras.models.Sequential(
+        [
+            tf.keras.layers.Flatten(),
+            larq.layers.QuantDense(
+                512, kernel_quantizer="ste_sign", kernel_constraint="weight_clip"
+            ),
+            larq.layers.QuantDense(
+                10,
+                input_quantizer=None,
+                kernel_quantizer="ste_sign",
+                kernel_constraint="weight_clip",
+                activation="softmax",
+            ),
+        ]
+    )
     ```
 
 === "Binary Activation Network (BAN)"
     ```python
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(),
-        larq.layers.QuantDense(512,
-                               kernel_quantizer=None,
-                               kernel_constraint=None),
-        larq.layers.QuantDense(10,
-                               input_quantizer="ste_sign",
-                               kernel_quantizer=None,
-                               kernel_constraint=None,
-                               activation="softmax")])
+    model = tf.keras.models.Sequential(
+        [
+            tf.keras.layers.Flatten(),
+            larq.layers.QuantDense(512, kernel_quantizer=None, kernel_constraint=None),
+            larq.layers.QuantDense(
+                10,
+                input_quantizer="ste_sign",
+                kernel_quantizer=None,
+                kernel_constraint=None,
+                activation="softmax",
+            ),
+        ]
+    )
     ```
 
 === "Binary Neural Network (BNN)"
     ```python
-    model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(),
-        larq.layers.QuantDense(512,
-                               kernel_quantizer="ste_sign",
-                               kernel_constraint="weight_clip"),
-        larq.layers.QuantDense(10,
-                               input_quantizer="ste_sign",
-                               kernel_quantizer="ste_sign",
-                               kernel_constraint="weight_clip",
-                               activation="softmax")])
+    model = tf.keras.models.Sequential(
+        [
+            tf.keras.layers.Flatten(),
+            larq.layers.QuantDense(
+                512, kernel_quantizer="ste_sign", kernel_constraint="weight_clip"
+            ),
+            larq.layers.QuantDense(
+                10,
+                input_quantizer="ste_sign",
+                kernel_quantizer="ste_sign",
+                kernel_constraint="weight_clip",
+                activation="softmax",
+            ),
+        ]
+    )
     ```
 
 ## Using Custom Quantizers
@@ -145,13 +162,14 @@ In this example we will define a binarization function with an identity gradient
 def identity_sign(x):
     def grad(dy):
         return dy
+
     return tf.sign(x), grad
 ```
 
 This function can now be used as an `input_quantizer` or a `kernel_quantizer`:
 
 ```python
-larq.layers.QuantDense(10,
-                       input_quantizer=identity_sign,
-                       kernel_quantizer=identity_sign)
+larq.layers.QuantDense(
+    10, input_quantizer=identity_sign, kernel_quantizer=identity_sign
+)
 ```
