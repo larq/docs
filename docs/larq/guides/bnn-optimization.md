@@ -33,10 +33,12 @@ One implication of this is that the latent weights should be constrained: as an 
 In Larq, it is trivial to implement this strategy. An example of a layer optimized with this method would look like:
 
 ```python
-x_out = larq.layers.QuantDense(512,
-                               input_qunatizer="ste_sign",
-                               kernel_quantizer="ste_sign",
-                               kernel_constraint="weight_clip")(x_out)
+x_out = larq.layers.QuantDense(
+    512,
+    input_qunatizer="ste_sign",
+    kernel_quantizer="ste_sign",
+    kernel_constraint="weight_clip",
+)(x_out)
 ```
 
 Any optimizer you now apply will update the latent weights; after the update the latent weights are clipped to \\([-1, 1]\\).

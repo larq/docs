@@ -20,7 +20,7 @@ x_out = larq.layers.QuantDense(
     input_quantizer=larq.quantizers.SteSign(clip_value=1.0),
     kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
     kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
-    )(x_in)
+)(x_in)
 ```
 
 ## First & Last Layer
@@ -103,9 +103,9 @@ x = larq.layers.QuantConv2D(
     kernel_quantizer=larq.quantizers.SteSign(clip_value=1.0),
     kernel_constraint=larq.constraints.WeightClip(clip_value=1.0),
     use_bias=False,
-    )(x)
+)(x)
 x = tf.keras.layers.MaxPool2D(pool_size=3, strides=2)(x)
-x = tf.keras.layers.BatchNormalization(momentum=.9)(x)
+x = tf.keras.layers.BatchNormalization(momentum=0.9)(x)
 ```
 
 ## Further References

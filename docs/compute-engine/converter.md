@@ -24,7 +24,7 @@ Convert your model and write the file to disk:
 ```python
 import larq_compute_engine as lce
 
-model = ... # Your custom Keras model or one from larq_zoo
+model = ...  # Your custom Keras model or one from larq_zoo
 with open("/tmp/my_model.tflite", "wb") as f:
     f.write(lce.convert_keras_model(model))
 ```
