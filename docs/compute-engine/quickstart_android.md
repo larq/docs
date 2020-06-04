@@ -130,7 +130,7 @@ passed to the `-Dversion` argument in Maven command executed previously.
 
 In this guide, we use the Larq [QuickNet](/zoo/api/sota/#quicknet)
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
-`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/converter/)
+`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/api/converter/)
 and needs to be placed in the `assets` folder of the Android project.
 You also need to use the `labels_without_background.txt` as its corresponding labels file.
 The labels file is already available in the `asset` folder of
@@ -250,7 +250,7 @@ on your Android device.
 
 ##### Run inference #####
 
-To run the inference with a [Larq converted model](/compute-engine/converter/) on an Android phone,
+To run the inference with a [Larq converted model](/compute-engine/api/converter/) on an Android phone,
 please follow these steps on your host machine (replace the `lce_benchmark_model` with your
 desired inference binary):
 

@@ -1,3 +1,4 @@
+import os
 import pkg_resources
 
 from keras_autodoc import DocumentationGenerator, get_classes, get_functions
@@ -55,7 +56,7 @@ repo_apis = {
             "larq_zoo.sota.QuickNetXL",
         ],
     },
-    "compute-engine": {"index.md": ["larq_compute_engine.convert_keras_model"]},
+    "compute-engine": {"converter.md": ["larq_compute_engine.convert_keras_model"]},
 }
 
 repo_package_names = {
@@ -70,7 +71,9 @@ for repo, api_pages in repo_apis.items():
     doc_generator = DocumentationGenerator(
         api_pages,
         project_url=f"https://github.com/larq/{repo}/blob/v{version}",
-        template_dir=f"./docs/{repo}/api_page_templates" if repo == "larq" else None,
+        template_dir=f"./docs/{repo}/api_page_templates"
+        if os.path.exists(f"./docs/{repo}/api_page_templates")
+        else None,
         extra_aliases={
             "tensorflow.python.ops.variables.Variable": "tf.Variable",
             "tensorflow.python.keras.optimizer_v2.optimizer_v2.OptimizerV2": "tf.keras.optimizers.Optimizer",
