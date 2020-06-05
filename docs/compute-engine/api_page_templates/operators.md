@@ -27,8 +27,8 @@ y_{n,\mathrm{out}} = \beta_\mathrm{out} + \gamma_\mathrm{out} \, \sigma\left(\ha
 If the output type is `BitTensor<int32, 3>` the final transformation is simplified to
 \\[
 y_{n,\mathrm{out}} = \begin{cases}
-  -1.0 & \hat{y}\_{n,\mathrm{out}} < \tau_\mathrm{out} \\\
-  \hphantom{-}1.0 & \hat{y}\_{n,\mathrm{out}} \geq \tau_\mathrm{out}\text{.}
+  -1.0 & \hat{y}\_{n,\mathrm{out}} > \tau_\mathrm{out} \\\
+  \hphantom{-}1.0 & \hat{y}\_{n,\mathrm{out}} \leq \tau_\mathrm{out}\text{.}
 \end{cases}
 \\]
 
