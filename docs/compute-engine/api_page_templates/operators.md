@@ -15,19 +15,30 @@ Options for the operators are stored using [FlexBuffers](https://google.github.i
 2D binarized convolution layer.
 
 The operation will compute
-
 \\[
-y_{n,\mathrm{out}} = \beta_\mathrm{out} + \gamma_\mathrm{out} \, \sigma\left(\sum_{i = 0}^{I - 1} w_{\mathrm{out}, i} \star \mathrm{bsign}(x_{n,i})\right), \quad n \in [0, N), \, \mathrm{out} \in [0, O)
+\hat{y}\_{n,\mathrm{out}} = \sum_{i = 0}^{I - 1} w_{\mathrm{out}, i} \star \mathrm{bsign}(x_{n,i})
 \\]
+with \\(n \in [0, N)\\) and \\(\mathrm{out} \in [0, O)\\), where \\(\star\\) is the 2D cross-correlation operator, \\(N\\) is a batch size, \\(I\\) and \\(O\\) denote the number of input and output channels, and \\(\mathrm{bsign}\\)[^1] is the [binary sign function](/larq/api/math/#sign-function).
 
-where \\(\star\\) is the 2D cross-correlation operator, \\(N\\) is a batch size, \\(I\\) and \\(O\\) denote the number of input and output channels, and \\(\mathrm{bsign}\\)[^1] is the [binary sign function](/larq/api/math/#sign-function).
+The final output with type `Tensor<float32|int8>` is then calculated as
+\\[
+y_{n,\mathrm{out}} = \beta_\mathrm{out} + \gamma_\mathrm{out} \, \sigma\left(\hat{y}\_{n,\mathrm{out}}\right)\text{.}
+\\]
+If the output type is `BitTensor<int32, 3>` the final transformation is simplified to
+\\[
+y_{n,\mathrm{out}} = \begin{cases}
+  -1.0 & \hat{y}\_{n,\mathrm{out}} < \tau_\mathrm{out} \\\
+  \hphantom{-}1.0 & \hat{y}\_{n,\mathrm{out}} \geq \tau_\mathrm{out}\text{.}
+\end{cases}
+\\]
 
 **Inputs**
 
 - `Tensor<float32|int8> | BitTensor<int32, 3>`: 4D input tensor \\(x\\)
 - `BitTensor<int32, 3>`: 4D bitpacked binary filter tensor \\(w\\) in `OHWI` format
-- `Tensor<float32>`: 1D post activation multiplier \\(\gamma\\)
-- `Tensor<float32>`: 1D post activation bias \\(\beta\\)
+- `Tensor<float32> | null`: 1D post activation multiplier \\(\gamma\\). This operand will be `null` if an output threshold is set.
+- `Tensor<float32> | null`: 1D post activation bias \\(\beta\\). This operand will be `null` if an output threshold is set.
+- `Tensor<int32> | null`: 1D output threshold \\(\tau\\). This operand defines the binary output threshold if [`experimental_enable_bitpacked_activations`](/compute-engine/api/converter/#convert_keras_model) is enabled and the output is `BitTensor<int32, 3>`.
 
 **Outputs**
 
