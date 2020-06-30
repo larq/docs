@@ -10,11 +10,6 @@ import altair as alt
 import larq as lq
 import pandas as pd
 
-try:
-    tf.enable_eager_execution()
-except Exception:
-    pass
-
 
 def calculate_activation(function, x):
     tf_x = tf.Variable(x)
