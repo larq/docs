@@ -49,7 +49,7 @@ y_{n,\mathrm{out}} = \begin{cases}
 - **channels_in** `int32`: Number of input channels of the incoming activations. This is necessary since input channels cannot be inferred from the shape of weights and activations if both are bitpacked.
 - **dilation_height_factor** `int32`: Vertical dilation rate of the filter window
 - **dilation_width_factor** `int32`: Horizontal dilation rate of the filter window
-- **fused_activation_function** `TfLiteFusedActivation`: \\(\sigma\\), one of `kTfLiteActNone`, `kTfLiteActRelu`, `kTfLiteActRelu1` or `kTfLiteActRelu6`
+- **fused_activation_function** `TfLiteFusedActivation`: \\(\sigma\\), one of `kTfLiteActNone`, `kTfLiteActRelu`, `kTfLiteActReluN1To1` or `kTfLiteActRelu6`
 - **padding** `TfLitePadding`: One of `kTfLitePaddingSame` or `kTfLitePaddingValid`
 - **stride_height** `int32`: Vertical stride of the filter window
 - **stride_width** `int32`: Horizontal stride of the filter window
