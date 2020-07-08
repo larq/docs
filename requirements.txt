@@ -12,5 +12,5 @@ pandas==1.0.5
 keras-autodoc==0.5.1
 
 larq==0.9.6
-larq-zoo==1.0.3
+larq-zoo==1.0.5
 larq-compute-engine==0.3.1
