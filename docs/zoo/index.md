@@ -26,7 +26,7 @@ The model definitions and the train loops are available in the [Larq Zoo reposit
 
 The [`sota`](/zoo/api/sota/) submodule contains these models:
 
-| Model                                         | Top-1 Accuracy | Top-5 Accuracy  | Memory   | Pixel 1 latency (1 thread) |
+| Model                                         | Top-1 Accuracy | Top-5 Accuracy  | Memory   | Latency (Pixel 1, single thread) |
 | ----------------------------------------------| -------------- | --------------  | -------- | ---------------------------|
 | [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %          |  3.18 MB | 18.3 ms                    |
 | [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %          |  4.49 MB | 27.6 ms                    |
@@ -34,7 +34,7 @@ The [`sota`](/zoo/api/sota/) submodule contains these models:
 
 The [`literature`](/zoo/api/literature/) submodule contains the following models:
 
-| Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Memory   | Pixel 1 latency (1 thread) |
+| Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Memory   | Latency (Pixel 1, single thread) |
 | ------------------------------------------------------------------------| -------------- | -------------- | -------- | ---------------------------|
 | [RealToBinaryNet](/zoo/api/literature/#realtobinarynet)                 | 65.0 %         | 85.7 %         | 5.13 MB  | 51.3 ms                    |
 | [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.6 %         | 85.2 %         | 7.35 MB  | 138.5 ms                   |
@@ -48,7 +48,7 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 | [XNOR-Net](/zoo/api/literature/#xnornet)                                | 45.0 %         | 69.2 %         | 22.77 MB | 34.9 ms                    |
 | [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.3 %         | 61.5 %         | 7.45 MB  | 44.3 ms                    |
 
-[^1]: DoReFaNet uses quantizers for which currently no optimized implemention is available in LCE.
+[^1]: DoReFaNet uses quantizers for which currently no optimized implemention is available in Larq Compute Engine.
 
 Models were benchmarked using [Larq Compute Engine](/compute-engine/) on a [Pixel 1 phone (2016)](https://support.google.com/pixelphone/answer/7158570?hl=en-GB), single-threaded.
 
