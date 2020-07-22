@@ -50,7 +50,7 @@ The [`literature`](/zoo/api/literature/) submodule contains the following models
 | [XNOR-Net](/zoo/api/literature/#xnornet)                                | 45.0 %         | 69.2 %         | 22.77 MB   | 34.9 ms                          |
 | [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.3 %         | 61.5 %         | 7.45 MB    | 44.3 ms                          |
 
-[^1]: Benchmarked on July 20st, 2020.
+[^1]: Benchmarked on July 20th, 2020.
 [^2]: DoReFaNet uses quantizers for which currently no optimized implemention is available in Larq Compute Engine.
 
 
