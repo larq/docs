@@ -5,7 +5,7 @@ matplotlib==3.3.0
 mkdocs==1.1.2
 mkdocs-material==5.5.0
 pymdown-extensions==7.1
-mknotebooks==0.4.0
+mknotebooks==0.4.1.post0.dev3
 mkdocs-minify-plugin==0.3.0
 altair==4.1.0
 pandas==1.0.5
