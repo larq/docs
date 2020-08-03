@@ -48,6 +48,7 @@ repo_apis = {
             "larq_zoo.literature.BinaryDenseNet37Dilated",
             "larq_zoo.literature.BinaryDenseNet45",
             "larq_zoo.literature.DoReFaNet",
+            "larq_zoo.literature.RealToBinaryNet",
             "larq_zoo.literature.XNORNet",
         ],
         "sota.md": [
