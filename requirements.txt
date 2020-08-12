@@ -1,5 +1,6 @@
 tensorflow==2.3.0
 tensorflow_datasets==3.2.1
+tensorflow_metadata==0.22.2  # Pinned due to https://github.com/tensorflow/metadata/pull/10
 Pillow==7.2.0
 matplotlib==3.3.0
 mkdocs==1.1.2
