@@ -49,8 +49,8 @@ y_{n,\mathrm{out}} = \begin{cases}
 - **channels_in** `int32`: Number of input channels of the incoming activations. This is necessary since input channels cannot be inferred from the shape of weights and activations if both are bitpacked.
 - **dilation_height_factor** `int32`: Vertical dilation rate of the filter window
 - **dilation_width_factor** `int32`: Horizontal dilation rate of the filter window
-- **fused_activation_function** `TfLiteFusedActivation`: \\(\sigma\\), one of `kTfLiteActNone`, `kTfLiteActRelu`, `kTfLiteActReluN1To1` or `kTfLiteActRelu6`
-- **padding** `TfLitePadding`: One of `kTfLitePaddingSame` or `kTfLitePaddingValid`
+- **fused_activation_function** `ActivationFunctionType`: \\(\sigma\\), one of `NONE`, `RELU`, `RELU_N1_TO_1` or `RELU6`
+- **padding** `Padding`: One of `SAME` or `VALID`
 - **stride_height** `int32`: Vertical stride of the filter window
 - **stride_width** `int32`: Horizontal stride of the filter window
 
@@ -70,7 +70,7 @@ Max pooling operation on spatial input data.
 
 **Options**
 
-- **padding** `TfLitePadding`: One of `kTfLitePaddingSame` or `kTfLitePaddingValid`
+- **padding** `Padding`: One of `SAME` or `VALID`
 - **stride_width** `int32`: Horizontal stride of the sliding window
 - **stride_height** `int32`: Vertical stride of the sliding window
 - **filter_width** `int32`: Horizontal size of the sliding window
