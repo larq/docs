@@ -30,7 +30,9 @@ inference binary.
 
 ## Cross-compiling LCE with Bazel
 
-First configure Bazel using the instructions [here](/compute-engine/build#configure-bazelrc).
+For cross-compiling on a Mac host, a docker image is required.
+Please see [setting up Docker](/compute-engine/docker/) for instructions on
+setting up the docker container, and then follow continue the steps here.
 
 To cross-compile the LCE example for ARM architectures, the bazel
 target needs to be built with the `--config=rpi3` (32-bit ARM) or
@@ -54,8 +56,8 @@ copy these to your ARM machine and run them there.
 
 ## Building LCE with Make
 
-To build LCE with Make, first clone the Larq Compute Engine repo and make sure the tensorflow submodule is loaded
-(this only has to be done once):
+To build LCE with Make, first clone the Larq Compute Engine repository and make
+sure the tensorflow submodule is loaded:
 
 ```bash
 git submodule update --init
@@ -117,8 +119,8 @@ In the `lib` folder, you can find the TensorFlow Lite static library
 
 ## Cross-compiling LCE with Make
 
-First clone the Larq Compute Engine repo and make sure the tensorflow submodule is loaded (this only has to be done
-once):
+First clone the Larq Compute Engine repository and make sure the tensorflow
+submodule is loaded:
 
 ```bash
 git submodule update --init
