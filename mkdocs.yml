@@ -35,7 +35,7 @@ nav:
   - Compute Engine:
       - Getting Started: compute-engine/index.md
       # TODO: Add end-to-end example
-      # TODO: Add optimizing for LCE guide
+      - Model Optimization Guide: compute-engine/model_optimization_guide.md
       - Benchmark:
           - Raspberry Pi: compute-engine/benchmark_rpi.md
           - Android: compute-engine/benchmark_android.md
