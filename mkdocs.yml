@@ -34,9 +34,16 @@ nav:
           - zoo.sota: zoo/api/sota.md
   - Compute Engine:
       - Getting Started: compute-engine/index.md
-      - Inference: compute-engine/inference.md
-      - Quickstart Android: compute-engine/quickstart_android.md
-      - Build:
+      # TODO: Add end-to-end example
+      # TODO: Add optimizing for LCE guide
+      - Benchmark:
+          - Raspberry Pi: compute-engine/benchmark_rpi.md
+          - Android: compute-engine/benchmark_android.md
+      - Deploy:
+          - Inference from C++: compute-engine/inference.md
+          - Build an Android App: compute-engine/quickstart_android.md
+      - Build from source:
+          # TODO: Restructure (build benchmarking binaries, build converter)
           - Build from source: compute-engine/build.md
           - Build for ARM: compute-engine/build_arm.md
       - API:
