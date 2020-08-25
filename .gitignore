@@ -2,6 +2,7 @@ docs/compute-engine/index.md
 docs/plots/generated
 docs/*/api
 package-lock.json
+public
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
