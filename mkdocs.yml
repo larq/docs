@@ -34,7 +34,7 @@ nav:
           - zoo.sota: zoo/api/sota.md
   - Compute Engine:
       - Getting Started: compute-engine/index.md
-      - End to End Guide: compute-engine/end_to_end.md
+      - End to End Guide: compute-engine/end_to_end.ipynb
       # TODO: Add end-to-end example
       # TODO: Add optimizing for LCE guide
       - Benchmark: compute-engine/benchmark.md
