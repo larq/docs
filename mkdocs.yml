@@ -35,7 +35,7 @@ nav:
   - Compute Engine:
       - Getting Started: compute-engine/index.md
       # TODO: Add end-to-end example
-      # TODO: Add optimizing for LCE guide
+      - Model Optimization Guide: compute-engine/model_optimization_guide.md
       - Benchmark: compute-engine/benchmark.md
       - Deploy:
           - Inference from C++: compute-engine/inference.md
