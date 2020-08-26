@@ -24,7 +24,7 @@ that inference is as fast as possible.
     of 8 there will be wasted computation.
 
 *   **Use `QuantConv2D` → `ReLU` → `BatchNormalization` to take advantage of op
-    fusing**
+    fusing instead of `QuantConv2D` → `BatchNormalization` → `ReLU`**
 
     !!! warning
         This is not the convention used in TensorFlow Lite.
@@ -97,12 +97,20 @@ that inference is as fast as possible.
     x = tf.keras.layers.Reshape((-1,))(x)
     ```
 
-*   **Ensure that `filter_height` × `filter_width` × `input_channels` is a
+*   **Ensure that `kernel_height` × `kernel_width` × `input_channels` is a
     multiple of 128**
 
     Inside the optimised binary convolution op, an `im2col` procedure is applied
     to the input tensor, which reduces the convolution operation to a (binary)
     matrix multiplication. The `im2col`-transformed input has a depth of size
-    `filter_height` × `filter_width` × `input_channels`, which is padded to a
+    `kernel_height` × `kernel_width` × `input_channels`, which is padded to a
     multiple of 128. If this value is already a multiple of 128, no padding is
     necessary, and so there is no unnecessary extra computation.
+
+    !!! note
+        This constraint is less important than the others in this guide; it is
+        also hard to satisfy exactly, especially with common odd kernel sizes
+        such as 1×1 or 3×3 combined with low input channel counts. Instead, you
+        can minimise inefficiency here by aiming for `kernel_height` ×
+        `kernel_width` × `input_channels` to be as close as possible to the next
+        greatest multiple of 128.
