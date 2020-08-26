@@ -36,9 +36,7 @@ nav:
       - Getting Started: compute-engine/index.md
       # TODO: Add end-to-end example
       - Model Optimization Guide: compute-engine/model_optimization_guide.md
-      - Benchmark:
-          - Raspberry Pi: compute-engine/benchmark_rpi.md
-          - Android: compute-engine/benchmark_android.md
+      - Benchmark: compute-engine/benchmark.md
       - Deploy:
           - Inference from C++: compute-engine/inference.md
           - Build an Android App: compute-engine/quickstart_android.md
