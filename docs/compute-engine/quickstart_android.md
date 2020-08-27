@@ -115,7 +115,7 @@ in detail in the following sections.
     the standard TensorFlow Lite dependency by commenting out the following
     line in `build.gradle` file:
 
-    ```
+    ```gradle
     dependencies {
         // Comment out the following line
         // implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
