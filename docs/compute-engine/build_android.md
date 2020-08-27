@@ -48,7 +48,7 @@ build --action_env ANDROID_SDK_API_LEVEL="29"
 build --action_env ANDROID_SDK_HOME="/tmp/lce_android"
 ```
 
-### Build an LCE inference or benchmark binary ###
+## Build an LCE inference or benchmark binary
 
 To build an LCE inference binary for Android (see [here](/compute-engine/inference/) for creating your
 own LCE binary) the Bazel target needs to built with `--config=android_arm64` flag.
