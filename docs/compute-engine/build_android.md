@@ -31,7 +31,7 @@ After executing the bash script, please accept the Android SDK licence agreement
 The script will download and unpack the Android NDK and SKD under the directory
 `/tmp/lce_android` in the LCE docker container.
 
-##### Custom android version #####
+## Custom Android version
 
 The Android NDK and SDK versions used in LCE are currently hard-coded in the
 install script.
