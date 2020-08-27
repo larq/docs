@@ -36,15 +36,15 @@ The Android NDK and SDK versions used in LCE are currently hard-coded in the
 install script.
 To build LCE against a different NDK and SDK versions, you can manually
 modify `ANDROID_VERSION` and `ANDROID_NDK_VERSION` variables in the
-install script. Additionally, the following configurations in `configure.sh`
-(or `.bazelrc`) file need to be adjusted:
+install script. Additionally, the following configurations in the `.bazelrc`
+file need to be adjusted:
 
 ```shell
-build --action_env ANDROID_NDK_HOME="/tmp/lce_android/ndk/19.2.5345600"
+build --action_env ANDROID_NDK_HOME="/tmp/lce_android/ndk/18.1.5063045"
 build --action_env ANDROID_NDK_API_LEVEL="21"
 build --action_env ANDROID_BUILD_TOOLS_VERSION="28.0.3"
-build --action_env ANDROID_SDK_API_LEVEL="23"
-build --action_env ANDROID_SDK_HOME="/usr/local/android/android-sdk-linux"
+build --action_env ANDROID_SDK_API_LEVEL="29"
+build --action_env ANDROID_SDK_HOME="/tmp/lce_android"
 ```
 
 ### Build an LCE inference or benchmark binary ###
