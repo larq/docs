@@ -128,7 +128,7 @@ in detail in the following sections.
 
 In this guide, we use the Larq [QuickNet](/zoo/api/sota/#quicknet)
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
-`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/api/converter/) (also see our [Model Conversion and Benchmarking Guide](/comppute-engine/end_to_end)) and needs to be placed in the `assets` folder of the Android project.
+`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/api/converter/) (also see our [Model Conversion and Benchmarking Guide](/compute-engine/end_to_end)) and needs to be placed in the `assets` folder of the Android project.
 You also need to use the `labels_without_background.txt` as its corresponding labels file.
 The labels file is already available in the `asset` folder of
 the TensorFlow Lite image classification Android app.
