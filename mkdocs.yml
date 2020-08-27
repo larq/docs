@@ -44,6 +44,7 @@ nav:
           # TODO: Restructure (build benchmarking binaries, build converter)
           - Build from source: compute-engine/build.md
           - Build for ARM: compute-engine/build_arm.md
+          - Build for Android: compute-engine/build_android.md
       - API:
         - Python Converter: compute-engine/api/converter.md
         - TFLite Operators: compute-engine/api/operators.md
