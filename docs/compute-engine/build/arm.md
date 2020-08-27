@@ -27,9 +27,9 @@ inference binary.
 
 === "Cross-compiling with Bazel"
 
-    For cross-compiling on a Mac host, a docker image is required.
+    For cross-compiling on a Mac host, a Docker image is required.
     Please see [setting up Docker](/compute-engine/build/docker/) for instructions on
-    setting up the docker container, and then follow continue the steps here.
+    setting up the Docker container, and then follow continue the steps here.
 
     To cross-compile the LCE example for ARM architectures, the bazel
     target needs to be built with the `--config=rpi3` (32-bit ARM) or
@@ -90,13 +90,10 @@ inference binary.
     It is also possible to replace `--native` by `--rpi` (32-bit ARM) or
     `--aarch64` (64-bit ARM) to add extra compiler optimization flags.
 
-    The resulting compiled files will be stored in
-    `third_party/tensorflow/tensorflow/lite/tools/make/gen/<TARGET>` where,
+    The resulting compiled files will be stored in `gen/<TARGET>/` where,
     depending on your target platform, `<TARGET>` can be `linux_x86_64`,
-    `rpi_armv7l`, or `aarch64_armv8-a`. In the `bin` folder, you can find the
-    example program `lce_minimal` and benchmark program `benchmark_model`.
-    In the `lib` folder, you can find the TensorFlow Lite static library
-    `libtensorflow-lite.a` which includes the LCE customs ops.
+    `rpi_armv7l`, or `linux_aarch64`. Here you can find the example program
+    `lce_minimal` and benchmark program `lce_benchmark`.
 
 
     !!! note
@@ -148,13 +145,9 @@ inference binary.
 
     When building for a 64-bit ARM architecture, replace `--rpi` with `--aarch64`.
 
-    The resulting compiled files will be stored in
-    `third_party/tensorflow/tensorflow/lite/tools/make/gen/<TARGET>` where,
+    The resulting compiled files will be stored in `gen/<TARGET>/` where,
     depending on your target platform, `<TARGET>` can be `linux_x86_64`,
-    `rpi_armv7l`, or `aarch64_armv8-a`. In the `bin` folder, you can find the
-    example program `lce_minimal` and benchmark program `benchmark_model`.
-    In the `lib` folder, you can find the TensorFlow Lite static library
-    `libtensorflow-lite.a` which includes the LCE customs ops.
+    `rpi_armv7l`, or `linux_aarch64`. Here you can find the example program
+    `lce_minimal` and benchmark program `lce_benchmark`.
 
-    Copy the `benchmark_model` program to your ARM
-    machine to run it.
+    Copy the `benchmark_model` program to your ARM machine to run it.
