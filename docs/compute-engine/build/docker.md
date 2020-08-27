@@ -2,8 +2,8 @@
 
 It is usually not needed to build LCE in a [Docker](https://www.docker.com/)
 container, and we recommend first following
-[this guide (converter)](/compute-engine/build/converter/) or
-[this guide (benchmark binaries)](/compute-engine/build/arm/)
+[this guide (benchmark binaries)](/compute-engine/build/arm/) or
+[this guide (converter)](/compute-engine/build/converter/)
 to try and build LCE outside of a Docker container.
 
 There are scenarios in which building in the Docker container is preferred:
@@ -49,7 +49,7 @@ be able to access it.
 
 ## Building a manylinux2010 pip package
 
-To make the larq-compute-engine pip package manylinux2010 compatible, some
+To make the larq-compute-engine pip package `manylinux2010` compatible, some
 extra setup steps need to be taken, which have been collected in
 [this script](https://github.com/larq/compute-engine/blob/master/.github/tools/release_linux.sh).
 
