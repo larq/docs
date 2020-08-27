@@ -1,4 +1,5 @@
-## Create an LCE inference binary for Android ##
+# Create an LCE inference binary for Android
+
 !!! note
     This guide explains how to build a standalone inference binary that can be executed on an Android device using the [Android developer tools](https://developer.android.com/studio/command-line/adb#shellcommands). If you'd rather use LCE for inference as part of an Android app, please check out [this guide](/compute-engine/quickstart_android) instead.
 
