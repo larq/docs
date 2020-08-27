@@ -43,7 +43,7 @@ each of these platforms, please refer to the corresponding guide.
 
 ## Build LCE Converter
 
-The LCE converter is available on [PyPI](https://pypi.org/project/larq-compute-engine/)
+The [LCE converter](/compute-engine/api/converter/) is available on [PyPI](https://pypi.org/project/larq-compute-engine/)
 and can be installed with Python's [pip](https://pip.pypa.io/en/stable/)
 package manager:
 
