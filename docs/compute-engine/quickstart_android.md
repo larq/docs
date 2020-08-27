@@ -89,7 +89,7 @@ in detail in the following sections.
     Modify the `build.gradle` file in the the Android project to
     include `mavenLocal()` repository:
 
-    ```
+    ```gradle
     allprojects {
         repositories {
             jcenter()
