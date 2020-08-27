@@ -5,8 +5,8 @@ This guide describes how to build your own Android app using Larq Compute Engine
 to perform inference with a model built and trained with [Larq](https://larq.dev).
 This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine), or you can build the LCE Lite AAR on your local machine (see [here](#2-add-lce-compatible-tensorflow-lite-aar-to-the-project) for instructions for either approach).
 
-If you'd rather build a binary than a full Android app, [this guide](/compute-engine/build_android) describes how to build
-a LCE-compatible inference binary that can be executed on Android OS (e.g to [benchmark your models](/compute-engine/benchmark)).
+If you'd rather build a command line binary than a full Android app, [this guide](/compute-engine/build_android/) describes how to build
+a LCE-compatible inference binary that can be executed on Android OS (e.g to [benchmark your models](/compute-engine/benchmark/)).
 
 ## Create Your Own Android app using LCE and TensorFlow Lite ##
 In this section, we demonstrate how to perform inference with a Larq model in an
