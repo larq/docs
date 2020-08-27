@@ -35,7 +35,6 @@ nav:
   - Compute Engine:
       - Getting Started: compute-engine/index.md
       - End to End Guide: compute-engine/end_to_end.ipynb
-      # TODO: Add end-to-end example
       - Model Optimization Guide: compute-engine/model_optimization_guide.md
       - Benchmark: compute-engine/benchmark.md
       - Deploy:
