@@ -12,9 +12,10 @@ accordingly. Before proceeding with the next steps, please follow
 the instructions in the main [LCE build guide](/compute-engine/build/) to setup
 the Docker container for LCE and the Bazel build system.
 
-NOTE: we recommend using the docker volume as described in the
-[LCE build guide](/compute-engine/build/) to be able to easily transfer
-files in-between the container and the host machine.
+!!! note
+    We recommend using the docker volume as described in the
+    [LCE build guide](/compute-engine/build/) to be able to easily transfer
+    files in-between the container and the host machine.
 
 ## Install prerequisites
 
