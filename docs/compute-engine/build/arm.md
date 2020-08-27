@@ -31,7 +31,7 @@ inference binary.
 ## Cross-compiling LCE with Bazel
 
 For cross-compiling on a Mac host, a docker image is required.
-Please see [setting up Docker](/compute-engine/docker/) for instructions on
+Please see [setting up Docker](/compute-engine/build/docker/) for instructions on
 setting up the docker container, and then follow continue the steps here.
 
 To cross-compile the LCE example for ARM architectures, the bazel

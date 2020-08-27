@@ -2,8 +2,8 @@
 
 It is usually not needed to build LCE in a [Docker](https://www.docker.com/)
 container, and we recommend first following
-[this guide (converter)](/compute-engine/build_converter/) or
-[this guide (benchmark binaries)](/compute-engine/build_arm/)
+[this guide (converter)](/compute-engine/build/converter/) or
+[this guide (benchmark binaries)](/compute-engine/build/arm/)
 to try and build LCE outside of a Docker container.
 
 There are scenarios in which building in the Docker container is preferred:

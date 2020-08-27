@@ -35,5 +35,4 @@ pip install artifacts/*.whl
 ```
 
 To build a [`manylinux2010`](https://www.python.org/dev/peps/pep-0571/)-compatible
-pip package, follow the steps in [this guide](/compute-engine/docker/).
-
+pip package, follow the steps in [this guide](/compute-engine/build/docker/).
