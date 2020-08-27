@@ -7,7 +7,7 @@ The Larq Compute Engine (LCE) repository consists of two main components:
 
 - **LCE Converter:** which takes a Larq model and generates a TensorFlow Lite
   [FlatBuffer](https://google.github.io/flatbuffers/) file (`.tflite`) compatible
-  with LCE runtime.
+  with the LCE runtime.
 
 Before proceeding with building LCE components, you need to setup Bazel.
 
@@ -17,17 +17,22 @@ Before proceeding with building LCE components, you need to setup Bazel.
 However, to avoid Bazel compatibility issues, you need to use [Bazelisk](https://github.com/bazelbuild/bazelisk)
 as a launcher for Bazel.
 
-To install Bazelisk on Linux, run the following two commands
-(replace `v1.6.1` with your preferred
-[bazelisk version](https://github.com/bazelbuild/bazelisk/releases)):
+=== "Linux"
+    To install Bazelisk on Linux, run the following two commands
+    (replace `v1.6.1` with your preferred
+    [bazelisk version](https://github.com/bazelbuild/bazelisk/releases)):
 
-```shell
-sudo wget -O /usr/local/bin/bazel \
-    https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64
-sudo chmod +x /usr/local/bin/bazel
-```
+    ```shell
+    sudo wget -O /usr/local/bin/bazel \
+        https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64
+    sudo chmod +x /usr/local/bin/bazel
+    ```
 
-To install Bazelisk on MacOS, run `brew install bazelisk`.
+=== "macOS"
+    To install Bazelisk on MacOS, run:
+    ```
+    brew install bazelisk
+    ```
 
 ## Build LCE Runtime
 
