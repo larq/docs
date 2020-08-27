@@ -8,7 +8,8 @@ This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintr
 If you'd rather build a command line binary than a full Android app, [this guide](/compute-engine/build_android/) describes how to build
 a LCE-compatible inference binary that can be executed on Android OS (e.g to [benchmark your models](/compute-engine/benchmark/)).
 
-## Create Your Own Android app using LCE and TensorFlow Lite ##
+## Create Your Own Android app using LCE and TensorFlow Lite
+
 In this section, we demonstrate how to perform inference with a Larq model in an
 Android app. We provide a custom LCE-compatible TensorFlow Lite [Android Archive](https://developer.android.com/studio/projects/android-library) (AAR)
 which you can use in your own Android app to perform inference with the [TensorFlow Lite Java inference APIs](https://www.tensorflow.org/lite/guide/inference#load_and_run_a_model_in_java).
@@ -18,7 +19,7 @@ To get started with TensorFlow Lite on Android, we recommend to carefully read t
 TensorFlow Lite [Android quickstart](https://www.tensorflow.org/lite/guide/android)
 before proceeding with the next steps in this guide.
 
-### 1. Build in Android Studio ###
+### 1. Build in Android Studio
 
 To download and build the TensorFlow Lite Android image classification app
 in [Android Studio](https://developer.android.com/studio), follow the instructions
@@ -68,7 +69,7 @@ in detail in the following sections.
     Once the docker container is setup, run the following command from the LCE root
     directory inside the container:
 
-    ``` bash
+    ```bash
     ./larq_compute_engine/tflite/java/build_lce_aar.sh
     ```
     The script will build the LCE Android archive `lce-lite-<version>.aar` and
@@ -81,9 +82,9 @@ in detail in the following sections.
 
     ```
     mvn install:install-file \
-    -Dfile=lce-lite-0.1.2.aar \
-    -DgroupId=org.larq \
-    -DartifactId=lce-lite -Dversion=0.1.000 -Dpackaging=aar
+        -Dfile=lce-lite-0.1.2.aar \
+        -DgroupId=org.larq \
+        -DartifactId=lce-lite -Dversion=0.1.000 -Dpackaging=aar
     ```
 
     Modify the `build.gradle` file in the the Android project to
@@ -137,7 +138,7 @@ float MobileNet model. To replace the MobileNet with QuickNet, you need to modif
 `getModelPath()` and `getLabelPath()` methods in `ClassifierFloatMobileNet.java`
 file.
 
-``` java
+```java
 @Override
 protected String getModelPath() {
     return "quicknet.tflite";
@@ -152,7 +153,7 @@ protected String getLabelPath() {
 The QuickNet model requires additional normalization of the input by changing
 the `IMAGE_MEAN` and `IMAGE_STD` variables in `ClassifierFloatMobileNet` class:
 
-``` java
+```java
 private static final float[] IMAGE_MEAN = {0.485f * 255, 0.456f * 255, 0.406f * 255};
 private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 255};
 ```
