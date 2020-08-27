@@ -41,9 +41,7 @@ for 64-bit ARM systems, run the following command from the LCE root
 directory:
 
 ```bash
-bazel build \
-    --config=aarch64 \
-    //examples:lce_minimal
+bazel build --config=aarch64 //examples:lce_minimal
 ```
 
 To build the LCE benchmark tool, build the bazel target
@@ -68,18 +66,22 @@ To simplify the build process for various supported targets, we provide the
 argument.
 
 To natively build the LCE library and C++ example programs, first you need to
-install the compiler toolchain on your target device. On Debian based systems like a
-Raspberry Pi board with Raspbian, run the following command:
+install the compiler toolchain on your target device.
 
-```
-sudo apt-get install build-essential
-```
+=== "Linux (Debian based)"
+    On Debian based systems like a
+    Raspberry Pi board with Raspbian, run the following command:
 
-On an Arch based system like a Raspberry Pi board with Manjaro operating system, run the following command instead:
+    ```
+    sudo apt-get install build-essential
+    ```
 
-```
-sudo pacman -S base-devel
-```
+=== "Linux (Arch based)"
+    On an Arch based system like a Raspberry Pi board with Manjaro operating system, run the following command instead:
+
+    ```
+    sudo pacman -S base-devel
+    ```
 
 You should then be able to natively compile LCE by running the following from
 the LCE root directory:
@@ -126,20 +128,19 @@ submodule is loaded:
 git submodule update --init
 ```
 
-To cross-compile LCE, you need to first install the compiler toolchain.
-For Debian based systems, run the following commands:
+To cross-compile LCE, you need to first install the compiler toolchain:
 
-```bash
-sudo apt-get update
-sudo apt-get install crossbuild-essential-armhf
-```
+=== "Linux (Debian based)"
+    ```bash
+    sudo apt-get update
+    sudo apt-get install crossbuild-essential-armhf
+    ```
 
-On an Arch based systems, the package is called `arm-linux-gnueabihf`:
-
-```bash
-sudo pacman -Syy
-sudo pacman -S arm-linux-gnueabihf
-```
+=== "Linux (Arch based)"
+    ```bash
+    sudo pacman -Syy
+    sudo pacman -S arm-linux-gnueabihf
+    ```
 
 To build for 32-bit ARM architectures, run the following command from the LCE
 root directory:
