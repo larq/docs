@@ -1,6 +1,6 @@
 ## Create an LCE inference binary for Android ##
 !!! note
-    This guide explains how to build standalone inference binary that can be executed on Android OS. If you'd rather use LCE for inference as part of your own Android app, please check out [this guide](/compute-engine/quickstart_android) instead.
+    This guide explains how to build a standalone inference binary that can be executed on an Android device using the [Android developer tools](https://developer.android.com/studio/command-line/adb#shellcommands). If you'd rather use LCE for inference as part of an Android app, please check out [this guide](/compute-engine/quickstart_android) instead.
 
 To build Larq Compute Engine (LCE) for Android,
 you must have the [Android NDK](https://developer.android.com/ndk) and
