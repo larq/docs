@@ -101,7 +101,7 @@ in detail in the following sections.
     Replace the standard TensorFlow Lite dependency with
     local LCE Lite AAR:
 
-    ```
+    ```gradle
     dependencies {
         implementation 'org.larq:lce-lite:0.1.000'
     }
