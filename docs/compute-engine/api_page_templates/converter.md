@@ -6,8 +6,8 @@ The LCE converter allows you to convert a Keras model built with `larq` to an LC
 
 Before installing the LCE converter, please install:
 
-- [Python](https://www.python.org/) version `3.6` or `3.7`
-- [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15`, `2.0.0`, or `2.1.0` (recommended):
+- [Python](https://www.python.org/) version `3.6`, `3.7`, or `3.8`
+- [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15`, `2.0`, `2.1`, `2.2` or `2.3` (recommended):
   ```shell
   pip install tensorflow  # or tensorflow-gpu
   ```
