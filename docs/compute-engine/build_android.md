@@ -15,7 +15,7 @@ NOTE: we recommend using the docker volume as described in the
 [LCE build guide](/compute-engine/build/) to be able to easily transfer
 files in-between the container and the host machine.
 
-##### Install prerequisites #####
+## Install prerequisites
 
 We provide a bash script which uses the `sdkmanager` tool
 to install the Android NDK and SDK inside the Docker container.
