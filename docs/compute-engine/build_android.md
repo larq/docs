@@ -56,9 +56,7 @@ For example, to build the [minimal example](https://github.com/larq/compute-engi
 run the following command from the LCE root directory:
 
 ```bash
-bazel build -c opt \
-    --config=android_arm64 \
-    //examples:lce_minimal
+bazel build -c opt --config=android_arm64 //examples:lce_minimal
 ```
 
 To build the [LCE benchmark tool](https://github.com/larq/compute-engine/tree/master/larq_compute_engine/tflite/benchmark)
