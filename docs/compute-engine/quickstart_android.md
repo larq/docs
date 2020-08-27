@@ -6,8 +6,7 @@ to perform inference with a model built and trained with [Larq](https://larq.dev
 This can be achieved either by using our pre-built [LCE Lite AAR hosted on Bintray](https://bintray.com/plumeraihq/larq-compute-engine), or you can build the LCE Lite AAR on your local machine (see [here](2-add-lce-compatible-tensorflow-lite-aar-to-the-project) for instructions for either approach).
 
 If you'd rather build a binary than a full Android app, [this guide](/compute-engine/build_android) describes how to build
-a LCE-compatible inference binary that can be executed on Android OS
-(e.g, a binary to benchmark your models).
+a LCE-compatible inference binary that can be executed on Android OS (e.g to [benchmark your models](/compute-engine/benchmark)).
 
 ## Create Your Own Android app using LCE and TensorFlow Lite ##
 In this section, we demonstrate how to perform inference with a Larq model in an
@@ -128,8 +127,7 @@ in detail in the following sections.
 
 In this guide, we use the Larq [QuickNet](/zoo/api/sota/#quicknet)
 model for efficient and fast image classification. The FlatBuffer format of the QuickNet model
-`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/api/converter/)
-and needs to be placed in the `assets` folder of the Android project.
+`quicknet.tflite` can be created by using the [LCE converter](/compute-engine/api/converter/) (also see our [Model Conversion and Benchmarking Guide](/comppute-engine/end_to_end)) and needs to be placed in the `assets` folder of the Android project.
 You also need to use the `labels_without_background.txt` as its corresponding labels file.
 The labels file is already available in the `asset` folder of
 the TensorFlow Lite image classification Android app.
