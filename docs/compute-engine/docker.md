@@ -1,4 +1,3 @@
-
 # Docker container for LCE builds
 
 It is usually not needed to build LCE in a [Docker](https://www.docker.com/)

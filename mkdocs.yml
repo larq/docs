@@ -40,11 +40,12 @@ nav:
       - Deploy:
           - Inference from C++: compute-engine/inference.md
           - Build an Android App: compute-engine/quickstart_android.md
-      - Build from source:
-          # TODO: Restructure (build benchmarking binaries, build converter)
+      - Build:
           - Build from source: compute-engine/build.md
           - Build for ARM: compute-engine/build_arm.md
           - Build for Android: compute-engine/build_android.md
+          - Build Converter: compute-engine/build_converter.md
+          - Build inside Docker: compute-engine/docker.md
       - API:
         - Python Converter: compute-engine/api/converter.md
         - TFLite Operators: compute-engine/api/operators.md
