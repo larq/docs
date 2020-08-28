@@ -127,7 +127,7 @@ inference binary.
     === "Linux (Debian based)"
         ```bash
         sudo apt-get update
-        sudo apt-get install crossbuild-essential-armhf
+        sudo apt-get install crossbuild-essential-arm64
         ```
 
     === "Linux (Arch based)"
