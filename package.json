@@ -4,8 +4,7 @@
   "scripts": {
     "install": "python3 -m pip install -r requirements.txt",
     "prebuild": "./download_lce_readme.sh && python3 generate_docs.py",
-    "build:docs": "python3 -m mkdocs build -d public",
-    "build": "npm run build:docs && npm run build:docs",
+    "build": "IGNORE_MODEL_SUMMARIES=1 python3 -m mkdocs build -d public && python3 -m mkdocs build -d public",
     "dev": "IGNORE_MODEL_SUMMARIES=1 python3 -m mkdocs serve"
   }
 }
