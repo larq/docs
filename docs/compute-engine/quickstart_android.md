@@ -63,10 +63,10 @@ in detail in the following sections.
     In case that you would like to make local changes to the LCE code or
     TensorFlow Lite binaries, you might wish to build the LCE Lite AAR locally.
     We provide a bash script to build the LCE Lite AAR. The bash script is only
-    tested inside the LCE docker container. See the LCE [build guide](/compute-engine/build/) to
-    setup the docker container.
+    tested inside the LCE Docker container. See the LCE [build guide](/compute-engine/build/) to
+    setup the Docker container.
 
-    Once the docker container is setup, run the following command from the LCE root
+    Once the Docker container is setup, run the following command from the LCE root
     directory inside the container:
 
     ```bash
