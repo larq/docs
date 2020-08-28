@@ -34,11 +34,18 @@ nav:
           - zoo.sota: zoo/api/sota.md
   - Compute Engine:
       - Getting Started: compute-engine/index.md
-      - Inference: compute-engine/inference.md
-      - Quickstart Android: compute-engine/quickstart_android.md
+      - End to End Guide: compute-engine/end_to_end.ipynb
+      - Model Optimization Guide: compute-engine/model_optimization_guide.md
+      - Benchmark: compute-engine/benchmark.md
+      - Deploy:
+          - Inference from C++: compute-engine/inference.md
+          - Build an Android App: compute-engine/quickstart_android.md
       - Build:
-          - Build from source: compute-engine/build.md
-          - Build for ARM: compute-engine/build_arm.md
+          - Build from source: compute-engine/build/index.md
+          - Build for ARM: compute-engine/build/arm.md
+          - Build for Android: compute-engine/build/android.md
+          - Build Converter: compute-engine/build/converter.md
+          - Build inside Docker: compute-engine/build/docker.md
       - API:
         - Python Converter: compute-engine/api/converter.md
         - TFLite Operators: compute-engine/api/operators.md
