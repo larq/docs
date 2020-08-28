@@ -49,7 +49,7 @@ in detail in the following sections.
     }
 
     dependencies {
-        implementation 'org.larq:lce-lite:0.1.2'
+        implementation 'org.larq:lce-lite:0.4.0'
     }
     ```
 
@@ -82,7 +82,7 @@ in detail in the following sections.
 
     ```
     mvn install:install-file \
-        -Dfile=lce-lite-0.1.2.aar \
+        -Dfile=lce-lite-0.4.0.aar \
         -DgroupId=org.larq \
         -DartifactId=lce-lite -Dversion=0.1.000 -Dpackaging=aar
     ```
