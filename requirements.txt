@@ -15,4 +15,4 @@ keras-autodoc==0.5.1
 
 larq==0.10.0
 larq-zoo==1.0.5
-larq-compute-engine==0.3.1
+larq-compute-engine==0.4.0
