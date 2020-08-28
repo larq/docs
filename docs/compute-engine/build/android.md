@@ -9,12 +9,12 @@ you must have the [Android NDK](https://developer.android.com/ndk) and
 Below we explain how to install the Android prerequisites in the LCE
 Docker container and how to configure the LCE Bazel build settings
 accordingly. Before proceeding with the next steps, please follow
-the instructions in the main [LCE build guide](/compute-engine/build/) to setup
-the Docker container for LCE and the Bazel build system.
+[these instructions](/compute-engine/build/docker/) to setup the Docker container
+and [these instructions](/compute-engine/build/) to setup Bazel.
 
 !!! note
-    We recommend using the docker volume as described in the
-    [LCE build guide](/compute-engine/build/) to be able to easily transfer
+    We recommend using the Docker volume as described
+    [here](/compute-engine/build/docker/) to be able to easily transfer
     files in-between the container and the host machine.
 
 ## Install prerequisites
@@ -30,7 +30,7 @@ root directory:
 
 After executing the bash script, please accept the Android SDK licence agreement.
 The script will download and unpack the Android NDK and SKD under the directory
-`/tmp/lce_android` in the LCE docker container.
+`/tmp/lce_android` in the LCE Docker container.
 
 ## Custom Android version
 
