@@ -9,7 +9,17 @@ The Larq Compute Engine (LCE) repository consists of two main components:
   [FlatBuffer](https://google.github.io/flatbuffers/) file (`.tflite`) compatible
   with the LCE runtime.
 
-Before proceeding with building LCE components, you need to setup Bazel.
+!!! important
+    Make sure to checkout the `git` tag matching the version of the
+    [LCE converter](/compute-engine/api/converter/) used to convert the model:
+    ```
+    git checkout v0.4.0
+    ```
+    If you have installed the converter from PyPI you can check the
+    currently installed version using:
+    ```
+    pip freeze | grep larq-compute-engine
+    ```
 
 ## Setup the build environment
 
