@@ -6,15 +6,19 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
 
     1. Download the prebuilt benchmarking binary from the [latest release](https://github.com/larq/compute-engine/releases/latest):
        ```
-       wget <TODO-URL> -O lce_benchmark_model
+       wget https://github.com/larq/compute-engine/releases/download/v0.4.0/lce_benchmark_model_aarch64 -O lce_benchmark_model
        ```
 
-    2. Benchmark the converted `.tflite` model:
+    2. Make the binary executable:
+       ```
+       chmod +x lce_benchmark_model
+       ```
+
+    3. Benchmark the converted `.tflite` model:
        ```
        ./lce_benchmark_model --graph=quicknet.tflite --num_threads=4
        ```
        Add `--help` to the command for a detailed description of the available benchmarking options.
-       <!-- TODO do we need to make it executable first -->
 
 === "Android phone"
 
@@ -34,24 +38,28 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
 
     4. Download the prebuilt Android benchmarking binary from the [latest release](https://github.com/larq/compute-engine/releases/latest):
        ```
-       wget <TODO-URL> -O lce_benchmark_model
+       wget https://github.com/larq/compute-engine/releases/download/v0.4.0/lce_benchmark_model_android_arm64 -O lce_benchmark_model
        ```
 
-    5. Transfer the LCE inference binary to your phone:
+    5. Make the binary executable:
+       ```
+       chmod +x lce_benchmark_model
+       ```
+
+    6. Transfer the LCE inference binary to your phone:
        ```
        adb push lce_benchmark_model /data/local/tmp
        ```
 
-    6. Transfer the converted `.tflite` model file to your phone:
+    7. Transfer the converted `.tflite` model file to your phone:
        ```
        adb push quicknet.tflite /data/local/tmp
        ```
 
-    7. Benchmark the model:
+    8. Benchmark the model:
        ```
        adb shell /data/local/tmp/lce_benchmark_model \
            --graph=/data/local/tmp/quicknet.tflite \
            --num_threads=4
        ```
        Add `--help` to the command for a detailed description of the available benchmarking options.
-       <!-- TODO do we need to make it executable first -->
