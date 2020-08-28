@@ -127,14 +127,16 @@ inference binary.
     === "Linux (Debian based)"
         ```bash
         sudo apt-get update
-        sudo apt-get install crossbuild-essential-arm64
+        sudo apt-get install crossbuild-essential-armhf crossbuild-essential-arm64
         ```
+        The `-armhf` package is for 32-bit ARM, the `-arm64` package for 64-bit ARM.
 
     === "Linux (Arch based)"
         ```bash
         sudo pacman -Syy
-        sudo pacman -S arm-linux-gnueabihf
+        sudo pacman -S arm-linux-gnueabihf aarch64-linux-gnu-gcc
         ```
+        The first package is for 32-bit ARM, the second one for 64-bit ARM.
 
     To build for 32-bit ARM architectures, run the following command from the LCE
     root directory:
