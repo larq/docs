@@ -6,7 +6,7 @@ guidelines to follow when designing models to be run on LCE, so as to ensure
 that inference is as fast as possible.
 
 !!! important
-    This guide assumes that you are deploying Larq Compute Engine on an Arm64
+    This guide assumes that you are deploying Larq Compute Engine on an 64-bit ARM
     device, such as an Android phone or a Raspberry Pi 4 board (with 64-bit OS).
 
 *   **Use multiples of 32 input channels**
