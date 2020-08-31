@@ -5,7 +5,7 @@ The API of Larq is built on top of `tf.keras` and is designed to provide an easy
 It is aimed at both researchers in the field of efficient deep learning and practitioners who want to explore BNNs for their applications. Furthermore, Larq makes it easier for beginners and students to get started with the field of efficient deep learning.
 
 To build a QNN, Larq introduces the concept of [quantized layers](/larq/api/layers/) and [quantizers](/larq/api/quantizers/). A quantizer defines the way of transforming a full precision input to a quantized output and the pseudo-gradient method used for the backwards pass. Each quantized layer requires an `input_quantizer` and a `kernel_quantizer` that describe the way of quantizing the incoming activations and weights of the layer respectively. If both `input_quantizer` and `kernel_quantizer` are `None` the layer is equivalent to a full precision layer. This layer can be used inside a [Keras model](https://www.tensorflow.org/guide/keras/sequential_model) or with a [custom training loop](https://www.tensorflow.org/guide/keras/train_and_evaluate#part_ii_writing_your_own_training_evaluation_loops_from_scratch).
-Note that efficient inference using a trained BNN requires the use of an optimized inference engine; we provide these for several platforms in [Larq Compute Engine](https://github.com/larq/compute-engine).
+Note that efficient inference using a trained BNN requires the use of an optimized inference engine; we provide these for several platforms in [Larq Compute Engine](/compute-engine).
 
 For a detailed explanation checkout our [user guide](/larq/guides/key-concepts/).
 
