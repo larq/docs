@@ -11,6 +11,7 @@
 
 [data-md-color-primary=white] {
   --md-typeset-a-color: var(--larq-green-darkest);
+  --md-footer-bg-color: #0a1d3c;
 }
 
 [data-md-color-scheme=slate] {
@@ -19,10 +20,7 @@
   --md-typeset-a-color: var(--larq-green-darker);
   --md-accent-fg-color: var(--larq-green-darkest);
   --md-default-fg-color--light: hsla(0, 0%, 100%, 0.9);
-}
-
-.md-footer {
-  --md-footer-bg-color: #0a1d3c;
+  --md-footer-bg-color: rgb(36, 38, 53);
 }
 
 h3 {
