@@ -1,7 +1,20 @@
 :root {
+  --larq-green: #7DFB9A;
+  --larq-green-darker: #5FBF75;
+  --larq-blue: #0A1D3C;
   --md-default-fg-color: #0a1d3c;
   --md-default-fg-color--light: #0a1d3c99;
   --md-default-fg-color--lightest: #0a1d3c14;
+  --md-accent-fg-color: var(--larq-green);
+}
+
+[data-md-color-primary=white] {
+  --md-primary-fg-color: var(--larq-green-darker);
+  --md-typeset-a-color: var(--larq-green-darker);
+}
+
+[data-md-color-scheme=slate] {
+  --md-default-fg-color--lightest: hsla(0, 0%, 100%, 0.7);
 }
 
 .md-footer {
@@ -13,8 +26,7 @@ h3 {
   padding-top: 8px !important;
 }
 
-.md-nav__title .md-nav__button.md-logo img,
-.md-header-nav__button.md-logo img {
+.md-nav__title .md-nav__button.md-logo img, .md-header-nav__button.md-logo img {
   width: unset;
 }
 
@@ -33,6 +45,10 @@ h3 {
   color: inherit;
 }
 
+.md-typeset .tabbed-set>input:checked+label {
+  color: var(--larq-green-darker);
+}
+
 .model-summary {
   overflow: scroll;
   max-height: 20rem;
@@ -40,6 +56,7 @@ h3 {
 
 .notebook-badge {
   border: 0.05rem solid var(--md-default-fg-color--lightest);
+  color: var(--md-typeset-color);
   padding: 0.45em 1.05em;
   border-radius: 2px;
   cursor: pointer;

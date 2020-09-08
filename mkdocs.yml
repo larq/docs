@@ -62,6 +62,7 @@ theme:
     repo: fontawesome/brands/github
   palette:
     primary: white
+    scheme: preference
     # accent: blue
   font:
     text: "Work Sans"
