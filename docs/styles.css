@@ -17,6 +17,7 @@
 [data-md-color-scheme=slate] {
   --md-default-fg-color--lightest: hsla(0, 0%, 100%, 0.7);
   --md-typeset-a-color: var(--larq-green-darker);
+  --md-default-fg-color--light: hsla(0, 0%, 100%, 0.9);
 }
 
 .md-footer {
