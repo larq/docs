@@ -7,7 +7,7 @@ mknotebooks==0.4.0
 mkdocs-minify-plugin==0.3.0
 mkdocs-exclude==1.0.2
 altair==4.1.0
-pandas==1.1.1
+pandas==1.1.2
 keras-autodoc==0.5.1
 
 larq==0.10.0
