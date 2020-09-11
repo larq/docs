@@ -1,0 +1,14 @@
+tensorflow-cpu
+mkdocs
+mkdocs-material
+pymdown-extensions
+mknotebooks
+mkdocs-minify-plugin
+mkdocs-exclude
+altair
+pandas
+keras-autodoc
+
+larq==0.10.0
+larq-zoo==1.0.5
+larq-compute-engine==0.4.2
