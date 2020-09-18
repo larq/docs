@@ -82,7 +82,8 @@ for repo, api_pages in repo_apis.items():
             "tensorflow.python.ops.variables.Variable": "tf.Variable",
             "tensorflow.python.keras.optimizer_v2.optimizer_v2.OptimizerV2": "tf.keras.optimizers.Optimizer",
             "tensorflow.python.framework.ops.Tensor": "tf.Tensor",
-            "tensorflow.python.keras.engine.training.Model": "tf.keras.models.Model",
+            "tensorflow.python.keras.engine.training.Model": "tf.keras.Model",
+            "tensorflow.python.framework.dtypes.DType": "tf.dtypes.DType",
         },
         max_signature_line_length=88,
     )
