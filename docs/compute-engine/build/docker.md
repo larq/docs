@@ -54,7 +54,7 @@ extra setup steps need to be taken, which have been collected in
 [this script](https://github.com/larq/compute-engine/blob/master/.github/tools/release_linux.sh).
 
 We recommend running this as follows, from inside the Docker container. Please
-change the Python verion to the desired version:
+change the Python version to the desired version:
 
 ```bash
 cd /tmp/lce-volume
