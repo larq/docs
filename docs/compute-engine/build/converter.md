@@ -1,15 +1,15 @@
 # Building the converter
 
 To build the pip package with the converter, Bazel needs to know for which
-python version to build the package.
-If you are using a python virtual environment, please run bazel from that
-environment, as Bazel will automatically detect the python version of the
+Python version to build the package.
+If you are using a Python virtual environment, please run bazel from that
+environment, as Bazel will automatically detect the Python version of the
 virtual environment.
 
-Bazel will detect the python version the first time you try to build anything
-that requires python. If you have run Bazel outside of your virtual
+Bazel will detect the Python version the first time you try to build anything
+that requires Python. If you have run Bazel outside of your virtual
 environment and now want to run it in the environment, you have to make Bazel
-re-detect the python verion. This requires a full clean, a normal `clean` is
+re-detect the Python version. This requires a full clean, a normal `clean` is
 not enough to trigger the redetection.:
 
 ```bash
@@ -18,6 +18,7 @@ bazel clean --expunge
 
 Install the TensorFlow pip package to ensure that all required dependencies
 are available:
+
 ```bash
 pip install tensorflow
 ```
