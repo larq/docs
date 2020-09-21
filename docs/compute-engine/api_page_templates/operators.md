@@ -18,7 +18,7 @@ The operation will compute
 \\[
 \hat{y}\_{n,\mathrm{out}} = \sum_{i = 0}^{I - 1} w_{\mathrm{out}, i} \star \mathrm{bsign}(x_{n,i})
 \\]
-with \\(n \in [0, N)\\) and \\(\mathrm{out} \in [0, O)\\), where \\(\star\\) is the 2D cross-correlation operator, \\(N\\) is a batch size, \\(I\\) and \\(O\\) denote the number of input and output channels, and \\(\mathrm{bsign}\\)[^1] is the [binary sign function](/larq/api/math/#sign-function).
+with \\(n \in [0, N)\\) and \\(\mathrm{out} \in [0, O)\\), where \\(\star\\) is the 2D cross-correlation operator, \\(N\\) is a batch size, \\(I\\) and \\(O\\) denote the number of input and output channels, and \\(\mathrm{bsign}\\)[^1] is the [binary sign function](/larq/api/math/#sign).
 
 The final output with type `Tensor<float32|int8>` is then calculated as
 \\[
