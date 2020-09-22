@@ -1,10 +1,10 @@
-# Larq Compute Engine Converter
+# Larq Compute Engine Python API
 
-The LCE converter allows you to convert a Keras model built with `larq` to an LCE-compatible TensorFlow Lite FlatBuffer format for inference.
+The LCE Python API allows you to convert a Keras model built with `larq` to an LCE-compatible TensorFlow Lite FlatBuffer format for inference. The package also includes a reference interpreter useful for accuracy evaluation and debugging.
 
 ## Installation
 
-Before installing the LCE converter, please install:
+Before installing the LCE Python API and the converter, please install:
 
 - [Python](https://www.python.org/) version `3.6`, `3.7`, or `3.8`
 - [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15`, `2.0`, `2.1`, `2.2` or `2.3` (recommended):
@@ -12,7 +12,7 @@ Before installing the LCE converter, please install:
   pip install tensorflow  # or tensorflow-gpu
   ```
 
-You can install the LCE converter with Python's [pip](https://pip.pypa.io/en/stable/) package manager:
+You can install `larq-compute-engine` with Python's [pip](https://pip.pypa.io/en/stable/) package manager:
 
 ```shell
 pip install larq-compute-engine
