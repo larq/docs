@@ -58,7 +58,11 @@ repo_apis = {
         ],
     },
     "compute-engine": {
-        "converter.md": ["larq_compute_engine.convert_keras_model"],
+        "converter.md": [
+            "larq_compute_engine.convert_keras_model",
+            "larq_compute_engine.testing.Interpreter",
+            "larq_compute_engine.testing.Interpreter.predict",
+        ],
         "operators.md": [],
     },
 }
@@ -84,6 +88,7 @@ for repo, api_pages in repo_apis.items():
             "tensorflow.python.framework.ops.Tensor": "tf.Tensor",
             "tensorflow.python.keras.engine.training.Model": "tf.keras.Model",
             "tensorflow.python.framework.dtypes.DType": "tf.dtypes.DType",
+            "numpy.ndarray": "np.ndarray",
         },
         max_signature_line_length=88,
     )
