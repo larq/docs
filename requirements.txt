@@ -63,7 +63,7 @@ mypy-extensions==0.4.3    # via black
 nbconvert==5.6.1          # via mknotebooks
 nbformat==5.0.7           # via nbconvert
 nltk==3.5                 # via lunr
-numpy==1.18.5             # via altair, h5py, keras-preprocessing, larq, larq-zoo, opt-einsum, pandas, scipy, tensorboard, tensorflow-cpu, tensorflow-datasets
+numpy==1.18.5             # via altair, h5py, keras-preprocessing, larq, larq-zoo, opt-einsum, pandas, tensorboard, tensorflow-cpu, tensorflow-datasets
 oauthlib==3.1.0           # via requests-oauthlib
 opt-einsum==3.3.0         # via tensorflow-cpu
 packaging==20.4           # via bleach, larq-compute-engine, sphinx
@@ -86,7 +86,6 @@ regex==2020.7.14          # via black, nltk
 requests-oauthlib==1.3.0  # via google-auth-oauthlib
 requests==2.24.0          # via requests-oauthlib, sphinx, tensorboard, tensorflow-datasets
 rsa==4.6                  # via google-auth
-scipy==1.4.1              # via tensorflow-cpu
 six==1.15.0               # via absl-py, astunparse, bleach, google-auth, google-pasta, grpcio, h5py, jsonschema, keras-preprocessing, livereload, lunr, packaging, promise, protobuf, pyrsistent, python-dateutil, tensorboard, tensorflow-cpu, tensorflow-datasets, traitlets
 smmap==3.0.4              # via gitdb
 snowballstemmer==2.0.0    # via sphinx
@@ -99,7 +98,7 @@ sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 tensorboard-plugin-wit==1.7.0  # via tensorboard
 tensorboard==2.3.0        # via tensorflow-cpu
-tensorflow-cpu==2.3.0     # via -r requirements.in
+tensorflow-cpu==2.3.1     # via -r requirements.in
 tensorflow-datasets==3.2.1  # via zookeeper
 tensorflow-estimator==2.3.0  # via tensorflow-cpu
 tensorflow-metadata==0.24.0  # via tensorflow-datasets
