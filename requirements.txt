@@ -47,7 +47,7 @@ keras-autodoc==0.6.0      # via -r requirements.in
 keras-preprocessing==1.1.2  # via tensorflow-cpu
 larq-compute-engine==0.4.3  # via -r requirements.in
 larq-zoo==1.0.5           # via -r requirements.in
-larq==0.10.0              # via -r requirements.in, larq-zoo
+larq==0.10.1              # via -r requirements.in, larq-zoo
 livereload==2.6.3         # via mkdocs
 lunr[languages]==0.5.8    # via mkdocs
 markdown==3.2.2           # via keras-autodoc, mkdocs, mkdocs-material, pymdown-extensions, tensorboard
