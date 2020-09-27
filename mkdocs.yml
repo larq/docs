@@ -5,7 +5,7 @@ site_url: "https://docs.larq.dev/"
 
 nav:
   - Larq:
-      - Getting Started: index.md
+      - Getting Started: larq/index.md
       - User Guides:
           - Key Concepts: larq/guides/key-concepts.md
           - Building BNNs: larq/guides/bnn-architecture.md
@@ -24,7 +24,7 @@ nav:
           - Math: larq/api/math.md
           - Models: larq/api/models.md
           - Metrics: larq/api/metrics.md
-      - FAQ: faq.md
+      - FAQ: larq/faq.md
   - Zoo:
       - Getting Started: zoo/index.md
       - Tutorials: zoo/tutorials.ipynb
@@ -47,7 +47,7 @@ nav:
           - Build Converter: compute-engine/build/converter.md
           - Build inside Docker: compute-engine/build/docker.md
       - API:
-          - Python API: compute-engine/api/converter.md
+          - Python API: compute-engine/api/python.md
           - TFLite Operators: compute-engine/api/operators.md
 
 repo_url: https://github.com/larq/larq
@@ -125,3 +125,8 @@ plugins:
   - exclude:
       glob:
         - "*/api_page_templates/*"
+  - redirects:
+      redirect_maps:
+        index.md: larq/index.md
+        faq.md: larq/faq.md
+        compute-engine/api/converter.md: compute-engine/api/python.md

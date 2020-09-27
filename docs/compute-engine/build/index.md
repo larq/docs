@@ -11,7 +11,7 @@ The Larq Compute Engine (LCE) repository consists of two main components:
 
 !!! important
     Make sure to checkout the `git` tag matching the version of the
-    [LCE converter](/compute-engine/api/converter/) used to convert the model:
+    [LCE converter](/compute-engine/api/python/) used to convert the model:
     ```
     git checkout v0.4.3
     ```
@@ -53,7 +53,7 @@ each of these platforms, please refer to the corresponding guide.
 
 ## Build LCE Converter
 
-The [LCE converter](/compute-engine/api/converter/) is available on [PyPI](https://pypi.org/project/larq-compute-engine/)
+The [LCE converter](/compute-engine/api/python/) is available on [PyPI](https://pypi.org/project/larq-compute-engine/)
 and can be installed with Python's [pip](https://pip.pypa.io/en/stable/)
 package manager:
 

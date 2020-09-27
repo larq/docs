@@ -57,7 +57,8 @@ mkdocs-exclude==1.0.2     # via -r requirements.in
 mkdocs-material-extensions==1.0  # via mkdocs-material
 mkdocs-material==6.0.0    # via -r requirements.in, mkdocs-material-extensions
 mkdocs-minify-plugin==0.3.0  # via -r requirements.in
-mkdocs==1.1.2             # via -r requirements.in, mkdocs-exclude, mkdocs-material, mkdocs-minify-plugin, mknotebooks
+mkdocs-redirects==1.0.1   # via -r requirements.in
+mkdocs==1.1.2             # via -r requirements.in, mkdocs-exclude, mkdocs-material, mkdocs-minify-plugin, mkdocs-redirects, mknotebooks
 mknotebooks==0.5.0        # via -r requirements.in
 mypy-extensions==0.4.3    # via black
 nbconvert==5.6.1          # via mknotebooks
