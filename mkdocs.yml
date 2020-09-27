@@ -68,8 +68,8 @@ theme:
     text: "Work Sans"
     code: "Roboto Mono"
   features:
-    - tabs
-    - instant
+    - navigation.tabs
+    - navigation.instant
 
 extra:
   social:
