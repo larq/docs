@@ -75,7 +75,7 @@ protobuf==3.13.0          # via tensorboard, tensorflow-cpu, tensorflow-datasets
 pyasn1-modules==0.2.8     # via google-auth
 pyasn1==0.4.8             # via pyasn1-modules, rsa
 pygments==2.6.1           # via mkdocs-material, nbconvert, sphinx
-pymdown-extensions==8.0   # via -r requirements.in, mkdocs-material
+pymdown-extensions==8.0.1  # via -r requirements.in, mkdocs-material
 pyparsing==2.4.7          # via packaging
 pyrsistent==0.16.0        # via jsonschema
 python-dateutil==2.8.1    # via jupyter-client, pandas
