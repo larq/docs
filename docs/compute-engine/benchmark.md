@@ -1,6 +1,6 @@
 # Benchmark models
 
-Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted models](/compute-engine/api/converter/) on Android phones or 64-bit ARM based systems like the Raspberry Pi.
+Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted models](/compute-engine/api/python/) on Android phones or 64-bit ARM based systems like the Raspberry Pi.
 
 === "Raspberry Pi (64-bit)"
 

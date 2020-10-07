@@ -5,6 +5,7 @@ pymdown-extensions
 mknotebooks
 mkdocs-minify-plugin
 mkdocs-exclude
+mkdocs-redirects
 altair
 pandas
 keras-autodoc
