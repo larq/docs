@@ -20,6 +20,10 @@ _Larq Zoo is part of a family of libraries for BNN development; you can also che
 
 ## Available models
 
+```plot-altair
+  /plots/zoo_hero.vg.json
+```
+
 The following models are trained on the [ImageNet](http://image-net.org/) dataset.
 The Top-1 and Top-5 accuracy refers to the model's performance on the ImageNet validation dataset, memory refers to the memory after quantization of the weights.
 Models were benchmarked using [Larq Compute Engine](/compute-engine/) on a [Pixel 1 phone (2016)](https://support.google.com/pixelphone/answer/7158570?hl=en-GB), single-threaded[^1].
