@@ -53,9 +53,9 @@ repo_apis = {
             "larq_zoo.literature.XNORNet",
         ],
         "sota.md": [
+            "larq_zoo.sota.QuickNetSmall",
             "larq_zoo.sota.QuickNet",
             "larq_zoo.sota.QuickNetLarge",
-            "larq_zoo.sota.QuickNetXL",
         ],
     },
     "compute-engine": {

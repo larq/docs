@@ -1,0 +1,1405 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 400,
+  "height": 300,
+  "style": "cell",
+  "data": [
+    {
+      "name": "selector001_store"
+    },
+    {
+      "name": "data-16f5a6091df0fa8b112f8b4632375703",
+      "values": [
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "QuickNetLarge",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f9cc57ed790>",
+          "batch_size": 1024,
+          "model_name": "RefNet/v1.1-large",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68133",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.407830834388733,
+          "1bit_macs": 3699376128,
+          "8bit_macs": 0,
+          "32bit_macs": 28861440,
+          "val_accuracy": 0.6682400107383728,
+          "model_size_bytes": 5660320,
+          "model_size_int8_eq_bytes": 3537064,
+          "rpi4B_1thread_latency_std": 0.174,
+          "pixel1_1thread_latency_std": 0.251,
+          "rpi4B_1thread_latency_mean": 84.34530000000001,
+          "pixel1_1thread_latency_mean": 45.477,
+          "rpi4B_1thread_latency_int8_std": 0.052,
+          "pixel1_1thread_latency_int8_std": 0.526,
+          "rpi4B_1thread_latency_int8_mean": 79.2312,
+          "pixel1_1thread_latency_int8_mean": 47.9029,
+          "val_sparse_top_k_categorical_accuracy": 0.8705400228500366,
+          "category": "bnn",
+          "model_family": "QuickNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68133",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68133/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 5.398101806640625,
+          "val_accuracy_100": 66.82400107383728
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "QuickNet",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f984004a280>",
+          "batch_size": 1024,
+          "model_name": "RefNet/v1.1",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68132",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.5938572883605957,
+          "1bit_macs": 1849688064,
+          "8bit_macs": 0,
+          "32bit_macs": 28861440,
+          "val_accuracy": 0.6322399973869324,
+          "model_size_bytes": 4368032,
+          "model_size_int8_eq_bytes": 2267048,
+          "rpi4B_1thread_latency_std": 0.08,
+          "pixel1_1thread_latency_std": 0.517,
+          "rpi4B_1thread_latency_mean": 51.7278,
+          "pixel1_1thread_latency_mean": 27.396900000000002,
+          "rpi4B_1thread_latency_int8_std": 0.062,
+          "pixel1_1thread_latency_int8_std": 0.732,
+          "rpi4B_1thread_latency_int8_mean": 45.778400000000005,
+          "pixel1_1thread_latency_int8_mean": 28.773799999999998,
+          "val_sparse_top_k_categorical_accuracy": 0.8454599976539612,
+          "category": "bnn",
+          "model_family": "QuickNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68132",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68132/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 4.165679931640625,
+          "val_accuracy_100": 63.22399973869324
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "QuickNetSmall",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f6d44321160>",
+          "batch_size": 1024,
+          "model_name": "RefNet/v1.1-small",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68131",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.7716387510299683,
+          "1bit_macs": 1156055040,
+          "8bit_macs": 0,
+          "32bit_macs": 15489536,
+          "val_accuracy": 0.5959799885749817,
+          "model_size_bytes": 4197152,
+          "model_size_int8_eq_bytes": 2172488,
+          "rpi4B_1thread_latency_std": 0.215,
+          "pixel1_1thread_latency_std": 0.044,
+          "rpi4B_1thread_latency_mean": 31.6288,
+          "pixel1_1thread_latency_mean": 17.4544,
+          "rpi4B_1thread_latency_int8_std": 0.042,
+          "pixel1_1thread_latency_int8_std": 0.578,
+          "rpi4B_1thread_latency_int8_mean": 29.1735,
+          "pixel1_1thread_latency_int8_mean": 18.6854,
+          "val_sparse_top_k_categorical_accuracy": 0.8177000284194946,
+          "category": "bnn",
+          "model_family": "QuickNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68131",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68131/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 4.002716064453125,
+          "val_accuracy_100": 59.59799885749817
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "XNORNet",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f624b5d2070>",
+          "batch_size": 1024,
+          "model_name": "XNORNet",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68127",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 2.6110150814056396,
+          "1bit_macs": 1025744896,
+          "8bit_macs": 0,
+          "32bit_macs": 113379328,
+          "val_accuracy": 0.4459800124168396,
+          "model_size_bytes": 23880320,
+          "model_size_int8_eq_bytes": 11429792,
+          "rpi4B_1thread_latency_std": 0.3,
+          "pixel1_1thread_latency_std": 0.186,
+          "rpi4B_1thread_latency_mean": 54.7365,
+          "pixel1_1thread_latency_mean": 29.2524,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.6911399960517883,
+          "category": "bnn",
+          "model_family": "XNORNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68127",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68127/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 22.7740478515625,
+          "val_accuracy_100": 44.59800124168396
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "RealToBinaryNet",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7ff618d51940>",
+          "batch_size": 1024,
+          "model_name": "RealToBinaryNet",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68126",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.4526422023773193,
+          "1bit_macs": 1676279808,
+          "8bit_macs": 0,
+          "32bit_macs": 138087936,
+          "val_accuracy": 0.6493800282478333,
+          "model_size_bytes": 5378976,
+          "model_size_int8_eq_bytes": 2374632,
+          "rpi4B_1thread_latency_std": 0.303,
+          "pixel1_1thread_latency_std": 0.128,
+          "rpi4B_1thread_latency_mean": 99.37360000000001,
+          "pixel1_1thread_latency_mean": 48.7599,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.8576599955558777,
+          "category": "bnn",
+          "model_family": "RealToBinaryNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68126",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68126/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 5.129791259765625,
+          "val_accuracy_100": 64.93800282478333
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "MeliusNet22",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f22af183a60>",
+          "batch_size": 1024,
+          "model_name": "MeliusNet22",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68125",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.63572096824646,
+          "1bit_macs": 4624220160,
+          "8bit_macs": 0,
+          "32bit_macs": 136388608,
+          "val_accuracy": 0.6250399947166443,
+          "model_size_bytes": 4065568,
+          "model_size_int8_eq_bytes": 1590088,
+          "rpi4B_1thread_latency_std": 0.467,
+          "pixel1_1thread_latency_std": 0.457,
+          "rpi4B_1thread_latency_mean": 252.092,
+          "pixel1_1thread_latency_mean": 110.711,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.8394200205802917,
+          "category": "bnn",
+          "model_family": "MeliusNet22",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68125",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68125/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 3.877227783203125,
+          "val_accuracy_100": 62.50399947166443
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BinaryDenseNet45",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7fa5e3afaa60>",
+          "batch_size": 1024,
+          "model_name": "BinaryDenseNet45",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68123",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.5400707721710205,
+          "1bit_macs": 6430556160,
+          "8bit_macs": 0,
+          "32bit_macs": 244103424,
+          "val_accuracy": 0.643280029296875,
+          "model_size_bytes": 7703968,
+          "model_size_int8_eq_bytes": 3083752,
+          "rpi4B_1thread_latency_std": 0.623,
+          "pixel1_1thread_latency_std": 0.374,
+          "rpi4B_1thread_latency_mean": 268.85,
+          "pixel1_1thread_latency_mean": 129.337,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.851580023765564,
+          "category": "bnn",
+          "model_family": "BinaryDenseNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68123",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68123/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 7.347076416015625,
+          "val_accuracy_100": 64.3280029296875
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BinaryDenseNet37Dilated",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f96a33c0cd0>",
+          "batch_size": 1024,
+          "model_name": "BinaryDenseNet37Dilated",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68122",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.5370532274246216,
+          "1bit_macs": 7774470144,
+          "8bit_macs": 0,
+          "32bit_macs": 452625408,
+          "val_accuracy": 0.6420800089836121,
+          "model_size_bytes": 5382304,
+          "model_size_int8_eq_bytes": 2057512,
+          "rpi4B_1thread_latency_std": 0.194,
+          "pixel1_1thread_latency_std": 0.363,
+          "rpi4B_1thread_latency_mean": 352.28,
+          "pixel1_1thread_latency_mean": 174.88,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.8521599769592285,
+          "category": "bnn",
+          "model_family": "BinaryDenseNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68122",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68122/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 5.132965087890625,
+          "val_accuracy_100": 64.2080008983612
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BinaryDenseNet37",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7fd4ec9129d0>",
+          "batch_size": 1024,
+          "model_name": "BinaryDenseNet37",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68121",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.6102228164672852,
+          "1bit_macs": 4506808320,
+          "8bit_macs": 0,
+          "32bit_macs": 199738368,
+          "val_accuracy": 0.6276800036430359,
+          "model_size_bytes": 5382304,
+          "model_size_int8_eq_bytes": 2057512,
+          "rpi4B_1thread_latency_std": 0.13,
+          "pixel1_1thread_latency_std": 0.218,
+          "rpi4B_1thread_latency_mean": 206.81,
+          "pixel1_1thread_latency_mean": 97.09230000000001,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.8415799736976624,
+          "category": "bnn",
+          "model_family": "BinaryDenseNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68121",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68121/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 5.132965087890625,
+          "val_accuracy_100": 62.76800036430359
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BinaryDenseNet28",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f521267fdc0>",
+          "batch_size": 1024,
+          "model_name": "BinaryDenseNet28",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68120",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.706257700920105,
+          "1bit_macs": 3587383296,
+          "8bit_macs": 0,
+          "32bit_macs": 202484224,
+          "val_accuracy": 0.6083400249481201,
+          "model_size_bytes": 4241312,
+          "model_size_int8_eq_bytes": 1454312,
+          "rpi4B_1thread_latency_std": 0.408,
+          "pixel1_1thread_latency_std": 0.242,
+          "rpi4B_1thread_latency_mean": 180.977,
+          "pixel1_1thread_latency_mean": 84.9142,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.8276000022888184,
+          "category": "bnn",
+          "model_family": "BinaryDenseNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68120",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68120/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 4.044830322265625,
+          "val_accuracy_100": 60.83400249481201
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BinaryResNetE18",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7ff8f0ce5670>",
+          "batch_size": 1024,
+          "model_name": "BinaryResNetE18",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68119",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.8353198766708374,
+          "1bit_macs": 1676279808,
+          "8bit_macs": 0,
+          "32bit_macs": 137793536,
+          "val_accuracy": 0.5816199779510498,
+          "model_size_bytes": 4189856,
+          "model_size_int8_eq_bytes": 2077352,
+          "rpi4B_1thread_latency_std": 0.238,
+          "pixel1_1thread_latency_std": 0.147,
+          "rpi4B_1thread_latency_mean": 86.148,
+          "pixel1_1thread_latency_mean": 41.8137,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.80867999792099,
+          "category": "bnn",
+          "model_family": "BinaryResNetE18",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68119",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68119/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 3.995758056640625,
+          "val_accuracy_100": 58.16199779510498
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BiRealNet",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7f583aa289d0>",
+          "batch_size": 1024,
+          "model_name": "BiRealNet",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68118",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 1.8699129819869995,
+          "1bit_macs": 1676279808,
+          "8bit_macs": 0,
+          "32bit_macs": 137793536,
+          "val_accuracy": 0.5747399926185608,
+          "model_size_bytes": 4189344,
+          "model_size_int8_eq_bytes": 2077224,
+          "rpi4B_1thread_latency_std": 0.11,
+          "pixel1_1thread_latency_std": 0.266,
+          "rpi4B_1thread_latency_mean": 85.44460000000001,
+          "pixel1_1thread_latency_mean": 41.745400000000004,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.799340009689331,
+          "category": "bnn",
+          "model_family": "BiRealNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68118",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68118/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 3.995269775390625,
+          "val_accuracy_100": 57.47399926185608
+        },
+        {
+          "experiment_group": "koen.benchmark-project.2292",
+          "loss": "sparse_categorical_crossentropy",
+          "model": "BinaryAlexNet",
+          "epochs": 0,
+          "dataset": "ImageNet(name=\"imagenet2012:5.0.*\", data_dir=\"gs://plumerai/data\", download=False, train_split=\"train\", validation_split=\"validation\", test_split=None, class_fraction=1, num_classes=1000)",
+          "dry_run": false,
+          "metrics": [
+            "accuracy",
+            "sparse_top_k_categorical_accuracy"
+          ],
+          "use_xla": false,
+          "optimizer": "<tensorflow.python.keras.optimizer_v2.gradient_descent.SGD object at 0x7fc0754548e0>",
+          "batch_size": 1024,
+          "model_name": "BinaryAlexNet",
+          "output_dir": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68117",
+          "benchmark_on": [
+            "pixel1",
+            "rpi"
+          ],
+          "restore_best": false,
+          "cache_dataset": false,
+          "throw_on_fail": true,
+          "export_summary": false,
+          "experiment_name": null,
+          "use_tensorboard": true,
+          "randomized_delay": false,
+          "use_progress_bar": false,
+          "lce_profile_levels": [
+            1,
+            2
+          ],
+          "use_half_precision": true,
+          "calibration_momentum": 0.99,
+          "save_untrained_model": false,
+          "use_terminate_on_nan": true,
+          "validation_frequency": 5,
+          "max_inference_time_ms": null,
+          "use_model_checkpointing": true,
+          "evaluate_model_on_device": false,
+          "max_lcem_memory_usage_kb": null,
+          "calculate_lcem_memory_usage": false,
+          "pretrained_weights_gcs_link": null,
+          "post_train_calibration_epochs": 1,
+          "val_loss": 3.168203830718994,
+          "1bit_macs": 768512000,
+          "8bit_macs": 0,
+          "32bit_macs": 72855552,
+          "val_accuracy": 0.36155998706817627,
+          "model_size_bytes": 7812248,
+          "model_size_int8_eq_bytes": 7749416,
+          "rpi4B_1thread_latency_std": 0.15,
+          "pixel1_1thread_latency_std": 0.466,
+          "rpi4B_1thread_latency_mean": 109.491,
+          "pixel1_1thread_latency_mean": 44.396699999999996,
+          "rpi4B_1thread_latency_int8_std": null,
+          "pixel1_1thread_latency_int8_std": null,
+          "rpi4B_1thread_latency_int8_mean": null,
+          "pixel1_1thread_latency_int8_mean": null,
+          "val_sparse_top_k_categorical_accuracy": 0.6157799959182739,
+          "category": "bnn",
+          "model_family": "BinaryAlexNet",
+          "source": "https://polyaxon.plumerai.com/app/koen/benchmark-project/experiments/68117",
+          "latency_breakdown_file": "gs://plumerai/polyaxon_outputs/koen/benchmark-project/groups/2292/68117/pixel1_1thread_latency_op_breakdown.csv",
+          "model_size": 7.450340270996094,
+          "val_accuracy_100": 36.15599870681763
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "data-16f5a6091df0fa8b112f8b4632375703",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "toNumber(datum[\"pixel1_1thread_latency_mean\"])",
+          "as": "pixel1_1thread_latency_mean"
+        },
+        {
+          "type": "formula",
+          "expr": "datum[\"model_family\"]===\"QuickNet\" ? 0 : 1",
+          "as": "color_model_family_sort_index"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"model_size\"]) && isFinite(+datum[\"model_size\"]) && isValid(datum[\"pixel1_1thread_latency_mean\"]) && isFinite(+datum[\"pixel1_1thread_latency_mean\"]) && isValid(datum[\"val_accuracy\"]) && isFinite(+datum[\"val_accuracy\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {
+          "events": "mousemove",
+          "update": "isTuple(group()) ? group() : unit"
+        }
+      ]
+    },
+    {
+      "name": "selector001",
+      "update": "vlSelectionResolve(\"selector001_store\", \"union\")"
+    },
+    {
+      "name": "selector001_pixel1_1thread_latency_mean",
+      "on": [
+        {
+          "events": {
+            "signal": "selector001_translate_delta"
+          },
+          "update": "panLinear(selector001_translate_anchor.extent_x, -selector001_translate_delta.x / width)"
+        },
+        {
+          "events": {
+            "signal": "selector001_zoom_delta"
+          },
+          "update": "zoomLinear(domain(\"x\"), selector001_zoom_anchor.x, selector001_zoom_delta)"
+        },
+        {
+          "events": [
+            {
+              "source": "scope",
+              "type": "dblclick"
+            }
+          ],
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "selector001_val_accuracy",
+      "on": [
+        {
+          "events": {
+            "signal": "selector001_translate_delta"
+          },
+          "update": "panLinear(selector001_translate_anchor.extent_y, selector001_translate_delta.y / height)"
+        },
+        {
+          "events": {
+            "signal": "selector001_zoom_delta"
+          },
+          "update": "zoomLinear(domain(\"y\"), selector001_zoom_anchor.y, selector001_zoom_delta)"
+        },
+        {
+          "events": [
+            {
+              "source": "scope",
+              "type": "dblclick"
+            }
+          ],
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "selector001_tuple",
+      "on": [
+        {
+          "events": [
+            {
+              "signal": "selector001_pixel1_1thread_latency_mean || selector001_val_accuracy"
+            }
+          ],
+          "update": "selector001_pixel1_1thread_latency_mean && selector001_val_accuracy ? {unit: \"layer_1\", fields: selector001_tuple_fields, values: [selector001_pixel1_1thread_latency_mean,selector001_val_accuracy]} : null"
+        }
+      ]
+    },
+    {
+      "name": "selector001_tuple_fields",
+      "value": [
+        {
+          "field": "pixel1_1thread_latency_mean",
+          "channel": "x",
+          "type": "R"
+        },
+        {
+          "field": "val_accuracy",
+          "channel": "y",
+          "type": "R"
+        }
+      ]
+    },
+    {
+      "name": "selector001_translate_anchor",
+      "value": {},
+      "on": [
+        {
+          "events": [
+            {
+              "source": "scope",
+              "type": "mousedown"
+            }
+          ],
+          "update": "{x: x(unit), y: y(unit), extent_x: domain(\"x\"), extent_y: domain(\"y\")}"
+        }
+      ]
+    },
+    {
+      "name": "selector001_translate_delta",
+      "value": {},
+      "on": [
+        {
+          "events": [
+            {
+              "source": "window",
+              "type": "mousemove",
+              "consume": true,
+              "between": [
+                {
+                  "source": "scope",
+                  "type": "mousedown"
+                },
+                {
+                  "source": "window",
+                  "type": "mouseup"
+                }
+              ]
+            }
+          ],
+          "update": "{x: selector001_translate_anchor.x - x(unit), y: selector001_translate_anchor.y - y(unit)}"
+        }
+      ]
+    },
+    {
+      "name": "selector001_zoom_anchor",
+      "on": [
+        {
+          "events": [
+            {
+              "source": "scope",
+              "type": "wheel",
+              "consume": true
+            }
+          ],
+          "update": "{x: invert(\"x\", x(unit)), y: invert(\"y\", y(unit))}"
+        }
+      ]
+    },
+    {
+      "name": "selector001_zoom_delta",
+      "on": [
+        {
+          "events": [
+            {
+              "source": "scope",
+              "type": "wheel",
+              "consume": true
+            }
+          ],
+          "force": true,
+          "update": "pow(1.001, event.deltaY * pow(16, event.deltaMode))"
+        }
+      ]
+    },
+    {
+      "name": "selector001_modify",
+      "on": [
+        {
+          "events": {
+            "signal": "selector001_tuple"
+          },
+          "update": "modify(\"selector001_store\", selector001_tuple, true)"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_pathgroup",
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "faceted_path_layer_0_main",
+          "data": "data_0",
+          "groupby": [
+            "model_family"
+          ]
+        }
+      },
+      "encode": {
+        "update": {
+          "width": {
+            "field": {
+              "group": "width"
+            }
+          },
+          "height": {
+            "field": {
+              "group": "height"
+            }
+          }
+        }
+      },
+      "marks": [
+        {
+          "name": "layer_0_marks",
+          "type": "line",
+          "clip": true,
+          "style": [
+            "line"
+          ],
+          "sort": {
+            "field": "datum[\"pixel1_1thread_latency_mean\"]"
+          },
+          "interactive": false,
+          "from": {
+            "data": "faceted_path_layer_0_main"
+          },
+          "encode": {
+            "update": {
+              "strokeDash": {
+                "value": [
+                  5,
+                  5
+                ]
+              },
+              "stroke": {
+                "scale": "color",
+                "field": "model_family"
+              },
+              "description": {
+                "signal": "\"model: \" + (isValid(datum[\"model_family\"]) ? datum[\"model_family\"] : \"\"+datum[\"model_family\"]) + \"; Pixel 1 latency (ms, single thread): \" + (format(datum[\"pixel1_1thread_latency_mean\"], \"\")) + \"; validation accuracy: \" + (format(datum[\"val_accuracy\"], \"\"))"
+              },
+              "x": {
+                "scale": "x",
+                "field": "pixel1_1thread_latency_mean"
+              },
+              "y": {
+                "scale": "y",
+                "field": "val_accuracy"
+              },
+              "defined": {
+                "signal": "isValid(datum[\"pixel1_1thread_latency_mean\"]) && isFinite(+datum[\"pixel1_1thread_latency_mean\"]) && isValid(datum[\"val_accuracy\"]) && isFinite(+datum[\"val_accuracy\"])"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "symbol",
+      "clip": true,
+      "style": [
+        "point"
+      ],
+      "interactive": true,
+      "from": {
+        "data": "data_1"
+      },
+      "encode": {
+        "update": {
+          "opacity": {
+            "value": 0.7
+          },
+          "size": {
+            "scale": "size",
+            "field": "model_size"
+          },
+          "fill": {
+            "scale": "color",
+            "field": "model_family"
+          },
+          "tooltip": {
+            "signal": "{\"Model\": isValid(datum[\"model\"]) ? datum[\"model\"] : \"\"+datum[\"model\"], \"Model size (MiB)\": format(datum[\"model_size\"], \".2f\"), \"Latency (ms)\": format(datum[\"pixel1_1thread_latency_mean\"], \".2f\"), \"Val accuracy (%)\": format(datum[\"val_accuracy_100\"], \".2f\")}"
+          },
+          "ariaRoleDescription": {
+            "value": "point"
+          },
+          "description": {
+            "signal": "\"model: \" + (isValid(datum[\"model_family\"]) ? datum[\"model_family\"] : \"\"+datum[\"model_family\"]) + \"; model size (MiB): \" + (format(datum[\"model_size\"], \"\")) + \"; Model: \" + (isValid(datum[\"model\"]) ? datum[\"model\"] : \"\"+datum[\"model\"]) + \"; Model size (MiB): \" + (format(datum[\"model_size\"], \".2f\")) + \"; Latency (ms): \" + (format(datum[\"pixel1_1thread_latency_mean\"], \".2f\")) + \"; Val accuracy (%): \" + (format(datum[\"val_accuracy_100\"], \".2f\")) + \"; Pixel 1 latency (ms, single thread): \" + (format(datum[\"pixel1_1thread_latency_mean\"], \"\")) + \"; validation accuracy: \" + (format(datum[\"val_accuracy\"], \"\"))"
+          },
+          "x": [
+            {
+              "test": "!isValid(datum[\"pixel1_1thread_latency_mean\"]) || !isFinite(+datum[\"pixel1_1thread_latency_mean\"])",
+              "value": 0
+            },
+            {
+              "scale": "x",
+              "field": "pixel1_1thread_latency_mean"
+            }
+          ],
+          "y": [
+            {
+              "test": "!isValid(datum[\"val_accuracy\"]) || !isFinite(+datum[\"val_accuracy\"])",
+              "field": {
+                "group": "height"
+              }
+            },
+            {
+              "scale": "y",
+              "field": "val_accuracy"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {
+            "data": "data_0",
+            "field": "pixel1_1thread_latency_mean"
+          },
+          {
+            "data": "data_1",
+            "field": "pixel1_1thread_latency_mean"
+          }
+        ]
+      },
+      "domainRaw": {
+        "signal": "selector001[\"pixel1_1thread_latency_mean\"]"
+      },
+      "range": [
+        0,
+        {
+          "signal": "width"
+        }
+      ],
+      "nice": true,
+      "zero": false
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {
+            "data": "data_0",
+            "field": "val_accuracy"
+          },
+          {
+            "data": "data_1",
+            "field": "val_accuracy"
+          }
+        ]
+      },
+      "domainRaw": {
+        "signal": "selector001[\"val_accuracy\"]"
+      },
+      "range": [
+        {
+          "signal": "height"
+        },
+        0
+      ],
+      "zero": false,
+      "nice": true
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {
+        "data": "data_0",
+        "field": "model_family",
+        "sort": {
+          "op": "min",
+          "field": "color_model_family_sort_index"
+        }
+      },
+      "range": "category"
+    },
+    {
+      "name": "size",
+      "type": "linear",
+      "domain": {
+        "data": "data_1",
+        "field": "model_size"
+      },
+      "range": [
+        0,
+        361
+      ],
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {
+        "signal": "ceil(width/40)"
+      },
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {
+        "signal": "ceil(height/40)"
+      },
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Pixel 1 latency (ms, single thread)",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {
+        "signal": "ceil(width/40)"
+      },
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "ImageNet validation accuracy",
+      "labelOverlap": true,
+      "tickCount": {
+        "signal": "ceil(height/40)"
+      },
+      "zindex": 0
+    }
+  ],
+  "legends": [
+    {
+      "title": "model",
+      "stroke": "color",
+      "symbolType": "circle",
+      "fill": "color",
+      "encode": {
+        "symbols": {
+          "update": {
+            "opacity": {
+              "value": 0.7
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "model size (MiB)",
+      "size": "size",
+      "symbolType": "circle",
+      "encode": {
+        "symbols": {
+          "update": {
+            "fill": {
+              "value": "black"
+            },
+            "fillOpacity": {
+              "value": 0.7
+            },
+            "opacity": {
+              "value": 0.7
+            },
+            "stroke": {
+              "value": "transparent"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

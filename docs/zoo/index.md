@@ -20,6 +20,10 @@ _Larq Zoo is part of a family of libraries for BNN development; you can also che
 
 ## Available models
 
+```plot-altair
+  /plots/zoo_hero.vg.json
+```
+
 The following models are trained on the [ImageNet](http://image-net.org/) dataset.
 The Top-1 and Top-5 accuracy refers to the model's performance on the ImageNet validation dataset, memory refers to the memory after quantization of the weights.
 Models were benchmarked using [Larq Compute Engine](/compute-engine/) on a [Pixel 1 phone (2016)](https://support.google.com/pixelphone/answer/7158570?hl=en-GB), single-threaded[^1].
@@ -28,31 +32,30 @@ The model definitions and the train loops are available in the [Larq Zoo reposit
 
 The [`sota`](/zoo/api/sota/) submodule contains these models:
 
-| Model                                         | Top-1 Accuracy | Top-5 Accuracy  | Model size | Latency (Pixel 1, single thread) |
-| --------------------------------------------- | -------------- | --------------  | ---------- | -------------------------------- |
-| [QuickNet](/zoo/api/sota/#quicknet)           | 58.6 %         | 81.0 %          |  3.18 MB   | 18.4 ms                          |
-| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 62.7 %         | 84.0 %          |  4.49 MB   | 27.6 ms                          |
-| [QuickNetXL](/zoo/api/sota/#quicknetxl)       | 67.0 %         | 87.3 %          |  6.22 MB   | 47.9 ms                          |
+| Model                                         | Top-1 Accuracy | Top-5 Accuracy | Model size | Latency (Pixel 1, single thread) |
+| --------------------------------------------- | -------------- | -------------- | ---------- | -------------------------------- |
+| [QuickNetSmall](/zoo/api/sota/#quicknetsmall) | 59.4 %         | 81.8 %         | 4.00 MB    | 17.5 ms                          |
+| [QuickNet](/zoo/api/sota/#quicknet)           | 63.3 %         | 84.6 %         | 4.17 MB    | 27.4 ms                          |
+| [QuickNetLarge](/zoo/api/sota/#quicknetlarge) | 66.9 %         | 87.0 %         | 5.40 MB    | 45.5 ms                          |
 
 The [`literature`](/zoo/api/literature/) submodule contains the following models:
 
 | Model                                                                   | Top-1 Accuracy | Top-5 Accuracy | Model size | Latency (Pixel 1, single thread) |
 | ----------------------------------------------------------------------- | -------------- | -------------- | ---------- | -------------------------------- |
-| [RealToBinaryNet](/zoo/api/literature/#realtobinarynet)                 | 65.0 %         | 85.7 %         | 5.13 MB    | 51.3 ms                          |
-| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.6 %         | 85.2 %         | 7.35 MB    | 138.5 ms                         |
-| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.3 %         | 85.2 %         | 5.13 MB    | 182.9 ms                         |
-| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.9 %         | 84.2 %         | 5.13 MB    | 102.2 ms                         |
-| [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 3.88 MB    | 117.7 ms                         |
-| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.9 %         | 82.8 %         | 4.04 MB    | 90.0 ms                          |
-| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.3 %         | 80.8 %         | 4.00 MB    | 43.6 ms                          |
-| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.5 %         | 79.8 %         | 4.00 MB    | 43.4 ms                          |
+| [RealToBinaryNet](/zoo/api/literature/#realtobinarynet)                 | 65.0 %         | 85.7 %         | 5.13 MB    | 48.8 ms                          |
+| [BinaryDenseNet45](/zoo/api/literature/#binarydensenet45)               | 64.6 %         | 85.2 %         | 7.35 MB    | 129.3 ms                         |
+| [BinaryDenseNet37Dilated](/zoo/api/literature/#binarydensenet37dilated) | 64.3 %         | 85.2 %         | 5.13 MB    | 174.9 ms                         |
+| [BinaryDenseNet37](/zoo/api/literature/#binarydensenet37)               | 62.9 %         | 84.2 %         | 5.13 MB    | 97.1 ms                          |
+| [MeliusNet22](/zoo/api/literature/#meliusnet22)                         | 62.4 %         | 83.9 %         | 3.88 MB    | 110.7 ms                         |
+| [BinaryDenseNet28](/zoo/api/literature/#binarydensenet28)               | 60.9 %         | 82.8 %         | 4.04 MB    | 84.9 ms                          |
+| [BinaryResNetE18](/zoo/api/literature/#binaryresnete18)                 | 58.3 %         | 80.8 %         | 4.00 MB    | 41.8 ms                          |
+| [Bi-Real Net](/zoo/api/literature/#birealnet)                           | 57.5 %         | 79.8 %         | 4.00 MB    | 41.7 ms                          |
 | [DoReFaNet](/zoo/api/literature/#dorefanet)                             | 53.4 %         | 76.5 %         | 22.80 MB   | Unsupported[^2]                  |
-| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 45.0 %         | 69.2 %         | 22.77 MB   | 34.9 ms                          |
-| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.3 %         | 61.5 %         | 7.45 MB    | 44.3 ms                          |
+| [XNOR-Net](/zoo/api/literature/#xnornet)                                | 45.0 %         | 69.2 %         | 22.77 MB   | 29.3 ms                          |
+| [Binary AlexNet](/zoo/api/literature/#binaryalexnet)                    | 36.3 %         | 61.5 %         | 7.45 MB    | 44.4 ms                          |
 
-[^1]: Benchmarked on July 20th, 2020.
+[^1]: Benchmarked on October 15th, 2020.
 [^2]: DoReFaNet uses quantizers for which currently no optimized implemention is available in Larq Compute Engine.
-
 
 ## Installation
 
