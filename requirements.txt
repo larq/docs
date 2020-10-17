@@ -55,7 +55,7 @@ markupsafe==1.1.1         # via jinja2
 mistune==0.8.4            # via nbconvert
 mkdocs-exclude==1.0.2     # via -r requirements.in
 mkdocs-material-extensions==1.0  # via mkdocs-material
-mkdocs-material==6.0.2    # via -r requirements.in, mkdocs-material-extensions
+mkdocs-material==6.1.0    # via -r requirements.in, mkdocs-material-extensions
 mkdocs-minify-plugin==0.3.0  # via -r requirements.in
 mkdocs-redirects==1.0.1   # via -r requirements.in
 mkdocs==1.1.2             # via -r requirements.in, mkdocs-exclude, mkdocs-material, mkdocs-minify-plugin, mkdocs-redirects, mknotebooks
