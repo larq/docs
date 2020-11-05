@@ -2,7 +2,7 @@ tensorflow-cpu
 mkdocs
 mkdocs-material
 pymdown-extensions
-mknotebooks
+mknotebooks==0.5.0
 mkdocs-minify-plugin
 mkdocs-exclude
 mkdocs-redirects
@@ -10,6 +10,6 @@ altair
 pandas
 keras-autodoc
 
-larq==0.10.1
-larq-zoo==2.0.0
-larq-compute-engine==0.4.3
+larq
+larq-zoo
+larq-compute-engine
