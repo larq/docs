@@ -51,7 +51,7 @@ larq-zoo==2.0.1           # via -r requirements.in
 larq==0.10.2              # via -r requirements.in, larq-zoo
 livereload==2.6.3         # via mkdocs
 lunr[languages]==0.5.8    # via mkdocs
-markdown==3.3.3           # via keras-autodoc, mkdocs, mkdocs-material, pymdown-extensions, tensorboard
+markdown==3.2.2           # via keras-autodoc, mkdocs, mkdocs-material, pymdown-extensions, tensorboard
 markupsafe==1.1.1         # via jinja2
 mistune==0.8.4            # via nbconvert
 mkdocs-exclude==1.0.2     # via -r requirements.in
