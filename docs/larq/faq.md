@@ -39,7 +39,7 @@ If your paper is publicly available, feel free to also add it to the list of pap
 One of the focuses of Larq is to accelerate research on neural networks with extremely low precision weights and activations.
 Here is a list of papers that have used Larq:
 
-* Helwegen, Koen, et al. ["Latent weights do not exist: Rethinking binarized neural network optimization."](https://papers.nips.cc/paper/8971-latent-weights-do-not-exist-rethinking-binarized-neural-network-optimization.pdf) *Advances in Neural Information Processing Systems (NeurIPS)*. 2019.
+* Helwegen et al. ["Latent weights do not exist: Rethinking binarized neural network optimization."](https://papers.nips.cc/paper/8971-latent-weights-do-not-exist-rethinking-binarized-neural-network-optimization.pdf) *Advances in Neural Information Processing Systems (NeurIPS)*. 2019.
     * Optimization of Binarized Neural Networks (BNNs) currently relies on real-valued latent weights to accumulate small update steps.
       In this paper, we argue that these latent weights cannot be treated analogously to weights in real-valued networks.
       Instead their main role is to provide inertia during training.
@@ -47,6 +47,7 @@ Here is a list of papers that have used Larq:
       We subsequently introduce the first optimizer specifically designed for BNNs, Binary Optimizer (Bop), and demonstrate its performance on CIFAR-10 and ImageNet.
       Together, the redefinition of latent weights as inertia and the introduction of Bop enable a better understanding of BNN optimization and open up the way for further improvements in training methodologies for BNNs.
     * Code available at: [plumerai/rethinking-bnn-optimization](https://github.com/plumerai/rethinking-bnn-optimization)
+* Amir et al. ["An SMT-Based Approach for Verifying Binarized Neural Networks"](https://arxiv.org/abs/2011.02948). 2020.
 
 Have you used Larq for a paper? Feel free to make a pull request to add it to this list!
 
