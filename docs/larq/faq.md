@@ -48,6 +48,13 @@ Here is a list of papers that have used Larq:
       Together, the redefinition of latent weights as inertia and the introduction of Bop enable a better understanding of BNN optimization and open up the way for further improvements in training methodologies for BNNs.
     * Code available at: [plumerai/rethinking-bnn-optimization](https://github.com/plumerai/rethinking-bnn-optimization)
 * Amir et al. ["An SMT-Based Approach for Verifying Binarized Neural Networks"](https://arxiv.org/abs/2011.02948). 2020.
+    * Deep learning has emerged as an effective approach for creating modern software systems, with neural networks often surpassing hand-crafted systems.
+    Unfortunately, neural networks are known to suffer from various safety and security issues.
+    Formal verification is a promising avenue for tackling this difficulty, by formally certifying that networks are correct.
+    We propose an SMT-based technique for verifying \emph{binarized neural networks} - a popular kind of neural networks, where some weights have been binarized in order to render the neural network more memory and energy efficient, and quicker to evaluate.
+    One novelty of our technique is that it allows the verification of neural networks that include both binarized and non-binarized components.
+    Neural network verification is computationally very difficult, and so we propose here various optimizations, integrated into our SMT procedure as deduction steps, as well as an approach for parallelizing verification queries.
+    We implement our technique as an extension to the Marabou framework, and use it to evaluate the approach on popular binarized neural network architectures.
 
 Have you used Larq for a paper? Feel free to make a pull request to add it to this list!
 
