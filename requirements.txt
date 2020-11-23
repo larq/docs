@@ -36,6 +36,7 @@ h5py==2.10.0              # via tensorflow-cpu
 htmlmin==0.1.12           # via mkdocs-minify-plugin
 idna==2.10                # via requests
 imagesize==1.2.0          # via sphinx
+importlib-metadata==2.0.0  # via jsonschema, larq, larq-zoo, markdown
 importlib-resources==3.3.0  # via tensorflow-datasets
 ipython-genutils==0.2.0   # via nbformat, traitlets
 jinja2==2.11.2            # via altair, mkdocs, nbconvert, sphinx
@@ -114,12 +115,13 @@ tqdm==4.53.0              # via larq-compute-engine, nltk, tensorflow-datasets
 traitlets==4.3.3          # via -r requirements.in, jupyter-client, jupyter-core, nbconvert, nbformat
 typed-ast==1.4.1          # via black
 typeguard==2.10.0         # via zookeeper
-typing-extensions==3.7.4.3  # via black
+typing-extensions==3.7.4.3  # via black, tensorflow-datasets
 urllib3==1.26.2           # via requests
 webencodings==0.5.1       # via bleach
 werkzeug==1.0.1           # via tensorboard
 wheel==0.35.1             # via astunparse, tensorboard, tensorflow-cpu
 wrapt==1.12.1             # via tensorflow-cpu
+zipp==3.4.0               # via importlib-metadata, importlib-resources
 zookeeper==1.0.4          # via larq-zoo
 
 # The following packages are considered to be unsafe in a requirements file:
