@@ -1,4 +1,4 @@
-netron_link = "https://lutzroeder.github.io/netron"
+netron_link = "https://netron.app"
 cors_proxy = "https://cors-anywhere.herokuapp.com"
 release_url = "https://github.com/larq/zoo/releases/download"
 
