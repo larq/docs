@@ -234,7 +234,7 @@ pygments==2.7.4
     #   mkdocs-material
     #   nbconvert
     #   sphinx
-pymdown-extensions==8.1
+pymdown-extensions==8.1.1
     # via
     #   -r requirements.in
     #   mkdocs-material
