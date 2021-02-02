@@ -136,7 +136,7 @@ larq-compute-engine==0.5.0
     # via -r requirements.in
 larq-zoo==2.0.5
     # via -r requirements.in
-larq==0.10.2
+larq==0.10.3
     # via
     #   -r requirements.in
     #   larq-zoo
