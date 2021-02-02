@@ -310,7 +310,7 @@ tensorboard-plugin-wit==1.8.0
     # via tensorboard
 tensorboard==2.4.1
     # via tensorflow-cpu
-tensorflow-cpu==2.4.0
+tensorflow-cpu==2.4.1
     # via -r requirements.in
 tensorflow-datasets==4.2.0
     # via zookeeper
