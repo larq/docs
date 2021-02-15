@@ -27,14 +27,15 @@ repo_apis = {
         "models.md": ["larq.models.summary"],  #  parse error, suspecting `print`
         "metrics.md": get_classes("larq.metrics"),
         "quantizers.md": [
-            "larq.quantizers.NoOpQuantizer",
+            "larq.quantizers.Quantizer",
+            "larq.quantizers.NoOp",
             "larq.quantizers.SteSign",
             "larq.quantizers.ApproxSign",
             "larq.quantizers.SteHeaviside",
             "larq.quantizers.SwishSign",
             "larq.quantizers.MagnitudeAwareSign",
             "larq.quantizers.SteTern",
-            "larq.quantizers.DoReFaQuantizer",
+            "larq.quantizers.DoReFa",
         ],
     },
     "zoo": {
