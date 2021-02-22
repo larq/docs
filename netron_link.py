@@ -1,5 +1,5 @@
 netron_link = "https://netron.app"
-cors_proxy = "https://cors-anywhere.herokuapp.com"
+cors_proxy = "https://cors.bridged.cc"
 release_url = "https://github.com/larq/zoo/releases/download"
 
 
