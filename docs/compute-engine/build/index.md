@@ -13,7 +13,7 @@ The Larq Compute Engine (LCE) repository consists of two main components:
     Make sure to checkout the `git` tag matching the version of the
     [LCE converter](/compute-engine/api/python/) used to convert the model:
     ```
-    git checkout v0.4.3
+    git checkout v0.5.0
     ```
     If you have installed the converter from PyPI you can check the
     currently installed version using:
