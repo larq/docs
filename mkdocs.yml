@@ -76,7 +76,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/larq
     - icon: fontawesome/solid/comment
-      link: https://spectrum.chat/larq
+      link: https://github.com/larq/larq/discussions
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/plumerai
     - icon: fontawesome/brands/linkedin
