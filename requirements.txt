@@ -107,7 +107,7 @@ ipython-genutils==0.2.0
     # via
     #   nbformat
     #   traitlets
-jinja2==2.11.2
+jinja2==2.11.3
     # via
     #   altair
     #   mkdocs
