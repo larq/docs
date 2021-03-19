@@ -356,7 +356,7 @@ typing-extensions==3.7.4.3
     #   black
     #   tensorflow-cpu
     #   tensorflow-datasets
-urllib3==1.26.2
+urllib3==1.26.3
     # via requests
 webencodings==0.5.1
     # via bleach
