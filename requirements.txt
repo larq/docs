@@ -166,7 +166,7 @@ mkdocs-material==6.2.8
     #   mkdocs-material-extensions
 mkdocs-minify-plugin==0.4.0
     # via -r requirements.in
-mkdocs-redirects==1.0.1
+mkdocs-redirects==1.0.2
     # via -r requirements.in
 mkdocs==1.1.2
     # via
@@ -281,6 +281,7 @@ six==1.15.0
     #   keras-preprocessing
     #   livereload
     #   lunr
+    #   mkdocs-redirects
     #   promise
     #   protobuf
     #   python-dateutil
