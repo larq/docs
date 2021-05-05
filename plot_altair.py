@@ -1,7 +1,6 @@
 import inspect
 import os
 import uuid
-from functools import reduce
 
 import numpy as np
 import tensorflow as tf
@@ -53,7 +52,7 @@ def html_format(source, language=None, css_class=None, options=None, md=None, **
 def plot_activation(
     source, language=None, css_class=None, options=None, md=None, **kwargs
 ):
-    function = reduce(getattr, [lq, *source.split(".")])
+    function = eval("lq." + source)
     if inspect.isclass(function):
         function = function()
     x = np.linspace(-2, 2, 500)
