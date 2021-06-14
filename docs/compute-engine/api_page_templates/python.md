@@ -6,8 +6,8 @@ The LCE Python API allows you to convert a Keras model built with `larq` to an L
 
 Before installing the LCE Python API and the converter, please install:
 
-- [Python](https://www.python.org/) version `3.6`, `3.7`, or `3.8`
-- [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15`, `2.0`, `2.1`, `2.2` or `2.3` (recommended):
+- [Python](https://www.python.org/) version `3.6`, `3.7`, `3.8`, or `3.9`
+- [Tensorflow](https://www.tensorflow.org/install) version `1.14`, `1.15`, `2.0`, `2.1`, `2.2`, `2.3`, `2.4` or `2.5` (recommended):
   ```shell
   pip install tensorflow  # or tensorflow-gpu
   ```

@@ -62,6 +62,7 @@ repo_apis = {
     "compute-engine": {
         "python.md": [
             "larq_compute_engine.convert_keras_model",
+            "larq_compute_engine.convert_saved_model",
             "larq_compute_engine.testing.Interpreter",
             "larq_compute_engine.testing.Interpreter.predict",
         ],
