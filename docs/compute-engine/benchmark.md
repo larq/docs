@@ -45,7 +45,6 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
        ```
        adb push lce_benchmark_model /data/local/tmp
        ```
-    
     6. Transfer the converted `.tflite` model file to your phone:
        ```
        adb push quicknet.tflite /data/local/tmp
