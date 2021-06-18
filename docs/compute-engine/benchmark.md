@@ -53,7 +53,7 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
        
     7. Make the binary executable:
        ```
-       adb shell +x /data/local/tmp/lce_benchmark_model
+       adb shell chmod +x /data/local/tmp/lce_benchmark_model
        ```
 
     8. Benchmark the model:
