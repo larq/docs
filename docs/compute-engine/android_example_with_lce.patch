@@ -1,0 +1,80 @@
+diff --git a/lite/examples/image_classification/android/build.gradle b/lite/examples/image_classification/android/build.gradle
+index 978712b5..5ad91d0b 100644
+--- a/lite/examples/image_classification/android/build.gradle
++++ b/lite/examples/image_classification/android/build.gradle
+@@ -18,6 +18,7 @@ allprojects {
+     repositories {
+         google()
+         mavenCentral()
++        mavenLocal()
+         maven {
+             name 'ossrh-snapshot'
+             url 'http://oss.sonatype.org/content/repositories/snapshots'
+diff --git a/lite/examples/image_classification/android/lib_support/build.gradle b/lite/examples/image_classification/android/lib_support/build.gradle
+index 518c000c..e055c8c3 100644
+--- a/lite/examples/image_classification/android/lib_support/build.gradle
++++ b/lite/examples/image_classification/android/lib_support/build.gradle
+@@ -39,11 +39,13 @@ dependencies {
+     implementation 'androidx.appcompat:appcompat:1.1.0'
+ 
+     // Build off of nightly TensorFlow Lite
+-    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT'
++    implementation 'org.larq:lce-lite:0.1.000'
++    // implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT'
+     implementation 'org.tensorflow:tensorflow-lite-gpu:0.0.0-nightly-SNAPSHOT'
+ 
+-    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+-
++    implementation ('org.tensorflow:tensorflow-lite-support:0.1.0') {
++        exclude module: 'tensorflow-lite'
++    }
+     // Use local TensorFlow library
+     // implementation 'org.tensorflow:tensorflow-lite-local:0.0.0'
+ }
+diff --git a/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/Classifier.java b/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/Classifier.java
+index e7dbe25e..d46eaff4 100644
+--- a/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/Classifier.java
++++ b/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/Classifier.java
+@@ -219,7 +219,7 @@ public abstract class Classifier {
+         }
+         break;
+       case CPU:
+-        tfliteOptions.setUseXNNPACK(true);
++        tfliteOptions.setUseXNNPACK(false);
+         Log.d(TAG, "CPU execution");
+         break;
+     }
+diff --git a/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/ClassifierFloatMobileNet.java b/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/ClassifierFloatMobileNet.java
+index dd3b6aea..24b9d93c 100644
+--- a/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/ClassifierFloatMobileNet.java
++++ b/lite/examples/image_classification/android/lib_support/src/main/java/org/tensorflow/lite/examples/classification/tflite/ClassifierFloatMobileNet.java
+@@ -25,9 +25,8 @@ import org.tensorflow.lite.support.common.ops.NormalizeOp;
+ public class ClassifierFloatMobileNet extends Classifier {
+ 
+   /** Float MobileNet requires additional normalization of the used input. */
+-  private static final float IMAGE_MEAN = 127.5f;
+-
+-  private static final float IMAGE_STD = 127.5f;
++  private static final float[] IMAGE_MEAN = {0.485f * 255, 0.456f * 255, 0.406f * 255};
++  private static final float[] IMAGE_STD = {0.229f * 255, 0.224f * 255, 0.225f * 255};
+ 
+   /**
+    * Float model does not need dequantization in the post-processing. Setting mean and std as 0.0f
+@@ -49,15 +48,12 @@ public class ClassifierFloatMobileNet extends Classifier {
+ 
+   @Override
+   protected String getModelPath() {
+-    // you can download this file from
+-    // see build.gradle for where to obtain this file. It should be auto
+-    // downloaded into assets.
+-    return "mobilenet_v1_1.0_224.tflite";
++    return "quicknet.tflite";
+   }
+ 
+   @Override
+   protected String getLabelPath() {
+-    return "labels.txt";
++    return "labels_without_background.txt";
+   }
+ 
+   @Override
