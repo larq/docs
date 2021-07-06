@@ -40,13 +40,13 @@ options: `supportDebug`, `debug`, `debug`, and `debug`. Then make sure you do a 
 
 ### 3. Add LCE-compatible TensorFlow Lite AAR to the project ###
 To add the LCE Lite AAR to your android project, you can either use the
-pre-built [LCE Lite AAR](https://github.com/larq/compute-engine/releases) (under 'assets')
+pre-built [LCE Lite AAR](https://github.com/larq/compute-engine/releases/latest) (under 'assets')
 or build the LCE Lite AAR yourself on your local machine. Both approaches are explained
 in detail in the following sections.
 
 === "Use the LCE Lite AAR from the GitHub release assets"
     To use LCE Lite AAR in the android app, we recommend downloading the
-    [LCE package released on GitHub under 'assets'](https://github.com/larq/compute-engine/releases) to your local machine. Then follow the instructions below as if you've built the AAR locally.
+    [LCE package released on GitHub under 'assets'](https://github.com/larq/compute-engine/releases/latest) to your local machine. Then follow the instructions below as if you've built the AAR locally.
 
     This AAR includes binaries for `arm64-v8a`, `x86_64`, `x86` [Android ABIs](https://developer.android.com/ndk/guides/abis).
     Please note that currently hand-optimized LCE operators are available only for `arm64-v8a`.
