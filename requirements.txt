@@ -36,6 +36,8 @@ certifi==2020.12.5
     # via requests
 chardet==4.0.0
     # via requests
+clang==5.0
+    # via tensorflow-cpu
 click==7.1.2
     # via
     #   black
@@ -83,7 +85,7 @@ google-pasta==0.2.0
     # via tensorflow-cpu
 googleapis-common-protos==1.52.0
     # via tensorflow-metadata
-grpcio==1.34.1
+grpcio==1.39.0
     # via
     #   tensorboard
     #   tensorflow-cpu
@@ -130,10 +132,10 @@ jupyter-core==4.7.0
     #   jupyter-client
     #   nbconvert
     #   nbformat
+keras==2.6.0
+    # via tensorflow-cpu
 keras-autodoc==0.7.0
     # via -r requirements.in
-keras-nightly==2.5.0.dev2021032900
-    # via tensorflow-cpu
 keras-preprocessing==1.1.2
     # via tensorflow-cpu
 larq==0.12.0
@@ -309,17 +311,17 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
-tensorboard==2.5.0
+tensorboard==2.6.0
     # via tensorflow-cpu
 tensorboard-data-server==0.6.1
     # via tensorboard
 tensorboard-plugin-wit==1.8.0
     # via tensorboard
-tensorflow-cpu==2.5.1
+tensorflow-cpu==2.6.0
     # via -r requirements.in
 tensorflow-datasets==4.2.0
     # via zookeeper
-tensorflow-estimator==2.5.0
+tensorflow-estimator==2.6.0
     # via tensorflow-cpu
 tensorflow-metadata==0.26.0
     # via tensorflow-datasets
