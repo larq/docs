@@ -144,7 +144,7 @@ larq==0.12.0
     #   larq-zoo
 larq-compute-engine==0.6.1
     # via -r requirements.in
-larq-zoo==2.1.0
+larq-zoo==2.2.0
     # via -r requirements.in
 livereload==2.6.3
     # via mkdocs
