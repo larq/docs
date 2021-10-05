@@ -119,7 +119,7 @@ jinja2==2.11.3
     #   sphinx
 joblib==1.0.0
     # via nltk
-jsmin==2.2.2
+jsmin==3.0.0
     # via mkdocs-minify-plugin
 jsonschema==3.2.0
     # via
@@ -178,7 +178,7 @@ mkdocs-material==6.2.8
     #   mkdocs-material-extensions
 mkdocs-material-extensions==1.0.1
     # via mkdocs-material
-mkdocs-minify-plugin==0.4.0
+mkdocs-minify-plugin==0.4.1
     # via -r requirements.in
 mkdocs-redirects==1.0.3
     # via -r requirements.in
