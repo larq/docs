@@ -44,6 +44,8 @@ click==7.1.2
     #   mkdocs
     #   nltk
     #   zookeeper
+csscompressor==0.9.5
+    # via mkdocs-minify-plugin
 dataclasses==0.8
     # via
     #   black
@@ -178,7 +180,7 @@ mkdocs-material==6.2.8
     #   mkdocs-material-extensions
 mkdocs-material-extensions==1.0.1
     # via mkdocs-material
-mkdocs-minify-plugin==0.4.1
+mkdocs-minify-plugin==0.5.0
     # via -r requirements.in
 mkdocs-redirects==1.0.3
     # via -r requirements.in
