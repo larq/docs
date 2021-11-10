@@ -317,7 +317,7 @@ tensorboard-data-server==0.6.1
     # via tensorboard
 tensorboard-plugin-wit==1.8.0
     # via tensorboard
-tensorflow-cpu==2.6.0
+tensorflow-cpu==2.6.1
     # via -r requirements.in
 tensorflow-datasets==4.2.0
     # via zookeeper
