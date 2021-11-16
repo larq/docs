@@ -152,7 +152,7 @@ livereload==2.6.3
     # via mkdocs
 lunr[languages]==0.5.8
     # via mkdocs
-markdown==3.2.2
+markdown==3.3.5
     # via
     #   -r requirements.in
     #   keras-autodoc
