@@ -140,7 +140,7 @@ keras-autodoc==0.7.0
     # via -r requirements.in
 keras-preprocessing==1.1.2
     # via tensorflow-cpu
-larq==0.12.0
+larq==0.12.2
     # via
     #   -r requirements.in
     #   larq-zoo
