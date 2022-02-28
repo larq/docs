@@ -35,7 +35,7 @@ In Larq, it is trivial to implement this strategy. An example of a layer optimiz
 ```python
 x_out = larq.layers.QuantDense(
     512,
-    input_qunatizer="ste_sign",
+    input_quantizer="ste_sign",
     kernel_quantizer="ste_sign",
     kernel_constraint="weight_clip",
 )(x_out)
