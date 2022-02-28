@@ -338,7 +338,7 @@ traitlets==4.3.3
     #   jupyter-core
     #   nbconvert
     #   nbformat
-typed-ast==1.4.2
+typed-ast==1.5.2
     # via black
 typeguard==2.10.0
     # via zookeeper
