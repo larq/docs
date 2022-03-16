@@ -1,6 +1,6 @@
 tensorflow-cpu
 mkdocs
-mkdocs-material
+mkdocs-material==6.2.8
 pymdown-extensions
 mknotebooks==0.5.0
 markdown~=3.2.2 # pinned due to mknotebooks
