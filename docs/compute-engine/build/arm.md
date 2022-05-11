@@ -8,18 +8,17 @@ To natively build on an ARM system, we provide a solution based on the
 Makefile build system.
 
 !!! warning
-    Although the Raspberry Pi 3 and Raspberry Pi 4 have 64-bit CPUs, the
-    officially supported OS Raspbian for the Raspberry Pi is a 32-bit OS. In order
-    to use the optimized 64-bit kernels of LCE on a Raspberry Pi, a 64-bit OS such
-    as [Manjaro](https://manjaro.org/download/#raspberry-pi-4-xfce) should be used.
+    Although the Raspberry Pi 3 and Raspberry Pi 4 have 64-bit CPUs, the default version of Raspberry Pi OS (previously known as Raspbian) is 32-bit. In order
+    to use the optimized 64-bit kernels of LCE on a Raspberry Pi, the 64-bit version should be used,
+    see [here](https://www.raspberrypi.com/software/operating-systems/) under 'Raspberry Pi OS (64-bit)'.
 
 This leaves us with three ways to build LCE binaries, which we recommend in
 the following order:
 
 1. To cross-compile LCE from a host machine, see "Cross-compiling with Bazel".
-2. To natively compile LCE, see "Building with Make".
-3. To cross-compile LCE using the Make system for users that do not wish to
-   install Bazel, see "Cross-compiling with Make".
+2. To natively compile LCE, see "Building with CMake".
+3. To cross-compile LCE using the CMake system for users that do not wish to
+   install Bazel, see "Cross-compiling with CMake".
 
 This guide will show you how to build the [LCE example program](https://github.com/larq/compute-engine/blob/master/examples/lce_minimal.cc).
 See [here](/compute-engine/inference/) to find out how you can create your own LCE
@@ -49,71 +48,48 @@ inference binary.
     `bazel-bin/larq_compute_engine/tflite/benchmark/lce_benchmark_model`. You can
     copy these to your ARM machine and run them there.
 
-=== "Building with Make"
+=== "Building with CMake"
 
-    To build LCE with Make, first clone the Larq Compute Engine repository and make
+    To build LCE with CMake, first clone the Larq Compute Engine repository and make
     sure the tensorflow submodule is loaded:
 
     ```bash
     git submodule update --init
     ```
 
-    To simplify the build process for various supported targets, we provide the
-    `build_lce.sh` script which accepts the build target platform as an input
-    argument.
-
     To natively build the LCE library and C++ example programs, first you need to
     install the compiler toolchain on your target device.
 
     === "Linux (Debian based)"
         On Debian based systems like a
-        Raspberry Pi board with Raspbian, run the following command:
+        Raspberry Pi board with Raspberry Pi OS (previously known as Raspbian), run the following command:
 
         ```
-        sudo apt-get install build-essential
+        sudo apt-get install cmake build-essential
         ```
 
     === "Linux (Arch based)"
         On an Arch based system like a Raspberry Pi board with Manjaro operating system, run the following command instead:
 
         ```
-        sudo pacman -S base-devel
+        sudo pacman -S base-devel cmake
         ```
 
     You should then be able to natively compile LCE by running the following from
     the LCE root directory:
 
     ```bash
-    larq_compute_engine/tflite/build_make/build_lce.sh --native
+    cmake -S . -B build
+    cmake --build build
     ```
 
-    It is also possible to replace `--native` by `--rpi` (32-bit ARM) or
-    `--aarch64` (64-bit ARM) to add extra compiler optimization flags.
-
-    The resulting compiled files will be stored in `gen/<TARGET>/` where,
-    depending on your target platform, `<TARGET>` can be `linux_x86_64`,
-    `rpi_armv7l`, or `linux_aarch64`. Here you can find the example program
-    `lce_minimal` and benchmark program `lce_benchmark`.
+    Here 'build' is the name of the out-of-source build directory chosen,
+    which will have all the intermediate and resulting files.
+    Here you can find the example program
+    `example` and benchmark program `lce_benchmark_model`.
 
 
-    !!! note
-        On some systems the compiler is incorrectly named `aarch64-unknown-linux-gnu-gcc`
-        while it should be named `aarch64-linux-gnu-gcc`. If building with the option
-        `--aarch64` results in errors then the following bash script can be used to
-        create symlinks that fix this naming issue.
-
-        ```bash
-        #!/usr/bin/env bash
-
-        cd /usr/bin
-        for unknownfile in aarch64-unknown-linux-gnu-*; do
-        	newfile="${unknownfile/-unknown-/-}"    
-        	echo "Creating symlink $newfile that points to $unknownfile"
-        	ln -s $unknownfile $newfile
-        done
-        ```
-
-=== "Cross-compiling with Make"
+=== "Cross-compiling with CMake"
 
     First clone the Larq Compute Engine repository and make sure the tensorflow
     submodule is loaded:
@@ -138,18 +114,21 @@ inference binary.
         ```
         The first package is for 32-bit ARM, the second one for 64-bit ARM.
 
-    To build for 32-bit ARM architectures, run the following command from the LCE
+    To cross-compile, run the following command from the LCE
     root directory:
 
     ```bash
-    larq_compute_engine/tflite/build_make/build_lce.sh --rpi
+    export CC=/path/to/gcc-arm-<X>.<Y>-x86_64-<ARCH>-none-linux-gnu/bin/<ARCH>-none-linux-gnu-gcc
+    export CXX=/path/to/gcc-arm-<X>.<Y>-x86_64-<ARCH>-none-linux-gnu/bin/<ARCH>-none-linux-gnu-g++
+    cmake -S . -B build
+    cmake --build build -j4
     ```
 
-    When building for a 64-bit ARM architecture, replace `--rpi` with `--aarch64`.
+    Here the paths to the compiler are dependent on whether you are targeting 32-bit or 64-bit ARM. Change these paths to match the ARM cross-compiler installed on your system.
 
-    The resulting compiled files will be stored in `gen/<TARGET>/` where,
-    depending on your target platform, `<TARGET>` can be `linux_x86_64`,
-    `rpi_armv7l`, or `linux_aarch64`. Here you can find the example program
-    `lce_minimal` and benchmark program `lce_benchmark`.
+    Here 'build' is the name of the out-of-source build directory chosen,
+    which will have all the intermediate and resulting files.
+    Here you can find the example program
+    `example` and benchmark program `lce_benchmark_model`.
 
     Copy the `benchmark_model` program to your ARM machine to run it.
