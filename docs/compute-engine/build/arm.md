@@ -5,20 +5,18 @@ for 32-bit, as well as 64-bit ARM-based systems.
 [Bazel](https://bazel.build/) is the primary build system for LCE and can
 be used to cross-compile binaries for ARM architectures directly from the host.
 To natively build on an ARM system, we provide a solution based on the
-Makefile build system.
+CMake build system.
 
 !!! warning
     Although the Raspberry Pi 3 and Raspberry Pi 4 have 64-bit CPUs, the default version of Raspberry Pi OS (previously known as Raspbian) is 32-bit. In order
     to use the optimized 64-bit kernels of LCE on a Raspberry Pi, the 64-bit version should be used,
     see [here](https://www.raspberrypi.com/software/operating-systems/) under 'Raspberry Pi OS (64-bit)'.
 
-This leaves us with three ways to build LCE binaries, which we recommend in
+This leaves us with two main ways to build LCE binaries, which we recommend in
 the following order:
 
 1. To cross-compile LCE from a host machine, see "Cross-compiling with Bazel".
 2. To natively compile LCE, see "Building with CMake".
-3. To cross-compile LCE using the CMake system for users that do not wish to
-   install Bazel, see "Cross-compiling with CMake".
 
 This guide will show you how to build the [LCE example program](https://github.com/larq/compute-engine/blob/master/examples/lce_minimal.cc).
 See [here](/compute-engine/inference/) to find out how you can create your own LCE
@@ -87,48 +85,3 @@ inference binary.
     which will have all the intermediate and resulting files.
     Here you can find the example program
     `example` and benchmark program `lce_benchmark_model`.
-
-
-=== "Cross-compiling with CMake"
-
-    First clone the Larq Compute Engine repository and make sure the tensorflow
-    submodule is loaded:
-
-    ```bash
-    git submodule update --init
-    ```
-
-    To cross-compile LCE, you need to first install the compiler toolchain:
-
-    === "Linux (Debian based)"
-        ```bash
-        sudo apt-get update
-        sudo apt-get install crossbuild-essential-armhf crossbuild-essential-arm64
-        ```
-        The `-armhf` package is for 32-bit ARM, the `-arm64` package for 64-bit ARM.
-
-    === "Linux (Arch based)"
-        ```bash
-        sudo pacman -Syy
-        sudo pacman -S arm-linux-gnueabihf aarch64-linux-gnu-gcc
-        ```
-        The first package is for 32-bit ARM, the second one for 64-bit ARM.
-
-    To cross-compile, run the following command from the LCE
-    root directory:
-
-    ```bash
-    export CC=/path/to/gcc-arm-<X>.<Y>-x86_64-<ARCH>-none-linux-gnu/bin/<ARCH>-none-linux-gnu-gcc
-    export CXX=/path/to/gcc-arm-<X>.<Y>-x86_64-<ARCH>-none-linux-gnu/bin/<ARCH>-none-linux-gnu-g++
-    cmake -S . -B build
-    cmake --build build -j4
-    ```
-
-    Here the paths to the compiler are dependent on whether you are targeting 32-bit or 64-bit ARM. Change these paths to match the ARM cross-compiler installed on your system.
-
-    Here 'build' is the name of the out-of-source build directory chosen,
-    which will have all the intermediate and resulting files.
-    Here you can find the example program
-    `example` and benchmark program `lce_benchmark_model`.
-
-    Copy the `benchmark_model` program to your ARM machine to run it.
