@@ -13,7 +13,7 @@ The Larq Compute Engine (LCE) repository consists of two main components:
     Make sure to checkout the `git` tag matching the version of the
     [LCE converter](/compute-engine/api/python/) used to convert the model:
     ```
-    git checkout v0.6.0
+    git checkout v0.7.0
     ```
     If you have installed the converter from PyPI you can check the
     currently installed version using:
@@ -34,7 +34,7 @@ as a launcher for Bazel.
 
     ```shell
     sudo wget -O /usr/local/bin/bazel \
-        https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-amd64
+        https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/bazelisk-linux-amd64
     sudo chmod +x /usr/local/bin/bazel
     ```
 
