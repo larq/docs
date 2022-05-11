@@ -6,7 +6,7 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
 
     1. Download the prebuilt benchmarking binary from the [latest release](https://github.com/larq/compute-engine/releases/latest):
        ```
-       wget https://github.com/larq/compute-engine/releases/download/v0.6.0/lce_benchmark_model_aarch64 -O lce_benchmark_model
+       wget https://github.com/larq/compute-engine/releases/download/v0.7.0/lce_benchmark_model_aarch64 -O lce_benchmark_model
        ```
 
     2. Make the binary executable:
@@ -38,7 +38,7 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
 
     4. Download the prebuilt Android benchmarking binary from the [latest release](https://github.com/larq/compute-engine/releases/latest):
        ```
-       wget https://github.com/larq/compute-engine/releases/download/v0.6.0/lce_benchmark_model_android_arm64 -O lce_benchmark_model
+       wget https://github.com/larq/compute-engine/releases/download/v0.7.0/lce_benchmark_model_android_arm64 -O lce_benchmark_model
        ```
 
     5. Transfer the LCE inference binary to your phone:
@@ -50,7 +50,7 @@ Larq Compute Engine provides prebuilt binaries to benchmark [Larq converted mode
        ```
        adb push quicknet.tflite /data/local/tmp
        ```
-       
+
     7. Make the binary executable:
        ```
        adb shell chmod +x /data/local/tmp/lce_benchmark_model
