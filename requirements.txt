@@ -58,7 +58,7 @@ flatbuffers==1.12
     #   tensorflow-cpu
 future==0.18.2
     # via tensorflow-datasets
-gast==0.5.3
+gast==0.4.0
     # via tensorflow-cpu
 ghp-import==2.1.0
     # via mkdocs
@@ -112,7 +112,7 @@ jupyter-core==4.10.0
     #   jupyter-client
     #   nbconvert
     #   nbformat
-keras==2.8.0
+keras==2.9.0
     # via tensorflow-cpu
 keras-autodoc==0.7.0
     # via -r requirements.in
@@ -193,6 +193,7 @@ packaging==21.3
     #   larq-compute-engine
     #   mkdocs
     #   sphinx
+    #   tensorflow-cpu
 pandas==1.4.2
     # via
     #   -r requirements.in
@@ -291,16 +292,18 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-tensorboard==2.8.0
+tensorboard==2.9.0
     # via tensorflow-cpu
 tensorboard-data-server==0.6.1
     # via tensorboard
 tensorboard-plugin-wit==1.8.1
     # via tensorboard
-tensorflow-cpu==2.8.0
+tensorflow-cpu==2.9.0
     # via -r requirements.in
 tensorflow-datasets==4.4.0
     # via zookeeper
+tensorflow-estimator==2.9.0
+    # via tensorflow-cpu
 tensorflow-io-gcs-filesystem==0.25.0
     # via tensorflow-cpu
 tensorflow-metadata==1.8.0
@@ -313,8 +316,6 @@ terminaltables==3.1.10
     # via larq
 testpath==0.6.0
     # via nbconvert
-tf-estimator-nightly==2.8.0.dev2021122109
-    # via tensorflow-cpu
 toml==0.10.2
     # via black
 toolz==0.11.2
