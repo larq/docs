@@ -54,6 +54,8 @@ entrypoints==0.4
     #   altair
     #   jupyter-client
     #   nbconvert
+fastjsonschema==2.15.3
+    # via nbformat
 flatbuffers==1.12
     # via
     #   larq-compute-engine
@@ -94,8 +96,6 @@ importlib-metadata==4.11.3
     # via
     #   markdown
     #   mkdocs
-ipython-genutils==0.2.0
-    # via nbformat
 jinja2==3.0.3
     # via
     #   -r requirements.in
@@ -178,7 +178,7 @@ nbclient==0.6.3
     # via nbconvert
 nbconvert==6.5.0
     # via mknotebooks
-nbformat==5.1.3
+nbformat==5.4.0
     # via
     #   -r requirements.in
     #   nbclient
