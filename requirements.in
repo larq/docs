@@ -3,7 +3,6 @@ mkdocs
 mkdocs-material==6.2.8
 pymdown-extensions
 mknotebooks==0.7.1
-nbformat~=5.4.0 # pinned due to mknotebooks
 jinja2~=3.0.3 # pinned due to mknotebooks
 mkdocs-minify-plugin
 mkdocs-exclude
