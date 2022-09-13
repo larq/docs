@@ -32,8 +32,14 @@ bleach==5.0.0
     # via nbconvert
 cachetools==5.0.0
     # via google-auth
+cairocffi==1.3.0
+    # via cairosvg
+cairosvg==2.5.2
+    # via mkdocs-material
 certifi==2021.10.8
     # via requests
+cffi==1.15.1
+    # via cairocffi
 charset-normalizer==2.0.12
     # via requests
 click==8.0.4
@@ -43,8 +49,12 @@ click==8.0.4
     #   zookeeper
 csscompressor==0.9.5
     # via mkdocs-minify-plugin
+cssselect2==0.6.0
+    # via cairosvg
 defusedxml==0.7.1
-    # via nbconvert
+    # via
+    #   cairosvg
+    #   nbconvert
 dill==0.3.4
     # via tensorflow-datasets
 docutils==0.16
@@ -100,6 +110,7 @@ jinja2==3.1.2
     # via
     #   altair
     #   mkdocs
+    #   mkdocs-material
     #   nbconvert
     #   sphinx
 jsmin==3.0.1
@@ -163,7 +174,7 @@ mkdocs==1.3.1
     #   mknotebooks
 mkdocs-exclude==1.0.2
     # via -r requirements.in
-mkdocs-material==6.2.8
+mkdocs-material==8.5.0
     # via -r requirements.in
 mkdocs-material-extensions==1.0.3
     # via mkdocs-material
@@ -219,6 +230,10 @@ pandocfilters==1.5.0
     # via nbconvert
 pathspec==0.9.0
     # via black
+pillow==9.2.0
+    # via
+    #   cairosvg
+    #   mkdocs-material
 promise==2.3
     # via tensorflow-datasets
 protobuf==3.19.4
@@ -234,6 +249,8 @@ pyasn1==0.4.8
     #   rsa
 pyasn1-modules==0.2.8
     # via google-auth
+pycparser==2.21
+    # via cffi
 pygments==2.12.0
     # via
     #   mkdocs-material
@@ -268,6 +285,7 @@ regex==2022.4.24
     # via black
 requests==2.27.1
     # via
+    #   mkdocs-material
     #   requests-oauthlib
     #   sphinx
     #   tensorboard
@@ -334,7 +352,10 @@ termcolor==1.1.0
 terminaltables==3.1.10
     # via larq
 tinycss2==1.1.1
-    # via nbconvert
+    # via
+    #   cairosvg
+    #   cssselect2
+    #   nbconvert
 toml==0.10.2
     # via black
 toolz==0.11.2
@@ -367,6 +388,7 @@ watchdog==2.1.7
 webencodings==0.5.1
     # via
     #   bleach
+    #   cssselect2
     #   tinycss2
 werkzeug==2.1.2
     # via tensorboard
