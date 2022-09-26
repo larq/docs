@@ -221,7 +221,7 @@ pathspec==0.9.0
     # via black
 promise==2.3
     # via tensorflow-datasets
-protobuf==3.19.4
+protobuf==3.19.5
     # via
     #   googleapis-common-protos
     #   tensorboard
