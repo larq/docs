@@ -112,7 +112,7 @@ jupyter-client==7.3.1
     # via
     #   mknotebooks
     #   nbclient
-jupyter-core==4.10.0
+jupyter-core==4.11.2
     # via
     #   jupyter-client
     #   nbconvert
