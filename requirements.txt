@@ -68,7 +68,7 @@ ghp-import==2.1.0
     # via mkdocs
 gitdb==4.0.9
     # via gitpython
-gitpython==3.1.27
+gitpython==3.1.30
     # via mknotebooks
 google-auth==2.6.6
     # via
