@@ -60,7 +60,7 @@ flatbuffers==1.12
     # via
     #   larq-compute-engine
     #   tensorflow-cpu
-future==0.18.2
+future==0.18.3
     # via tensorflow-datasets
 gast==0.4.0
     # via tensorflow-cpu
