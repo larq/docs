@@ -197,7 +197,7 @@ numpy==1.22.3
     #   tensorboard
     #   tensorflow-cpu
     #   tensorflow-datasets
-oauthlib==3.2.1
+oauthlib==3.2.2
     # via requests-oauthlib
 opt-einsum==3.3.0
     # via tensorflow-cpu
