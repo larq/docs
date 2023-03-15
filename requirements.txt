@@ -84,7 +84,7 @@ grpcio==1.46.0
     #   tensorflow-cpu
 h5py==3.6.0
     # via tensorflow-cpu
-htmlmin==0.1.12
+htmlmin2==0.1.13
     # via mkdocs-minify-plugin
 idna==3.3
     # via requests
@@ -166,7 +166,7 @@ mkdocs-material==6.2.8
     # via -r requirements.in
 mkdocs-material-extensions==1.0.3
     # via mkdocs-material
-mkdocs-minify-plugin==0.6.2
+mkdocs-minify-plugin==0.6.4
     # via -r requirements.in
 mkdocs-redirects==1.2.0
     # via -r requirements.in
