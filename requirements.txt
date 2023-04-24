@@ -210,7 +210,7 @@ packaging==21.3
     #   nbconvert
     #   sphinx
     #   tensorflow-cpu
-pandas==1.5.3
+pandas==2.0.1
     # via
     #   -r requirements.in
     #   altair
@@ -358,6 +358,8 @@ typing-extensions==4.2.0
     # via
     #   black
     #   tensorflow-cpu
+tzdata==2023.3
+    # via pandas
 urllib3==1.26.9
     # via requests
 watchdog==2.1.7
