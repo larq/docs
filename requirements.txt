@@ -265,7 +265,7 @@ pyyaml-env-tag==0.1
     # via mkdocs
 pyzmq==22.3.0
     # via jupyter-client
-requests==2.27.1
+requests==2.31.0
     # via
     #   requests-oauthlib
     #   sphinx
