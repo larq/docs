@@ -77,7 +77,7 @@ google-pasta==0.2.0
     # via tensorflow-cpu
 googleapis-common-protos==1.56.0
     # via tensorflow-metadata
-grpcio==1.46.0
+grpcio==1.53.0
     # via
     #   tensorboard
     #   tensorflow-cpu
@@ -282,7 +282,6 @@ six==1.16.0
     #   bleach
     #   google-auth
     #   google-pasta
-    #   grpcio
     #   keras-preprocessing
     #   promise
     #   python-dateutil
