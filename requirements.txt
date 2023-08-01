@@ -145,13 +145,14 @@ markdown==3.3.7
 markupsafe==2.1.1
     # via
     #   jinja2
+    #   mkdocs
     #   nbconvert
     #   werkzeug
 mergedeep==1.3.4
     # via mkdocs
 mistune==0.8.4
     # via nbconvert
-mkdocs==1.4.3
+mkdocs==1.5.1
     # via
     #   -r requirements.in
     #   mkdocs-exclude
@@ -215,10 +216,14 @@ pandas==1.5.3
     #   altair
 pandocfilters==1.5.0
     # via nbconvert
-pathspec==0.9.0
-    # via black
+pathspec==0.11.2
+    # via
+    #   black
+    #   mkdocs
 platformdirs==2.6.2
-    # via black
+    # via
+    #   black
+    #   mkdocs
 promise==2.3
     # via tensorflow-datasets
 protobuf==3.19.5
