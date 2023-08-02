@@ -45,7 +45,7 @@ defusedxml==0.7.1
     # via nbconvert
 dill==0.3.4
     # via tensorflow-datasets
-docutils==0.16
+docutils==0.20.1
     # via sphinx
 entrypoints==0.4
     # via
@@ -93,6 +93,7 @@ importlib-metadata==4.11.3
     # via
     #   markdown
     #   mkdocs
+    #   sphinx
 jinja2==3.1.2
     # via
     #   altair
@@ -294,7 +295,7 @@ snowballstemmer==2.2.0
     # via sphinx
 soupsieve==2.3.2.post1
     # via beautifulsoup4
-sphinx==3.5.4
+sphinx==7.1.2
     # via
     #   -r requirements.in
     #   keras-autodoc
