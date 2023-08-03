@@ -129,7 +129,7 @@ larq==0.12.2
     #   larq-zoo
 larq-compute-engine==0.8.0
     # via -r requirements.in
-larq-zoo==2.3.1
+larq-zoo==2.3.2
     # via -r requirements.in
 libclang==14.0.1
     # via tensorflow-cpu
@@ -225,6 +225,7 @@ promise==2.3
 protobuf==3.19.5
     # via
     #   googleapis-common-protos
+    #   larq-zoo
     #   tensorboard
     #   tensorflow-cpu
     #   tensorflow-datasets
@@ -353,7 +354,9 @@ traitlets==5.2.0
     #   nbconvert
     #   nbformat
 typeguard==2.12.1
-    # via zookeeper
+    # via
+    #   larq-zoo
+    #   zookeeper
 typing-extensions==4.2.0
     # via
     #   altair
