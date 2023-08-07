@@ -2,7 +2,7 @@ tensorflow-cpu
 mkdocs
 mkdocs-material==6.2.8
 pymdown-extensions
-mknotebooks==0.7.1
+mknotebooks==0.8.0.post0.dev1
 mkdocs-minify-plugin
 mkdocs-exclude
 mkdocs-redirects
