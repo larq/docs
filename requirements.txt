@@ -346,7 +346,7 @@ tomli==2.0.1
     # via black
 toolz==0.11.2
     # via altair
-tornado==6.3.2
+tornado==6.3.3
     # via jupyter-client
 tqdm==4.64.0
     # via
