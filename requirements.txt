@@ -12,7 +12,7 @@ absl-py==1.0.0
     #   tensorflow-metadata
 alabaster==0.7.12
     # via sphinx
-altair==5.0.1
+altair==5.1.0
     # via -r requirements.in
 astunparse==1.6.3
     # via tensorflow-cpu
@@ -205,6 +205,7 @@ opt-einsum==3.3.0
     # via tensorflow-cpu
 packaging==21.3
     # via
+    #   altair
     #   larq
     #   larq-compute-engine
     #   larq-zoo
