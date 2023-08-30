@@ -12,7 +12,7 @@ absl-py==1.0.0
     #   tensorflow-metadata
 alabaster==0.7.12
     # via sphinx
-altair==5.1.0
+altair==5.1.1
     # via -r requirements.in
 astunparse==1.6.3
     # via tensorflow-cpu
