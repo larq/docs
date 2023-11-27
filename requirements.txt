@@ -135,7 +135,7 @@ libclang==14.0.1
     # via tensorflow-cpu
 lxml==4.9.1
     # via nbconvert
-markdown==3.3.7
+markdown==3.5.1
     # via
     #   keras-autodoc
     #   mkdocs
@@ -248,7 +248,7 @@ pygments==2.15.0
     #   mkdocs-material
     #   nbconvert
     #   sphinx
-pymdown-extensions==10.4
+pymdown-extensions==10.5
     # via
     #   -r requirements.in
     #   mkdocs-material
