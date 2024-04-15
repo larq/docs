@@ -213,7 +213,7 @@ packaging==21.3
     #   nbconvert
     #   sphinx
     #   tensorflow-cpu
-pandas==2.2.1
+pandas==2.2.2
     # via
     #   -r requirements.in
     #   altair
