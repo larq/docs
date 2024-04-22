@@ -9,7 +9,7 @@ mkdocs-redirects
 altair
 pandas
 keras-autodoc
-sphinx~=7.3.6 # pinned due to keras-autodoc
+sphinx~=7.3.7 # pinned due to keras-autodoc
 
 larq
 larq-zoo
