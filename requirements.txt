@@ -387,7 +387,7 @@ webencodings==0.5.1
     # via
     #   bleach
     #   tinycss2
-werkzeug==3.0.1
+werkzeug==3.0.3
     # via tensorboard
 wheel==0.38.1
     # via
