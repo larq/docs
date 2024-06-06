@@ -355,7 +355,7 @@ tomli==2.0.1
     #   sphinx
 toolz==0.11.2
     # via altair
-tornado==6.3.3
+tornado==6.4.1
     # via jupyter-client
 tqdm==4.66.3
     # via
