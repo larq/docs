@@ -7,6 +7,7 @@ container, and we recommend first following
 to try and build LCE outside of a Docker container.
 
 There are scenarios in which building in the Docker container is preferred:
+
 - To build a [`manylinux2010`](https://www.python.org/dev/peps/pep-0571/)-compatible pip package
 - To build a benchmark binary for Android
 - When the build outside of the container fails and can't be fixed.
@@ -17,13 +18,13 @@ to migrate the build targets in-between the host machine and the container.
 To be able to build the LCE converter's
 [`manylinux2010`](https://www.python.org/dev/peps/pep-0571/) compatible PIP
 package, we need to use the
-[`tensorflow:custom-op-ubuntu16`](https://hub.docker.com/r/tensorflow/tensorflow)
-image.
+[`tensorflow/build:2.16-python3.12`](https://hub.docker.com/r/tensorflow/tensorflow)
+image (replace the Python version number with the desired version).
 
 First, download the Docker image:
 
 ```bash
-docker pull tensorflow/tensorflow:custom-op-ubuntu16
+docker pull tensorflow/build:2.16-python3.12
 ```
 
 Clone the LCE repository on the host machine:
@@ -38,7 +39,7 @@ directory inside the container:
 
 ```bash
 docker run -it -v $PWD/lce-volume:/tmp/lce-volume \
-    -w /tmp/lce-volume tensorflow/tensorflow:custom-op-ubuntu16 /bin/bash
+    -w /tmp/lce-volume tensorflow/build:2.16-python3.12 /bin/bash
 ```
 
 Now, you will be able to build bazel targets inside the container, by following
@@ -58,7 +59,7 @@ change the Python version to the desired version:
 
 ```bash
 cd /tmp/lce-volume
-export PYTHON_VERSION="3.8"
+export TF_PYTHON_VERSION="3.12"
 .github/tools/release_linux.sh
 ```
 
