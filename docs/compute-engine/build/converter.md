@@ -10,7 +10,7 @@ export TF_PYTHON_VERSION="3.12"
 
 If you have run Bazel without setting the python version, or you want to change
 the version, you have to make Bazel re-detect the Python version. This requires
-a full clean, a normal `clean` is not enough to trigger the redetection.:
+a full clean, a normal `clean` is not enough to trigger the redetection:
 
 ```bash
 bazel clean --expunge
