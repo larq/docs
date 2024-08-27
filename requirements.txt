@@ -12,7 +12,7 @@ absl-py==1.0.0
     #   tensorflow-metadata
 alabaster==0.7.16
     # via sphinx
-altair==5.3.0
+altair==5.4.1
     # via -r requirements.in
 astunparse==1.6.3
     # via tensorflow-cpu
@@ -180,6 +180,8 @@ mknotebooks==0.8.0.post0.dev1
     # via -r requirements.in
 mypy-extensions==0.4.3
     # via black
+narwhals==1.5.5
+    # via altair
 nbclient==0.6.3
     # via nbconvert
 nbconvert==6.5.1
@@ -194,7 +196,6 @@ nest-asyncio==1.5.5
     #   nbclient
 numpy==1.25.2
     # via
-    #   altair
     #   h5py
     #   keras-preprocessing
     #   larq
@@ -219,9 +220,7 @@ packaging==21.3
     #   sphinx
     #   tensorflow-cpu
 pandas==2.2.2
-    # via
-    #   -r requirements.in
-    #   altair
+    # via -r requirements.in
 pandocfilters==1.5.0
     # via nbconvert
 pathspec==0.11.2
@@ -353,8 +352,6 @@ tomli==2.0.1
     # via
     #   black
     #   sphinx
-toolz==0.11.2
-    # via altair
 tornado==6.4.1
     # via jupyter-client
 tqdm==4.66.3
@@ -372,7 +369,7 @@ typeguard==2.12.1
     # via
     #   larq-zoo
     #   zookeeper
-typing-extensions==4.2.0
+typing-extensions==4.12.2
     # via
     #   altair
     #   black
